@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\Home;
+use App\Models\Contact;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -38,6 +39,10 @@ class DatabaseSeeder extends Seeder
             a point where the bulk of lessons are past paper focussed -
             this is the best approach in familiarising students with the
             exam paper style.',
+        ]);
+
+        Contact::create([
+            'title' => 'Contact',
         ]);
     }
 }
