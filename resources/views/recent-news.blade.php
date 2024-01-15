@@ -10,7 +10,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
         padding: 30px 0;
-        max-height: 1000px;
+        max-height: 500px;
+        overflow: hidden;
     }
 </style>
 <section class='grid'>
