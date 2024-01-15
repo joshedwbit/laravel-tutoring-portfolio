@@ -4,6 +4,8 @@ namespace Database\Seeders;
 use App\Models\Home;
 use App\Models\Contact;
 use App\Models\RecentNews;
+use App\Models\LeaveReviewPage;
+use App\Models\LeaveReviewForm;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -47,6 +49,11 @@ class DatabaseSeeder extends Seeder
 
         RecentNews::create([
             'title' => 'Recent News',
+        ]);
+
+        LeaveReviewPage::create([
+            'intro' => 'Reviews are a great way for me to reach new clients, please detail any highlights
+            (or lowlights!)<br>All feedback is massively appreciated.<br>Thanks, Joshua'
         ]);
     }
 }
