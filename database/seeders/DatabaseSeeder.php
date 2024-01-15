@@ -5,7 +5,7 @@ use App\Models\Home;
 use App\Models\Contact;
 use App\Models\RecentNews;
 use App\Models\LeaveReviewPage;
-use App\Models\LeaveReviewForm;
+use App\Models\Reviews;
 use App\Models\ReviewsPage;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             (or lowlights!)<br>All feedback is massively appreciated.<br>Thanks, Joshua'
         ]);
 
-        LeaveReviewForm::factory(5)->create();
+        Reviews::factory(5)->create();
 
         ReviewsPage::create([
             'intro' => null

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LeaveReviewPage;
-use App\Models\LeaveReviewForm;
+use App\Models\Reviews;
 use App\Models\ReviewsPage;
 
 class ReviewsController extends Controller
@@ -30,7 +30,7 @@ class ReviewsController extends Controller
     {
         return view('reviews', [
             'pageInfo' => ReviewsPage::first(),
-            'reviews' => LeaveReviewForm::latest()->get(),
+            'reviews' => Reviews::latest()->get(),
         ]);
     }
 }
