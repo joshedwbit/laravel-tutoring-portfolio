@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RecentNewsController;
-use App\Http\Controllers\LeaveReviewController;
-use App\Models\RecentNews;
+use App\Http\Controllers\ReviewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +24,5 @@ use App\Models\RecentNews;
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/contact', [ContactController::class, 'contact']);
 Route::get('/recent-news', [RecentNewsController::class, 'news']);
-Route::get('/leave-a-review', [LeaveReviewController::class, 'leaveReview']);
+Route::get('/leave-a-review', [ReviewsController::class, 'leaveReview']);
+Route::get('/reviews', [ReviewsController::class, 'reviews']);
