@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RecentNewsController;
+use App\Models\RecentNews;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,4 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/contact', [ContactController::class, 'contact']);
+Route::get('/recent-news', [RecentNewsController::class, 'news']);

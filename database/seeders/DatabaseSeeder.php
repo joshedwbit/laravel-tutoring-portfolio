@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 use App\Models\Home;
 use App\Models\Contact;
-
+use App\Models\RecentNews;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -43,6 +43,10 @@ class DatabaseSeeder extends Seeder
 
         Contact::create([
             'title' => 'Contact',
+        ]);
+
+        RecentNews::create([
+            'title' => 'Recent News',
         ]);
     }
 }
