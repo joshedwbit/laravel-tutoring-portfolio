@@ -55,5 +55,7 @@ class DatabaseSeeder extends Seeder
             'intro' => 'Reviews are a great way for me to reach new clients, please detail any highlights
             (or lowlights!)<br>All feedback is massively appreciated.<br>Thanks, Joshua'
         ]);
+
+        LeaveReviewForm::factory(5)->create();
     }
 }
