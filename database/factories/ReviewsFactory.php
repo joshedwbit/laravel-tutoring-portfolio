@@ -32,7 +32,6 @@ class ReviewsFactory extends Factory
             'achieved' => $this->faker->numberBetween($min = 1, $max = 9),
             'rating' => $this->faker->numberBetween($min = 4, $max = 5),
             'comments' => $this->faker->paragraph(5),
-            'passcode' => 'tutor123',
         ];
     }
 }

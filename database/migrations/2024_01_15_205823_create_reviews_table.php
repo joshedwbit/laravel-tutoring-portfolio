@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('leave_review_forms', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('name');
@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('achieved');
             $table->integer('rating');
             $table->text('comments');
-            $table->string('passcode');
         });
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('leave_review_forms');
+        Schema::dropIfExists('reviews');
     }
 };
