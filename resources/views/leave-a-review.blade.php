@@ -1,108 +1,131 @@
-<x-layout>
-    <x-card class="p-10 max-w-lg mx-auto mt-24">
-      <header class="text-center">
-        <h2 class="text-2xl font-bold uppercase mb-1">Create a Gig</h2>
-        <p class="mb-4">Post a gig to find a developer</p>
-      </header>
+@extends('base')
 
-      <form method="POST" action="/listings" enctype="multipart/form-data">
-        @csrf
-        <div class="mb-6">
-          <label for="company" class="inline-block text-lg mb-2">Company Name</label>
-          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company"
-            value="{{old('company')}}"
-            {{-- value field to keep data in form on refresh  --}}
-            />
+@section('content')
+<h1 class="home">{{ $pageInfo['title'] }}</h1>
+<h4 class="">{!! $pageInfo['intro'] !!}</h4>
 
-          @error('company')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
+<form method="POST" action="/review-submitted" enctype="multipart/form-data">
+  @csrf
 
-        <div class="mb-6">
-          <label for="title" class="inline-block text-lg mb-2">Job Title</label>
-          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
-            placeholder="Example: Senior Laravel Developer" value="{{old('title')}}" />
+  <fieldset>
+    <legend>Basic info</legend>
+  <div>
+    <label for="name">{{ $pageInfo['label_name'] }}</label>
+    <input type="text" name="name" id="name" value="{{old('name')}}"/>
 
-          @error('title')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
+    @error('name')
+    <p>{{$message}}</p>
+    @enderror
+  </div>
 
-        <div class="mb-6">
-          <label for="location" class="inline-block text-lg mb-2">Job Location</label>
-          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="location"
-            placeholder="Example: Remote, Boston MA, etc" value="{{old('location')}}" />
+  <div>
+    <label for="school">{{ $pageInfo['label_school'] }}</label>
+    <input type="text" name="school" id="school" value="{{old('school')}}"/>
 
-          @error('location')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
+    @error('school')
+    <p>{{$message}}</p>
+    @enderror
+  </div>
 
-        <div class="mb-6">
-          <label for="email" class="inline-block text-lg mb-2">
-            Contact Email
-          </label>
-          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email" value="{{old('email')}}" />
+  <div>
+    <label for="year_group">{{ $pageInfo['label_year_group'] }}</label>
 
-          @error('email')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
+    <!-- Select Dropdown -->
+    <select id="year_group" name="year_group">
+        <option value="ks3">KS3</option>
+        <option value="year_10">Year 10</option>
+        <option value="year_11">Year 11</option>
+        <option value="AS">AS</option>
+        <option value="A2">A2</option>
+    </select>
+    @error('year_group')
+    <p>{{$message}}</p>
+    @enderror
+  </div>
+  </fieldset>
 
-        <div class="mb-6">
-          <label for="website" class="inline-block text-lg mb-2">
-            Website/Application URL
-          </label>
-          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="website"
-            value="{{old('website')}}" />
+  <fieldset>
+    <legend>Grades</legend>
+    <div>
+      <label for="predicted">{{ $pageInfo['label_predicted'] }}</label>
 
-          @error('website')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
+      <!-- Select Dropdown -->
+      <select id="predicted" name="predicted">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+      </select>
+      @error('predicted')
+      <p>{{$message}}</p>
+      @enderror
+    </div>
 
-        <div class="mb-6">
-          <label for="tags" class="inline-block text-lg mb-2">
-            Tags (Comma Separated)
-          </label>
-          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="tags"
-            placeholder="Example: Laravel, Backend, Postgres, etc" value="{{old('tags')}}" />
+    <div>
+      <label for="achieved">{{ $pageInfo['label_achieved'] }}</label>
 
-          @error('tags')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
-{{--
-        <div class="mb-6">
-          <label for="logo" class="inline-block text-lg mb-2">
-            Company Logo
-          </label>
-          <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo" />
-          @error('logo')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div> --}}
+      <!-- Select Dropdown -->
+      <select id="achieved" name="achieved">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+      </select>
+      @error('achieved')
+      <p>{{$message}}</p>
+      @enderror
+    </div>
+  </fieldset>
 
-        <div class="mb-6">
-          <label for="description" class="inline-block text-lg mb-2">
-            Job Description
-          </label>
-          <textarea class="border border-gray-200 rounded p-2 w-full" name="description" rows="10"
-            placeholder="Include tasks, requirements, salary, etc">{{old('description')}}</textarea>
+  <fieldset>
+    <div>
+      <label for="rating">{{ $pageInfo['label_rating'] }}</label>
+      <input type="number" name="rating" id="rating" step="1"/>
 
-          @error('description')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-          @enderror
-        </div>
+      @error('rating')
+      <p>{{$message}}</p>
+      @enderror
+    </div>
+  </fieldset>
 
-        <div class="mb-6">
-          <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
-            Create Gig
-          </button>
+  <fieldset>
+  <div>
+    <label for="comments">{{ $pageInfo['label_comments'] }}</label>
+    <textarea name="comments" id="comments" rows="5" placeholder="please provide details
+    of timeframe, successes, challenges overcome, etc">{{old('comments')}}</textarea>
 
-          <a href="/" class="text-black ml-4"> Back </a>
-        </div>
-      </form>
-    </x-card>
-  </x-layout>
+    @error('comments')
+    <p>{{$message}}</p>
+    @enderror
+  </div>
+  </fieldset>
+
+  <fieldset>
+  <div>
+    <label for="passcode">{{ $pageInfo['label_passcode'] }}</label>
+    <input type="text" name="passcode" id="passcode"/>
+
+    @error('passcode')
+    <p>{{$message}}</p>
+    @enderror
+  </div>
+  </fieldset>
+
+  <div>
+    <button type="submit">
+      {{ $pageInfo['submit_text'] }}
+    </button>
+  </div>
+</form>
+
+@endsection

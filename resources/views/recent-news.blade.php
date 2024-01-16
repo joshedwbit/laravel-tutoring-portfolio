@@ -1,9 +1,8 @@
 @extends('base')
 
 @section('content')
-<h1 class="home">Recent news page</h1>
-<br><br>
-{{ $pageInfo['title'] }}
+<h1 class="home">{{ $pageInfo['title'] }}</h1>
+<br>
 <style>
     .grid {
         display: grid;

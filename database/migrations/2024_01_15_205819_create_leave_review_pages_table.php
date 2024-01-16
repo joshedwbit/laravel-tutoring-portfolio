@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('label_rating')->default('Rating');
             $table->string('label_comments')->default('Comments');
             $table->string('label_passcode')->default('Passcode');
+            $table->string('submit_text')->default('Submit');
         });
     }
 

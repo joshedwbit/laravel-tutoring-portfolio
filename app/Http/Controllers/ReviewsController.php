@@ -33,4 +33,14 @@ class ReviewsController extends Controller
             'reviews' => Reviews::latest()->get(),
         ]);
     }
+
+    /**
+     * Handles leave a review form submission
+     *
+     * @return void
+     */
+    public function submission()
+    {
+        var_dump('print');exit;
+    }
 }

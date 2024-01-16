@@ -1,8 +1,7 @@
 @extends('base')
 
 @section('content')
-<h1 class="home">Home page</h1>
-<br><br>{{ $pageInfo['title'] }}
+<h1 class="home">{{ $pageInfo['title'] }}</h1>
 <br><br>{{ $pageInfo['about_title'] }}
 <br><br>{{ $pageInfo['about_copy'] }}
 <br><br>{{ $pageInfo['aim_title'] }}
