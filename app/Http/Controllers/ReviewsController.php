@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\LeaveReviewPage;
 use App\Models\Reviews;
 use App\Models\ReviewsPage;
+use Illuminate\Support\Facades\Redis;
 
 class ReviewsController extends Controller
 {
@@ -56,6 +57,7 @@ class ReviewsController extends Controller
 
         unset($formFields['passcode']);
         Reviews::create($formFields);
+        $request->session()->put('review_submitted', true);
         return redirect('/review-thanks');
     }
 
@@ -64,11 +66,17 @@ class ReviewsController extends Controller
      *
      * @return void
      */
-    public function thanks()
+    public function thanks(Request $request)
     {
-        return view('review-thanks', [
-            'pageInfo' => ReviewsPage::first(),
-            'review' => Reviews::latest()->first(),
-        ]);
+        $hasSubmittedReview = $request->session()->has('review_submitted');
+
+        if ($hasSubmittedReview) {
+            $request->session()->forget('review_submitted');
+            return view('review-thanks', [
+                'pageInfo' => ReviewsPage::first(),
+                'review' => Reviews::latest()->first(),
+            ]);
+        }
+        return redirect('/leave-a-review');
     }
 }
