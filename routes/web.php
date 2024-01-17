@@ -27,3 +27,4 @@ Route::get('/recent-news', [RecentNewsController::class, 'news']);
 Route::get('/leave-a-review', [ReviewsController::class, 'leaveReview']);
 Route::get('/reviews', [ReviewsController::class, 'reviews']);
 Route::post('/review-submitted', [ReviewsController::class, 'submission']);
+Route::get('/review-thanks', [ReviewsController::class, 'thanks']);

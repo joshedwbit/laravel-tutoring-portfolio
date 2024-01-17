@@ -56,6 +56,19 @@ class ReviewsController extends Controller
 
         unset($formFields['passcode']);
         Reviews::create($formFields);
-        return redirect('/');
+        return redirect('/review-thanks');
+    }
+
+    /**
+     * directs to thanks view after form submission
+     *
+     * @return void
+     */
+    public function thanks()
+    {
+        return view('review-thanks', [
+            'pageInfo' => ReviewsPage::first(),
+            'review' => Reviews::latest()->first(),
+        ]);
     }
 }

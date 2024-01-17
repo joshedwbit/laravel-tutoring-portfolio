@@ -1,2 +1,2 @@
-website created by Joshua Edwards
+Website created by Joshua Edwards
 <br>Copyright {{ date('Y') }}
