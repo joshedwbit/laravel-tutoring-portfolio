@@ -90,7 +90,7 @@
   <fieldset>
     <div>
       <label for="rating">{{ $pageInfo['label_rating'] }}</label>
-      <input type="number" name="rating" id="rating" step="1"/>
+      <input type="number" min='1' max='5' name="rating" id="rating" step="1" value={{old('rating')}}/>
 
       @error('rating')
       <p>{{$message}}</p>

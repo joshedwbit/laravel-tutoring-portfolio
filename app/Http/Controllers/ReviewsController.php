@@ -39,8 +39,23 @@ class ReviewsController extends Controller
      *
      * @return void
      */
-    public function submission()
+    public function submission(Request $request)
     {
-        var_dump('print');exit;
+        $reviewPasscode = config('app.review_passcode');
+
+        $formFields = $request->validate([
+            'name' => 'nullable|string',
+            'school' => 'nullable|string',
+            'year_group' => 'required',
+            'predicted' => 'required',
+            'achieved' => 'required',
+            'rating' => 'required|in:1,2,3,4,5',
+            'comments' => 'required|min:20|max:1200',
+            'passcode' => 'required|in:' . $reviewPasscode,
+        ]);
+
+        unset($formFields['passcode']);
+        Reviews::create($formFields);
+        return redirect('/');
     }
 }

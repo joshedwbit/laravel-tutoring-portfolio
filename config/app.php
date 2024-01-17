@@ -185,4 +185,5 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'review_passcode' => env('REVIEW_PASSCODE'),
 ];

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->string('school');
+            $table->string('name')->nullable();
+            $table->string('school')->nullable();
             $table->string('year_group');
             $table->string('predicted');
             $table->string('achieved');
