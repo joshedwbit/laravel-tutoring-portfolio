@@ -1,5 +1,18 @@
 {{-- <div class="">base template</div> --}}
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @vite('resources/sass/app.scss', 'resources/js/app.js')
+</head>
+<body>
+
+
+
+<header class="header">
 @include('partials._navbar')
 @include('partials._logo')
 </header>
@@ -11,3 +24,6 @@
 <footer>
 @include('partials._footer')
 </footer>
+
+</body>
+</html>

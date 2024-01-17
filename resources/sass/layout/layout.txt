@@ -1,0 +1,1 @@
+layout styles for major section i.e. header, footer, sidebar, grid
