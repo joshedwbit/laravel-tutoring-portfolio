@@ -1,3 +1,21 @@
-.header {
-    background-color: red;
-}
+// themes
+@import "theme/variables";
+
+// tools
+@import "tools/mixins";
+
+// base
+@import "base/band";
+@import "base/document";
+@import "base/typography";
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navbar";
+
+// objects
+@import "objects/button";
+@import "objects/fields";
+
+// components
