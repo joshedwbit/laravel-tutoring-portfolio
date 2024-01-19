@@ -1,1 +1,50 @@
 // body,html,main,header,footer
+
+// html {
+// }
+
+// .outer-wrapper {
+//     margin: $site-gutter;
+// }
+
+// .inner-wrapper {
+// }
+
+// h1, h2, h3, h4, h5, h6 {
+//     margin: 0;
+// }
+
+
+html {
+    font-family: 'Calibri', sans-serif;
+    @include breakpoint($mobile) {
+        // stuff
+    }
+}
+
+.background {
+    background-image: url("../images/jpg/mathBg.jpeg");
+    background-color: rgba(3, 0, 0, 0.7); /* white color with 50% opacity */
+    background-blend-mode: overlay; /* blend the background color with the image */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .background__wrapper {
+        margin:50px;
+        user-select: none;
+
+        .background__overlay {
+            margin:30px 0px;
+            padding: 20px;
+            display: block;
+            height: auto;  /* change later */
+            background-color: $bg-primary;
+            border: 6px solid $bg-secondary;
+
+            &:hover {
+                box-shadow: 0px 0px 20px 2px $bg-secondary;
+            }
+        }
+
+    }
+}

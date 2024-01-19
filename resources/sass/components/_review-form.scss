@@ -1,0 +1,17 @@
+.review-form {
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+
+        >input, >select {
+            width: 50%;
+            box-sizing: border-box;
+            height: 30px;
+            border-radius: 0.5rem;
+            border: none;
+            padding: 0 10px;
+        }
+    }
+}
