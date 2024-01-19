@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('title', 'Review thanks - Joshua Edwards Tutoring')
+
 @section('content')
 <h1 class="home">Thanks for your feedback!</h1>
 <h4>You can now view this in the <a href="/reviews">Reviews</a> section</h4>

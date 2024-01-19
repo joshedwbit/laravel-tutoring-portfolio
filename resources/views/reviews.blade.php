@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('title', 'Reviews - Joshua Edwards Tutoring')
+
 @section('content')
 <h1 class="home">{{ $pageInfo['title'] }}</h1>
 
