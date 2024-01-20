@@ -9,22 +9,20 @@
     @vite('resources/sass/app.scss', 'resources/js/app.js')
     @yield('scripts')
 </head>
-<body>
+<body class="background">
+    <div class="background__wrapper">
+        @include('partials._navbar')
+        @include('partials._logo')
 
+        <div class="background__overlay br">
+            <main>
+                @yield('content')
+            </main>
+        </div>
 
-
-<header class="header">
-@include('partials._navbar')
-@include('partials._logo')
-</header>
-
-<main style="border: 1px solid red;">
-@yield('content')
-</main>
-
-<footer>
-@include('partials._footer')
-</footer>
-
+        <footer>
+        @include('partials._footer')
+        </footer>
+    </div>
 </body>
 </html>

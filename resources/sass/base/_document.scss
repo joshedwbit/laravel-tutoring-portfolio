@@ -23,7 +23,7 @@ html {
 }
 
 .background {
-    background-image: url("../images/jpg/mathBg.jpeg");
+    background-image: url("/public/images/jpg/mathBg.jpeg");
     background-color: rgba(3, 0, 0, 0.7); /* white color with 50% opacity */
     background-blend-mode: overlay; /* blend the background color with the image */
     background-repeat: no-repeat;

@@ -30,16 +30,16 @@
 
     .contact__item--linkedin {
         @include bg-image-properties;
-        background-image: url("/static/images/jpg/linkedinLogo.jpg");
+        background-image: url("/public/images/jpg/linkedinLogo.jpg");
 
     }
     .contact__item--email {
         @include bg-image-properties;
-        background-image: url("/static/images/jpg/emailLogo.jpg");
+        background-image: url("/public/images/jpg/emailLogo.jpg");
     }
     .contact__item--whatsapp {
         @include bg-image-properties;
-        background-image: url("/static/images/jpg/whatsappLogo.jpg");
+        background-image: url("/public/images/jpg/whatsappLogo.jpg");
     }
 
     .contact__item--linkedin::before,

@@ -1,5 +1,6 @@
 // themes
 @import "theme/variables";
+@import "theme/global-classes";
 
 // tools
 @import "tools/mixins";
@@ -19,3 +20,7 @@
 @import "objects/fields";
 
 // components
+@import "components/aboutpage";
+@import "components/homepage";
+@import "components/recent-news";
+@import "components/review-form";
