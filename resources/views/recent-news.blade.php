@@ -1,5 +1,9 @@
 @extends('base')
 
+@section('scripts')
+@vite('resources/js/twitter-dropdown.js')
+@endsection
+
 @section('content')
 <h1 class="home">{{ $pageInfo['title'] }}</h1>
 <br>
