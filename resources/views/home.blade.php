@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="homepage">
-    <h2 class="homepage__title">{{ $pageInfo['title'] }}</h2>
+    <h2 class="pageTitle">{{ $pageInfo['title'] }}</h2>
     <section class="homepage__header__about-me">
         <div>
             <h3 class="homepage__header__title">{{ $pageInfo['about_title'] }}</h3>
