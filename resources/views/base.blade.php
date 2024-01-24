@@ -10,17 +10,17 @@
     @yield('scripts')
 </head>
 <body>
-    <div class="content__wrapper">
+    <header>
         @include('partials._navbar')
         @include('partials._logo')
+    </header>
 
-        <main class="content__overlay br">
-            @yield('content')
-        </main>
+    <main class="br">
+        @yield('content')
+    </main>
 
-        <footer>
-            @include('partials._footer')
-        </footer>
-    </div>
+    <footer>
+        @include('partials._footer')
+    </footer>
 </body>
 </html>

@@ -20,6 +20,8 @@ html {
 }
 
 body {
+    margin:50px;
+    user-select: none;
     background-image: url("/public/images/jpg/mathBg.jpeg");
     background-color: rgba(3, 0, 0, 0.7); /* white color with 50% opacity */
     background-blend-mode: overlay; /* blend the background color with the image */
@@ -27,16 +29,14 @@ body {
     background-size: contain;
 }
 
-.content__wrapper {
-    margin:50px;
-    user-select: none;
-}
-
-.content__overlay {
-    margin: 30px 0;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 main {
+    margin: 30px 0;
     padding: 20px;
     background-color: $bg-primary;
     border: 6px solid $bg-secondary;

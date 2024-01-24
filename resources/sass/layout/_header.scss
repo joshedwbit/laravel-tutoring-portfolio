@@ -1,43 +1,22 @@
+.header__menu {
+    cursor: pointer;
+    background-color: $bg-primary;
+    border: 3px solid $bg-secondary;
+    margin: 10px 0;
 
-.header__banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .header__menu {
-        cursor: pointer;
-        background-color: $bg-primary;
-        border: 3px solid $bg-secondary;
-        border-radius: 0.3rem;
-        margin: 10px 0;
-
-        &:hover {
-            box-shadow: 0px 0px 20px 3px $bg-secondary;
-        }
-
-        .header__menu__icon {
-            width: 50%;
-            height: auto;
-            transition: transform 0.2s;
-        }
+    &:hover {
+        box-shadow: 0px 0px 20px 3px $bg-secondary;
     }
+}
+
+.header__menu-icon {
+    width: 50%;
+    height: auto;
+    transition: transform 0.2s;
 }
 
 .menu--active {
     transform: rotate(90deg);
-}
-
-.header__logo__title {
-    background-color: rgba(3, 0, 0, 0.2); /* white color with 50% opacity */
-    background-blend-mode: overlay; /* blend the background color with the image */
-    border: 6px solid #8E8E8E;
-    font-family: "chalkduster", sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    line-height: 4rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: $text-primary;
-    padding: 0 20px;
 }
 
 .header__navbar {
@@ -54,47 +33,63 @@
     width:300px;
     background-color: $bg-primary;
     /* animation: fadeIn 0.4s; */
+}
 
-    .header__navbar__item {
-        padding: 20px 20px;
-        display: flex;
-        align-items: center;
-        color: black;
-        transition: box-shadow 0.2s ease;
-        cursor: pointer;
-        transition: background-color 0,3s ease;
+.header__navbar-item {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+    transition: background-color 0,3s ease;
 
-        &:hover {
-            font-size: 1.05rem;
-            background-color: $pacific-cyan;
-            box-shadow: 0px 0px 20px 3px $bg-secondary;
-        }
-
-        .header__navbar__item-icon {
-            width:10%;
-            height: auto;
-            padding-right: 15px;
-        }
+    &:hover {
+        font-size: 1.05rem;
+        background-color: $pacific-cyan;
+        box-shadow: 0px 0px 20px 3px $bg-secondary;
     }
 }
 
-.header__navbar--active {
-    visibility: visible !important;
-    opacity: 1 !important;
+.header__navbar-item-icon {
+    width:10%;
+    height: auto;
+    padding-right: 15px;
 }
 
-.header__navbar__item:not(:last-child) {
+.header__navbar--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__navbar-item:not(:last-child) {
     border-bottom: 3px solid $bg-secondary;
 }
 
 
-.header__logo__shimmer {
+// ------logo------
+
+.header__logo-title {
+    font-family: "chalkduster", sans-serif;
+    background-color: rgba(3, 0, 0, 0.2); /* white color with 50% opacity */
+    background-blend-mode: overlay; /* blend the background color with the image */
+    border: 6px solid #8E8E8E;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $text-primary;
+    padding: 0 20px;
+}
+
+.header__logo--shimmer {
     position: relative;
     overflow: hidden;
 }
 
-.header__logo__shimmer::before,
-.header__logo__shimmer::after {
+.header__logo--shimmer::before,
+.header__logo--shimmer::after {
     content: "";
     position: absolute;
     top: 0;
