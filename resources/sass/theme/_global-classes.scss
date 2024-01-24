@@ -38,9 +38,9 @@
     border-top: 4px solid $bg-primary;
     animation: spin 1s linear infinite;
     margin: 0 auto;
-  }
+}
 
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
