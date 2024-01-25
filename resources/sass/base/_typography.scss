@@ -1,22 +1,17 @@
 // titles
 
 .page-title {
+    @include font(30px, 36px, 1px, 700);
+    font-family: $font-decorative;
     animation: slide-up 1s ease;
-    font-family: 'DJB Chalk It Up', sans-serif;
     // Callie Chalk Font
     text-align: center;
-    @include font(30px, 36px, 1px, 700);
-    // @include br(0.5rem);
-    // margin: 10px 25% 30px;
-    // background-color: rgba(175,238,238, 0.8);
-    // opacity: 0.7;
-    // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 @keyframes slide-up{
     0%{
         opacity: 0;
-        transform:translateY(50px);
+        transform:translateY(20px);
     }
     100%{
         opacity:1;

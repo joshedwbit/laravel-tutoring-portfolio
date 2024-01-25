@@ -3,7 +3,7 @@
 @section('title', 'Leave a review - Joshua Edwards Tutoring')
 
 @section('content')
-<h1 class="home">{{ $pageInfo['title'] }}</h1>
+<h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 <h4 class="">{!! $pageInfo['intro'] !!}</h4>
 
 <form method="POST" action="/review-submitted" enctype="multipart/form-data">

@@ -3,7 +3,7 @@
 @section('title', 'About - Joshua Edwards Tutoring')
 
 @section('content')
-<h2 class="page-title">{{ $pageInfo['title'] }}</h2>
+<h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 
 <section class="contact br">
     <div class="contact__item__wrapper">
