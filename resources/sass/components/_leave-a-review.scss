@@ -3,4 +3,8 @@
 
 .leave-a-review__intro {
     margin: 50px 0;
+
+    @include breakpoint(mobile) {
+        margin: 40px 0;
+    }
 }

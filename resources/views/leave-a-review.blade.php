@@ -5,7 +5,7 @@
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 
-<h4 class="leave-a-review__intro">{!! $pageInfo['intro'] !!}</h4>
+<div class="leave-a-review__intro">{!! $pageInfo['intro'] !!}</div>
 
 <form method="POST" action="/review-submitted" enctype="multipart/form-data">
   @csrf
