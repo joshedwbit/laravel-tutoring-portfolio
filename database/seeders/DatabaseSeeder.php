@@ -25,17 +25,17 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Home::create([
-            'about_copy' => 'Maths Masters (MMATH) 2020 graduate from the University of Nottingham.<br>Experience tutoring KS3,
-            KS4 and First year university maths, all with exceptional results.',
+            'about_copy' => '<p>Maths Masters (MMATH) 2020 graduate from the University of Nottingham.</p><p>Experience tutoring KS3,
+            KS4 and First year university maths, all with exceptional results.</p>',
             'aim_copy' => 'Helping students of all levels looking to work hard to achieve desired grades and beyond.',
-            'background_copy' => 'Hi, my name is Joshua. I currently work as a junior
+            'background_copy' => '<p>Hi, my name is Joshua. I currently work as a junior
             implementation engineer and in my free time I tutor mathematics;
-            class of 2022/23 will be my third consecutive year one on one Tutoring.<br>
+            class of 2022/23 will be my third consecutive year one on one Tutoring.</p><p>
             In my experience so far I\'ve found it\'s never mathematical ability
             holding students back, rather a lack of confidence. I aim to adjust teaching
             style accordingly to suit the needs and learning styles of each student, and build
             confidence to inspire a genuine interest in the subject,
-            driving a desire to do well.',
+            driving a desire to do well.</p>',
             'approach_copy' => 'My initial approach largely revolves around
             schoolwork - in particular any areas of difficulty/confusion.
             Post-Christmas holidays I\'ll start mixing in past papers until
@@ -53,8 +53,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         LeaveReviewPage::create([
-            'intro' => 'Reviews are a great way for me to reach new clients, please detail any highlights
-            (or lowlights!)<br><br>All feedback is massively appreciated.<br><br>Thanks, Joshua'
+            'intro' => '<p>Reviews are a great way for me to reach new clients, please detail any highlights
+            (or lowlights!)</p><p>All feedback is massively appreciated.</p><p>Thanks, Joshua</p>'
         ]);
 
         // Reviews::factory(5)->create();

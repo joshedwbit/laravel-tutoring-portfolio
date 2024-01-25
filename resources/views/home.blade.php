@@ -25,8 +25,8 @@
     <div class="homepage__approach">
         <h3 class="homepage__title">{{ $pageInfo['approach_title'] }}</h3>
         <div>
-            {!! $pageInfo['approach_copy'] !!}<br>
-            If interested please <a href="/contact" >get in contact.</a>
+            {!! $pageInfo['approach_copy'] !!}
+            <p>If interested please <a href="/contact" >get in contact.</a></p>
         </div>
     </div>
 </section>

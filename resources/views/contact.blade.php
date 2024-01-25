@@ -17,8 +17,8 @@
     <div class="contact__item__wrapper">
         <div class="contact__item--email">
             <div class="contact__item__text br">
-                {{ config('contact.email') }}<br>
-                <a href="mailto:{{ config('contact.email') }}">send an email now</a>
+                {{ config('contact.email') }}
+                <p><a href="mailto:{{ config('contact.email') }}">send an email now</a></p>
             </div>
         </div>
     </div>
@@ -26,8 +26,8 @@
     <div class="contact__item__wrapper">
         <div class="contact__item--whatsapp">
             <div class="contact__item__text">
-                {{ config('contact.mobile') }}<br>
-                Drop a message or <a href="tel:{{ config('contact.mobile') }}">call now</a>
+                {{ config('contact.mobile') }}
+                <p>Drop a message or <a href="tel:{{ config('contact.mobile') }}">call now</a></p>
             </div>
         </div>
     </div>
