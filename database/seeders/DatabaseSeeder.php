@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
 
         LeaveReviewPage::create([
             'intro' => 'Reviews are a great way for me to reach new clients, please detail any highlights
-            (or lowlights!)<br>All feedback is massively appreciated.<br>Thanks, Joshua'
+            (or lowlights!)<br><br>All feedback is massively appreciated.<br><br>Thanks, Joshua'
         ]);
 
         // Reviews::factory(5)->create();
