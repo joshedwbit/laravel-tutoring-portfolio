@@ -62,7 +62,7 @@
 
 
 .contact__item__text {
-    @include font(16px, 24px, 1px, 600);
+    @include font(16px, 24px, 0.5px, 600);
     opacity: 0;
     text-align: center;
     color: $text-primary;

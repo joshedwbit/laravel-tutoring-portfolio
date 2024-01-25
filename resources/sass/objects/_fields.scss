@@ -1,0 +1,48 @@
+.field {
+    label {
+        @include font(18px, 20px, normal, 600);
+    }
+
+    .error {
+        border: 1px solid $c-red;
+        background-color: $c-pink;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 0.5rem;
+    }
+}
+
+.field__value {
+    margin: 10px 0;
+
+    select,
+    input {
+        width: 40%;
+        min-height: 35px;
+        padding: 0 10px;
+        cursor: pointer;
+
+    }
+
+    select {
+        @include br(0.5rem);
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
+
+.field--textarea {
+    font-family: $font-base;
+    padding: 15px;
+
+    &::placeholder {
+        font-family: $font-alt;
+        font-style: italic;
+    }
+}
+
+input.field--rating {
+    width: 80px;
+}
