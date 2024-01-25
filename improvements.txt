@@ -1,1 +1,2 @@
 make nav menu appear top down
+transitions on titles/general elements slide in

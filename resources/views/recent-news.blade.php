@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<div class="pageTitle">{{ $pageInfo['title'] }}</div>
+<h2 class="page-title">{{ $pageInfo['title'] }}</h2>
 <div class="recent-news__container">
     <div class="recent-news__dropdown">
         <button class="recent-news__dropdown-edexcel br">
