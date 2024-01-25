@@ -26,7 +26,7 @@
     <div class="contact__item__wrapper">
         <div class="contact__item--whatsapp">
             <div class="contact__item__text">
-                {{ config('contact.mobile') }} <br>
+                {{ config('contact.mobile') }}<br>
                 Drop a message or <a href="tel:{{ config('contact.mobile') }}">call now</a>
             </div>
         </div>

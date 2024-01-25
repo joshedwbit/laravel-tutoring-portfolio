@@ -7,11 +7,11 @@
     <h2 class="page-title">{{ $pageInfo['title'] }}</h2>
     <div>
         <h3 class="homepage__title">{{ $pageInfo['about_title'] }}</h3>
-        {{ $pageInfo['about_copy'] }}
+        {!! $pageInfo['about_copy'] !!}
     </div>
     <div>
         <h3 class="homepage__title">{{ $pageInfo['aim_title'] }}</h3>
-        {{ $pageInfo['aim_copy'] }}
+        {!! $pageInfo['aim_copy'] !!}
     </div>
     <figure class="homepage__image">
         <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br">
@@ -19,13 +19,13 @@
     <div class="homepage__background">
         <h3 class="homepage__title">{{ $pageInfo['background_title'] }}</h3>
         <div>
-            {{ $pageInfo['background_copy'] }}
+            {!! $pageInfo['background_copy'] !!}
         </div>
     </div>
     <div class="homepage__approach">
         <h3 class="homepage__title">{{ $pageInfo['approach_title'] }}</h3>
         <div>
-            {{ $pageInfo['approach_copy'] }}<br>
+            {!! $pageInfo['approach_copy'] !!}<br>
             If interested please <a href="/contact" >get in contact.</a>
         </div>
     </div>
