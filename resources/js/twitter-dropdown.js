@@ -1,14 +1,14 @@
-var edexcelButton = document.querySelector('.recent-news__dropdown-edexcel')
-var ocrButton = document.querySelector('.recent-news__dropdown-ocr')
-var aqaButton = document.querySelector('.recent-news__dropdown-aqa')
+var edexcelButton = document.querySelector('.js-dropdown-edexcel')
+var ocrButton = document.querySelector('.js-dropdown-ocr')
+var aqaButton = document.querySelector('.js-dropdown-aqa')
 
-var edexcelButtonArrow = document.querySelector('.arrow-icon--edexcel')
-var ocrButtonArrow = document.querySelector('.arrow-icon--ocr')
-var aqaButtonArrow = document.querySelector('.arrow-icon--aqa')
+var edexcelButtonArrow = document.querySelector('.js-icon-edexcel')
+var ocrButtonArrow = document.querySelector('.js-icon-ocr')
+var aqaButtonArrow = document.querySelector('.js-icon-aqa')
 
-var edexcelLink = document.querySelector('.recent-news__wrapper-edexcel');
-var ocrLink = document.querySelector('.recent-news__wrapper-ocr');
-var aqaLink = document.querySelector('.recent-news__wrapper-aqa');
+var edexcelLink = document.querySelector('.js-wrapper-edexcel');
+var ocrLink = document.querySelector('.js-wrapper-ocr');
+var aqaLink = document.querySelector('.js-wrapper-aqa');
 
 
 edexcelButton.addEventListener('click', function(e) {

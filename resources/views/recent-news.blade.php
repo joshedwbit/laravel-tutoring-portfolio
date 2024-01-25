@@ -7,34 +7,34 @@
 
 @section('content')
 <h2 class="page-title">{{ $pageInfo['title'] }}</h2>
-<div class="recent-news__container">
+<section class="recent-news__container">
     <div class="recent-news__dropdown">
-        <button class="recent-news__dropdown-edexcel br">
+        <button class="js-dropdown-edexcel br">
             Edexcel
-            <img class="arrow-icon--edexcel" src="{{ asset('images/svg/arrow-down.svg') }}" alt="arrow-down">
+            <img class="js-icon-edexcel" src="{{ asset('images/svg/arrow-down.svg') }}" alt="arrow-down">
         </button>
-        <div class="recent-news__wrapper-edexcel">
+        <div class="recent-news__wrapper js-wrapper-edexcel">
             <a class="twitter-timeline" data-height="600" data-theme="dark" href="{{ config('globals.twitter-api.edexcel') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
     <div class="recent-news__dropdown">
-        <button class="recent-news__dropdown-ocr br">
+        <button class="js-dropdown-ocr br">
             OCR
-            <img class="arrow-icon--ocr" src="{{ asset('images/svg/arrow-down.svg') }}" alt="arrow-down">
+            <img class="js-icon-ocr" src="{{ asset('images/svg/arrow-down.svg') }}" alt="arrow-down">
         </button>
-        <div class="recent-news__wrapper-ocr">
+        <div class="recent-news__wrapper js-wrapper-ocr">
             <a class="twitter-timeline" data-height="600" data-theme="dark" href="{{ config('globals.twitter-api.ocr') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
     <div class="recent-news__dropdown">
-        <button class="recent-news__dropdown-aqa br">
+        <button class="js-dropdown-aqa br">
             AQA
-            <img class="arrow-icon--aqa" src="{{ asset('images/svg/arrow-down.svg') }}" alt="arrow-down">
+            <img class="js-icon-aqa" src="{{ asset('images/svg/arrow-down.svg') }}" alt="arrow-down">
         </button>
-        <div class="recent-news__wrapper-aqa">
+        <div class="recent-news__wrapper js-wrapper-aqa">
             <a class="twitter-timeline" data-height="600" data-theme="dark" href="{{ config('globals.twitter-api.aqa') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
-</div>
+</section>
 
 @endsection
