@@ -3,24 +3,19 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 40px;
     max-width: 800px;
     margin: 0 auto;
-    cursor: default;
-
-    @include breakpoint(mobile) {
-        padding: 20px;
-    }
-}
-.homepage__title {
-    font-family: 'Chalkduster', sans-serif;
 }
 
-.homepage__body__biopic {
+.homepage__image {
     padding: 30px 0;
 
+    @include breakpoint(mobile) {
+        padding: 20px 0;
+    }
+
     img {
-        width:60%;
+        width:70%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border: 3px solid $bg-secondary;
         transition: transform 0.5s ease;
@@ -28,20 +23,22 @@
         &:hover {
             transform: scale(1.01);
         }
+
+        @include breakpoint(nav) {
+            width: 100%;
+        }
     }
 }
 
-[class^="homepage__body"] div {
+.homepage__background div,
+.homepage__approach div {
     text-align: left;
 }
 
-.homepage__header__title,
-.homepage__body__title {
+.homepage__title {
     transform: scale(1);
-    /* transition: transform 0.2s ease; */
 }
 
-.homepage__header__title:hover,
-.homepage__body__title:hover {
+.homepage__title:hover {
     transform: scale(1.05);
 }

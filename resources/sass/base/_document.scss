@@ -41,7 +41,7 @@ header {
 
 main {
     margin: $content-gutter-vert 0;
-    padding: 20px;
+    padding: $content-padding;
     background-color: $bg-primary;
     border: 6px solid $bg-secondary;
 
@@ -50,6 +50,7 @@ main {
     }
 
     @include breakpoint(mobile) {
+        padding: $content-padding-mobile;
         margin: $content-gutter-vert-mobile 0;
     }
 }
