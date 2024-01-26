@@ -3,32 +3,54 @@
 @section('title', 'Reviews - Joshua Edwards Tutoring')
 
 @section('content')
-<h1 class="home">{{ $pageInfo['title'] }}</h1>
+<h1 class="page-title">{{ $pageInfo['title'] }}</h1>
+
 
 @foreach ($reviews as $review)
-{{ $pageInfo['label_added'] }}
-<br>{{ $review['created_at'] }}
+<section class="reviews reviews--container">
+    <div class="reviews__item">
+        <h4>{{ $pageInfo['label_added'] }}</h4>
+        {{ $review['created_at'] }}
+    </div>
 
-<br>{{ $pageInfo['label_name'] }}
-<br>{{ $review['name'] }}
+    <div class="reviews__item">
+        <h4>{{ $pageInfo['label_name'] }}</h4>
+        {{ $review['name'] }}
+    </div>
 
-<br>{{ $pageInfo['label_school'] }}
-<br>{{ $review['school'] }}
+    <div class="reviews__item">
+        <h4>{{ $pageInfo['label_school'] }}</h4>
+        {{ $review['school'] }}
+    </div>
 
-<br>{{ $pageInfo['label_predicted'] }}
-<br>{{ $review['predicted'] }}
+    <div class="reviews__item">
+        <h4>{{ $pageInfo['label_predicted'] }}</h4>
+        {{ $review['predicted'] }}
+    </div>
 
-<br>{{ $pageInfo['label_achieved'] }}
-<br>{{ $review['achieved'] }}
+    <div class="reviews__item">
+        <h4>{{ $pageInfo['label_achieved'] }}</h4>
+        {{ $review['achieved'] }}
+    </div>
 
-<br>{{ $pageInfo['label_year_group'] }}
-<br>{{ $review['year_group'] }}
+    <div class="reviews__item">
+        <h4>{{ $pageInfo['label_year_group'] }}</h4>
+        {{ $review['year_group'] }}
+    </div>
 
-<br>{{ $pageInfo['label_rating'] }}
-<br>{{ $review['rating'] }}
+    {{-- <div class="reviews__item">
+        <h4>{{ $pageInfo['label_rating'] }}</h4>
+        {{ $review['rating'] }}
+    </div> --}}
 
-<br>{{ $pageInfo['label_comments'] }}
-<br>{{ $review['comments'] }}
-<br><br>
+    <div class="reviews__item reviews--comments">
+        <h4>{{ $pageInfo['label_comments'] }}</h4>
+        {{ $review['comments'] }}
+    </div>
+
+    @if (!$loop->last)
+        <div class="page-break"></div>
+    @endif
+</section>
 @endforeach
 @endsection
