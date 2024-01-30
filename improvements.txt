@@ -3,3 +3,4 @@ transitions on titles/general elements slide in
 fix hover effects on mobile
 optimise images (homepage, contact)
 style thanks page (disable redirect if navigating directly)
+setup github actions
