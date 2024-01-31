@@ -1,56 +1,62 @@
 @extends('base')
 
+@section('title', 'Leave a review - Joshua Edwards Tutoring')
+
 @section('content')
-<h1 class="home">{{ $pageInfo['title'] }}</h1>
-<h4 class="">{!! $pageInfo['intro'] !!}</h4>
+<h1 class="page-title">{{ $pageInfo['title'] }}</h1>
+
+<div class="leave-a-review__intro">{!! $pageInfo['intro'] !!}</div>
 
 <form method="POST" action="/review-submitted" enctype="multipart/form-data">
   @csrf
 
-  <fieldset>
-    <legend>Basic info</legend>
-  <div>
+  <div class="field">
     <label for="name">{{ $pageInfo['label_name'] }}</label>
-    <input type="text" name="name" id="name" value="{{old('name')}}"/>
 
-    @error('name')
-    <p>{{$message}}</p>
-    @enderror
+    <div class="field__value">
+      <input type="text" name="name" id="name" value="{{old('name')}}"/>
+    </div>
   </div>
 
-  <div>
+  <div class="field">
     <label for="school">{{ $pageInfo['label_school'] }}</label>
-    <input type="text" name="school" id="school" value="{{old('school')}}"/>
 
-    @error('school')
-    <p>{{$message}}</p>
-    @enderror
+    <div class="field__value">
+      <input type="text" name="school" id="school" value="{{old('school')}}"/>
+    </div>
   </div>
 
-  <div>
+  <div class="field">
     <label for="year_group">{{ $pageInfo['label_year_group'] }}</label>
 
-    <!-- Select Dropdown -->
-    <select id="year_group" name="year_group">
-        <option value="ks3">KS3</option>
-        <option value="year_10">Year 10</option>
-        <option value="year_11">Year 11</option>
-        <option value="AS">AS</option>
-        <option value="A2">A2</option>
-    </select>
+    <div class="field__value">
+      <select id="year_group" name="year_group">
+          <option value="" disabled selected hidden>Please select year group</option>
+          <option value="ks3">KS3</option>
+          <option value="year_10">Year 10</option>
+          <option value="year_11">Year 11</option>
+          <option value="AS">AS</option>
+          <option value="A2">A2</option>
+      </select>
+    </div>
+
     @error('year_group')
-    <p>{{$message}}</p>
+    <p class="error">{{$message}}</p>
     @enderror
   </div>
-  </fieldset>
 
-  <fieldset>
-    <legend>Grades</legend>
-    <div>
-      <label for="predicted">{{ $pageInfo['label_predicted'] }}</label>
+  <div class="field">
+    <label for="predicted">{{ $pageInfo['label_predicted'] }}</label>
 
-      <!-- Select Dropdown -->
+    <div class="field__value">
       <select id="predicted" name="predicted">
+          <option value="" disabled selected hidden>Please select the grade that was predicted</option>
+          <option value="E">E</option>
+          <option value="D">D</option>
+          <option value="C">C</option>
+          <option value="B">B</option>
+          <option value="A">A</option>
+          <option value="A*">A*</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -61,16 +67,25 @@
           <option value="8">8</option>
           <option value="9">9</option>
       </select>
-      @error('predicted')
-      <p>{{$message}}</p>
-      @enderror
     </div>
 
-    <div>
-      <label for="achieved">{{ $pageInfo['label_achieved'] }}</label>
+    @error('predicted')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
 
-      <!-- Select Dropdown -->
+  <div class="field">
+    <label for="achieved">{{ $pageInfo['label_achieved'] }}</label>
+
+    <div class="field__value">
       <select id="achieved" name="achieved">
+          <option value="" disabled selected hidden>Please select the achieved grade</option>
+          <option value="E">E</option>
+          <option value="D">D</option>
+          <option value="C">C</option>
+          <option value="B">B</option>
+          <option value="A">A</option>
+          <option value="A*">A*</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -81,48 +96,51 @@
           <option value="8">8</option>
           <option value="9">9</option>
       </select>
-      @error('achieved')
-      <p>{{$message}}</p>
-      @enderror
     </div>
-  </fieldset>
 
-  <fieldset>
-    <div>
-      <label for="rating">{{ $pageInfo['label_rating'] }}</label>
-      <input type="number" min='1' max='5' name="rating" id="rating" step="1" value={{old('rating')}}/>
+    @error('achieved')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
 
-      @error('rating')
-      <p>{{$message}}</p>
-      @enderror
+  <div class="field">
+    <label for="rating">{{ $pageInfo['label_rating'] }}</label>
+
+    <div class="field__value">
+      <input type="number" class="field--rating" min='1' max='5' name="rating" id="rating" step="1"/>
     </div>
-  </fieldset>
 
-  <fieldset>
-  <div>
+    @error('rating')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="field">
     <label for="comments">{{ $pageInfo['label_comments'] }}</label>
-    <textarea name="comments" id="comments" rows="5" placeholder="please provide details
-    of timeframe, successes, challenges overcome, etc">{{old('comments')}}</textarea>
+
+    <div class="field__value">
+      <textarea name="comments" class="field--textarea br" id="comments" rows="5" placeholder="please provide details of timeframe, successes, challenges overcome, etc">{{old('comments')}}</textarea>
+    </div>
 
     @error('comments')
-    <p>{{$message}}</p>
+    <p class="error">{{$message}}</p>
     @enderror
   </div>
-  </fieldset>
 
-  <fieldset>
-  <div>
+  <div class="field">
     <label for="passcode">{{ $pageInfo['label_passcode'] }}</label>
-    <input type="text" name="passcode" id="passcode"/>
+
+    <div class="field__value">
+      <input type="text" name="passcode" id="passcode"/>
+    </div>
 
     @error('passcode')
-    <p>{{$message}}</p>
+    <p class="error">{{$message}}</p>
     @enderror
   </div>
-  </fieldset>
 
   <div>
-    <button type="submit">
+    <button class="submit" type="submit">
       {{ $pageInfo['submit_text'] }}
     </button>
   </div>

@@ -1,1 +1,3 @@
-import './bootstrap';
+import { navDropdown } from "./navbar";
+
+navDropdown();

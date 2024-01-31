@@ -1,13 +1,33 @@
 @extends('base')
 
+@section('title', 'Home - Joshua Edwards Tutoring')
+
 @section('content')
-<h1 class="home">{{ $pageInfo['title'] }}</h1>
-<br><br>{{ $pageInfo['about_title'] }}
-<br><br>{{ $pageInfo['about_copy'] }}
-<br><br>{{ $pageInfo['aim_title'] }}
-<br><br>{{ $pageInfo['aim_copy'] }}
-<br><br>{{ $pageInfo['background_title'] }}
-<br><br>{{ $pageInfo['background_copy'] }}
-<br><br>{{ $pageInfo['approach_title'] }}
-<br><br>{{ $pageInfo['approach_copy'] }}
+<section class="homepage">
+    <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
+    <div>
+        <h3 class="homepage__title">{{ $pageInfo['about_title'] }}</h3>
+        {!! $pageInfo['about_copy'] !!}
+    </div>
+    <div>
+        <h3 class="homepage__title">{{ $pageInfo['aim_title'] }}</h3>
+        {!! $pageInfo['aim_copy'] !!}
+    </div>
+    <figure class="homepage__image">
+        <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br">
+    </figure>
+    <div class="homepage__background">
+        <h3 class="homepage__title">{{ $pageInfo['background_title'] }}</h3>
+        <div>
+            {!! $pageInfo['background_copy'] !!}
+        </div>
+    </div>
+    <div class="homepage__approach">
+        <h3 class="homepage__title">{{ $pageInfo['approach_title'] }}</h3>
+        <div>
+            {!! $pageInfo['approach_copy'] !!}
+            <p>If interested please <a class="homepage__link" href="/contact">get in contact.</a></p>
+        </div>
+    </div>
+</section>
 @endsection

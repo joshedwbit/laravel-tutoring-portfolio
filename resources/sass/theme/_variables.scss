@@ -1,4 +1,40 @@
 // site gutter, colors
+
+// fonts
+$font-base: 'Calibri', sans-serif;
+$font-decorative: 'DJB Chalk It Up', sans-serif;
+$font-alt: 'lato', sans-serif;
+
+// gutters
+$site-gutter: 50px;
+$site-gutter-mobile: 20px;
+$content-gutter-vert: 30px;
+$content-gutter-vert-mobile: 20px;
+$content-padding: 40px;
+$content-padding-mobile: 40px 20px;
+
+// Breakpoints
 $bp-nav: 1200px;
 $bp-tablet: 999px;
 $bp-mobile: 550px;
+
+// color variables
+
+$bg-primary: cornflowerblue;
+$bg-secondary: paleturquoise;
+$turqgreen: #54dd84;
+$text-primary: whitesmoke;
+$menu-primary: #6c65ea;
+$c-grey: #cccccc;
+$c-red: #a52a2a;
+$c-pink: lightpink;
+$c-white: whitesmoke;
+$c-charcoal: #36454f;
+
+// colors
+
+$text-greyed: rgba(41, 52, 61, 0.829);
+$light-pink: #FFB4C6;
+$faint-purple: #887DFF;
+$light-blue: #ADD8E6;
+$pacific-cyan: #4CA8C7;

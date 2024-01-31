@@ -1,0 +1,29 @@
+.br {
+    border-radius: 0.5rem;
+}
+
+.br--small {
+    border-radius: 0.3rem;
+}
+
+.page-break {
+    width: 100%;
+    border-bottom: 3px solid $c-charcoal;
+    margin: 40px 0 15px;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid black;
+    border-top: 4px solid $bg-primary;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% {transform: rotate(90deg); }
+    100% { transform: rotate(360deg); }
+}

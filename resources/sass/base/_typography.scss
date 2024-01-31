@@ -1,1 +1,20 @@
 // titles
+
+.page-title {
+    @include font(30px, 36px, 2px, 700);
+    font-family: $font-decorative;
+    animation: slide-up 1s ease;
+    // Callie Chalk Font
+    text-align: center;
+}
+
+@keyframes slide-up{
+    0%{
+        opacity: 0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}

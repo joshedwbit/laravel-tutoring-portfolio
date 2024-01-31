@@ -1,0 +1,80 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+    border: 6px solid $bg-secondary;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @include breakpoint(nav) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contact__item__wrapper {
+    position: relative;
+    flex: 1 0 auto;
+    height: 400px;
+
+    @include breakpoint(nav) {
+        width: 100%;
+    }
+
+    &:hover {
+        .contact__item__text {
+            opacity: 1;
+        }
+    }
+}
+
+.contact__item--linkedin,
+.contact__item--email,
+.contact__item--whatsapp {
+    @include bg-image-properties;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Adjust the opacity as desired */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.contact__item--linkedin {
+    background-image: url("/public/images/jpg/linkedinLogo.jpg");
+}
+.contact__item--email {
+    background-image: url("/public/images/jpg/emailLogo.jpg");
+}
+.contact__item--whatsapp {
+    background-image: url("/public/images/jpg/whatsappLogo.jpg");
+}
+
+
+.contact__item__text {
+    @include font(16px, 24px, 0.5px, 600);
+    opacity: 0;
+    text-align: center;
+    color: $text-primary;
+    transition: opacity 0.8s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $pacific-cyan;
+    padding: 20px;
+
+    a {
+        color: $text-greyed;
+    }
+}

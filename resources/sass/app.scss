@@ -1,5 +1,6 @@
 // themes
 @import "theme/variables";
+@import "theme/global-classes";
 
 // tools
 @import "tools/mixins";
@@ -12,10 +13,14 @@
 // layout
 @import "layout/header";
 @import "layout/footer";
-@import "layout/navbar";
 
 // objects
 @import "objects/button";
 @import "objects/fields";
 
 // components
+@import "components/aboutpage";
+@import "components/homepage";
+@import "components/recent-news";
+@import "components/leave-a-review";
+@import "components/reviews";
