@@ -5,4 +5,3 @@ optimise images (homepage, contact)
 style thanks page (disable redirect if navigating directly)
 setup github actions
 make twitterDropdown js page specific
-fish shell in terminal
