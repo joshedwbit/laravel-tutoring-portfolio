@@ -11,6 +11,10 @@
       @media (max-width: $bp-mobile) {
         @content;
       }
+    } @else if $breakpoint == 'tiny' {
+      @media (max-width: $bp-tiny) {
+        @content;
+      }
     } @else {
       @media (max-width: $breakpoint) {
           @content;

@@ -77,4 +77,8 @@
     a {
         color: $text-greyed;
     }
+
+    @include breakpoint(tiny) {
+        @include font(14px, 18px, 0.5px, 500);
+    }
 }
