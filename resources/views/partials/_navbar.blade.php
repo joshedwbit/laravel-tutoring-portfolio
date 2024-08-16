@@ -22,4 +22,8 @@
         <img class="header__navbar-item-icon" src="{{ asset('images/svg/infinity.svg') }}" alt="Recent news">
         Recent news
     </a>
+    <a href="/resources" class="header__navbar-item">
+        <img class="header__navbar-item-icon" src="{{ asset('images/svg/resources.svg') }}" alt="Resources">
+        Resources
+    </a>
 </nav>

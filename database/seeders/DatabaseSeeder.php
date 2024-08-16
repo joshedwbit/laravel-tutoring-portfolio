@@ -7,6 +7,8 @@ use App\Models\RecentNews;
 use App\Models\LeaveReviewPage;
 use App\Models\Reviews;
 use App\Models\ReviewsPage;
+use App\Models\Resources;
+use App\Models\Papers;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -65,6 +67,12 @@ class DatabaseSeeder extends Seeder
         ReviewsPage::create([
             'intro' => null
         ]);
+
+        Resources::create([
+            'title' => 'Resources',
+        ]);
+
+        Papers::factory(50)->create();
     }
 
     /**

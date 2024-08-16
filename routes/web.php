@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RecentNewsController;
 use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\ResourcesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::get('/leave-a-review', [ReviewsController::class, 'leaveReview']);
 Route::get('/reviews', [ReviewsController::class, 'reviews']);
 Route::post('/review-submitted', [ReviewsController::class, 'submission']);
 Route::get('/review-thanks', [ReviewsController::class, 'thanks']);
+Route::get('/resources', [ResourcesController::class, 'resources']);
