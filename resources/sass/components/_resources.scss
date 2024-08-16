@@ -1,0 +1,22 @@
+.resources--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+    grid-template-rows: repeat(1, min-content);
+    justify-items: center;
+    align-items: start;
+    margin: 0 80px;
+    overflow: scroll;
+    overflow-y: hidden;
+
+    @include breakpoint(nav) {
+        margin: 0 30px;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0px;
+    }
+}
+
+.resources__header {
+    padding: 0 30px;
+}
