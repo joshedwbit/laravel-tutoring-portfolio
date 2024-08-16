@@ -30,3 +30,4 @@ Route::get('/reviews', [ReviewsController::class, 'reviews']);
 Route::post('/review-submitted', [ReviewsController::class, 'submission']);
 Route::get('/review-thanks', [ReviewsController::class, 'thanks']);
 Route::get('/resources', [ResourcesController::class, 'resources']);
+Route::post('/resources-submitted', [ResourcesController::class, 'submission']);
