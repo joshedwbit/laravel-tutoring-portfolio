@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RecentNewsController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::post('/review-submitted', [ReviewsController::class, 'submission']);
 Route::get('/review-thanks', [ReviewsController::class, 'thanks']);
 Route::get('/resources', [ResourcesController::class, 'resources']);
 Route::post('/resources-submitted', [ResourcesController::class, 'submission']);
+Route::get('/login', [userController::class, 'login']);
+Route::post('/register', [UserController::class, 'register']);
+Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/user-login', [UserController::class, 'userLogin']);
