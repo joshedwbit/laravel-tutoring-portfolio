@@ -5,7 +5,11 @@
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 
+@php
+$isLoggedIn = Auth::check();
+@endphp
 
+@if ($isLoggedIn)
 <form method="POST" action="/resources-submitted">
     @csrf
 
@@ -44,8 +48,8 @@
       <div class="field__value">
         <select id="season" name="season">
             <option value="" disabled selected hidden>Please select season</option>
-            <option value="winter">Winter</option>
-            <option value="summer">Summer</option>
+            <option value="Winter">Winter</option>
+            <option value="Summer">Summer</option>
         </select>
       </div>
 
@@ -60,8 +64,8 @@
         <div class="field__value">
           <select id="type" name="type">
               <option value="" disabled selected hidden>Please select paper type</option>
-              <option value="calculator">Calculator</option>
-              <option value="non-calculator">Non-calculator</option>
+              <option value="Calculator">Calculator</option>
+              <option value="Non-calculator">Non-calculator</option>
           </select>
         </div>
 
@@ -76,8 +80,8 @@
         <div class="field__value">
           <select id="level" name="level">
               <option value="" disabled selected hidden>Please select level</option>
-              <option value="foundation">Foundation</option>
-              <option value="higher">Higher</option>
+              <option value="Foundation">Foundation</option>
+              <option value="Higher">Higher</option>
           </select>
         </div>
 
@@ -116,9 +120,9 @@
       </button>
     </div>
   </form>
+@endif
 
-
-<section class="resources--container">
+<section class="resources--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
     <h4 class="resources__header">Year</h4>
     <h4 class="resources__header">Paper</h4>
     <h4 class="resources__header">Season</h4>
@@ -126,6 +130,10 @@
     <h4 class="resources__header">Level</h4>
     <h4 class="resources__header">Question</h4>
     <h4 class="resources__header">Topic(s)</h4>
+    @if ($isLoggedIn)
+    <h4 class="resources__header"></h4>
+    <h4 class="resources__header"></h4>
+    @endif
 
     @foreach ($papers as $paper)
         <div>
@@ -155,6 +163,18 @@
         <div>
             {{ $paper['topic'] }}
         </div>
+
+        @if ($isLoggedIn)
+        <div>
+          <a href="/edit-resource/{{ $paper->id }}">Edit</a>
+        </div>
+
+        <form action="/delete-resource/{{ $paper->id }}" method="POST">
+          @csrf
+          @method('DELETE')
+          <button>Delete</button>
+        </form>
+        @endif
     @endforeach
 
     </section>

@@ -32,18 +32,53 @@ class ResourcesController extends Controller
         $formFields = $request->validate([
             'year' => 'required|digits:4|integer|min:2000|max:' . date('Y'),
             'paper_number' => 'required|in:1,2,3',
-            'season' => 'required|string|in:winter,summer',
-            'type' => 'required|string|in:calculator,non-calculator',
-            'level' => 'required|string|in:foundation,higher',
+            'season' => 'required|string|in:Winter,Summer',
+            'type' => 'required|string|in:Calculator,Non-calculator',
+            'level' => 'required|string|in:Foundation,Higher',
             'question_number' => 'required|integer|min:1|max:25',
             'topic' => 'required|string',
         ]);
 
-        $formFields['season'] = $formFields['season'] == 'summer' ? 'Summer' : 'Winter';
-        $formFields['higher'] = $formFields['level'] == 'higher' ? 1 : 0;
-        $formFields['calculator'] = $formFields['type'] == 'calculator' ? 1 : 0;
+        $formFields['higher'] = $formFields['level'] == 'Higher' ? 1 : 0;
+        $formFields['calculator'] = $formFields['type'] == 'Calculator' ? 1 : 0;
 
         Papers::create($formFields);
+        return redirect('/resources');
+    }
+
+    public function editResource(Papers $paper)
+    {
+        if (!auth()->check()) {
+            return redirect('/resources');
+        }
+
+        return view('edit-resource', [
+            'resource' => $paper
+        ]);
+    }
+
+    public function updateResource(Papers $paper, Request $request)
+    {
+        if (!auth()->check()) {
+            return redirect('/resources');
+        }
+        // todo put this into its own method, possibly a trait/interface
+
+        $formFields = $request->validate([
+            'year' => 'required|digits:4|integer|min:2000|max:' . date('Y'),
+            'paper_number' => 'required|in:1,2,3',
+            'season' => 'required|string|in:Winter,Summer',
+            'type' => 'required|string|in:Non-calculator,Calculator',
+            'level' => 'required|string|in:Foundation,Higher',
+            'question_number' => 'required|integer|min:1|max:25',
+            'topic' => 'required|string',
+        ]);
+        // todo put form validation in new method since its reused
+
+        $formFields['higher'] = $formFields['level'] == 'Higher' ? 1 : 0;
+        $formFields['calculator'] = $formFields['type'] == 'Calculator' ? 1 : 0;
+
+        $paper->update($formFields);
         return redirect('/resources');
     }
 }
