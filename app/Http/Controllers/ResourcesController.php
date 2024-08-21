@@ -25,6 +25,7 @@ class ResourcesController extends Controller
      * Handles resources form submission
      *
      * @return void
+     * @param Request $request
      */
     public function submission(Request $request)
     {

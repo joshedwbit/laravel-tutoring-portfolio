@@ -39,6 +39,7 @@ class ReviewsController extends Controller
      * Handles leave a review form submission
      *
      * @return void
+     * @param Request $request
      */
     public function submission(Request $request)
     {
@@ -65,6 +66,7 @@ class ReviewsController extends Controller
      * directs to thanks view after form submission
      *
      * @return void
+     * @param Request $request
      */
     public function thanks(Request $request)
     {
