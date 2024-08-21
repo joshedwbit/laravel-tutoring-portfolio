@@ -57,6 +57,13 @@ class ReviewsController extends Controller
         ]);
 
         unset($formFields['passcode']);
+
+        $selectedYearGroup = $formFields['year_group'];
+
+        if (str_starts_with($selectedYearGroup, 'year')) {
+            $formFields['year_group'] = $selectedYearGroup == 'year-10' ? 'Year 10' : 'Year 11';
+        };
+
         Reviews::create($formFields);
         $request->session()->put('review_submitted', true);
         return redirect('/review-thanks');

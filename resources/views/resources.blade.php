@@ -6,7 +6,7 @@
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 
 
-<form method="POST" action="/resources-submitted" enctype="multipart/form-data">
+<form method="POST" action="/resources-submitted">
     @csrf
 
     <div class="field">

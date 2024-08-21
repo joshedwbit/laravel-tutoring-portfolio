@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('label_year_group')->default('Year group');
             $table->string('label_predicted')->default('Predicted grade');
             $table->string('label_achieved')->default('Grade achieved');
-            $table->string('label_rating')->default('Rating');
+            $table->string('label_rating')->default('Rating (1-5)');
             $table->string('label_comments')->default('Comments');
             $table->string('label_passcode')->default('Passcode');
             $table->string('submit_text')->default('Submit');

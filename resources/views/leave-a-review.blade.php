@@ -7,7 +7,7 @@
 
 <div class="leave-a-review__intro">{!! $pageInfo['intro'] !!}</div>
 
-<form method="POST" action="/review-submitted" enctype="multipart/form-data">
+<form method="POST" action="/review-submitted">
   @csrf
 
   <div class="field">
@@ -33,8 +33,8 @@
       <select id="year_group" name="year_group">
           <option value="" disabled selected hidden>Please select year group</option>
           <option value="ks3">KS3</option>
-          <option value="year_10">Year 10</option>
-          <option value="year_11">Year 11</option>
+          <option value="year-10">Year 10</option>
+          <option value="year-11">Year 11</option>
           <option value="AS">AS</option>
           <option value="A2">A2</option>
       </select>
