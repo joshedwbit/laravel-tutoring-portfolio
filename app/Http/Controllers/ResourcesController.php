@@ -46,6 +46,12 @@ class ResourcesController extends Controller
         return redirect('/resources');
     }
 
+    /**
+     * Points to edit view on a resource if logged in
+     *
+     * @param Papers $paper
+     * @return void
+     */
     public function editResource(Papers $paper)
     {
         if (!auth()->check()) {
@@ -57,28 +63,49 @@ class ResourcesController extends Controller
         ]);
     }
 
+    /**
+     * Updates the resource if logged in
+     *
+     * @param Papers $paper
+     * @param Request $request
+     * @return void
+     */
     public function updateResource(Papers $paper, Request $request)
     {
-        if (!auth()->check()) {
-            return redirect('/resources');
+        if (auth()->check()) {
+            $formFields = $request->validate([
+                'year' => 'required|digits:4|integer|min:2000|max:' . date('Y'),
+                'paper_number' => 'required|in:1,2,3',
+                'season' => 'required|string|in:Winter,Summer',
+                'type' => 'required|string|in:Non-calculator,Calculator',
+                'level' => 'required|string|in:Foundation,Higher',
+                'question_number' => 'required|integer|min:1|max:25',
+                'topic' => 'required|string',
+            ]);
+            // todo put form validation in new method since its reused
+
+            $formFields['higher'] = $formFields['level'] == 'Higher' ? 1 : 0;
+            $formFields['calculator'] = $formFields['type'] == 'Calculator' ? 1 : 0;
+
+            $paper->update($formFields);
         }
         // todo put this into its own method, possibly a trait/interface
 
-        $formFields = $request->validate([
-            'year' => 'required|digits:4|integer|min:2000|max:' . date('Y'),
-            'paper_number' => 'required|in:1,2,3',
-            'season' => 'required|string|in:Winter,Summer',
-            'type' => 'required|string|in:Non-calculator,Calculator',
-            'level' => 'required|string|in:Foundation,Higher',
-            'question_number' => 'required|integer|min:1|max:25',
-            'topic' => 'required|string',
-        ]);
-        // todo put form validation in new method since its reused
+        return redirect('/resources');
+    }
 
-        $formFields['higher'] = $formFields['level'] == 'Higher' ? 1 : 0;
-        $formFields['calculator'] = $formFields['type'] == 'Calculator' ? 1 : 0;
+    /**
+     * Deletes the resource if logged in
+     *
+     * @param Papers $paper
+     * @return void
+     */
+    public function deleteResource(Papers $paper)
+    {
+        if (auth()->check()) {
+            $paper->delete();
+        }
 
-        $paper->update($formFields);
         return redirect('/resources');
     }
 }
