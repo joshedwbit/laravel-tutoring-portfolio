@@ -45,6 +45,7 @@ Route::post('/resources-submitted', [ResourcesController::class, 'submission']);
 Route::get('/edit-resource/{paper}', [ResourcesController::class, 'editResource']);
 Route::put('/edit-resource/{paper}', [ResourcesController::class, 'updateResource']);
 Route::delete('/delete-resource/{paper}', [ResourcesController::class, 'deleteResource']);
+Route::post('/resources-filtered', [ResourcesController::class, 'filter']);
 
 // todo
 // turn topic into a dropdown (make it so you can search)

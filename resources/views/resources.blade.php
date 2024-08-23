@@ -122,6 +122,84 @@ $isLoggedIn = Auth::check();
   </form>
 @endif
 
+<form action="/resources-filtered" method="POST">
+  @csrf
+
+  <div class="field">
+    <label for="filter_year">Filter Year</label>
+
+    <input type="text" name="filter_year" id="filter_year"/>
+
+
+    @error('filter_year')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="field">
+    <label for="filter_paper_number">Filter Paper</label>
+
+      <input type="checkbox" name="filter_paper_number[]" value="1">1
+      <input type="checkbox" name="filter_paper_number[]" value="2">2
+      <input type="checkbox" name="filter_paper_number[]" value="3">3
+
+    @error('paper_number')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="field">
+    <label for="filter_season">Filter Season</label>
+    <input type="checkbox" name="filter_season[]" value="Winter">Winter
+    <input type="checkbox" name="filter_season[]" value="Summer">Summer
+
+    @error('filter_season')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="field">
+      <label for="filter_type">Filter Type</label>
+
+    <input type="checkbox" name="filter_type[]" value="1">Calculator
+    <input type="checkbox" name="filter_type[]" value="0">Non-calculator
+
+      @error('filter_type')
+      <p class="error">{{$message}}</p>
+      @enderror
+  </div>
+
+  <div class="field">
+      <label for="filter_level">Level</label>
+    <input type="checkbox" name="filter_level[]" value="0">Foundation
+    <input type="checkbox" name="filter_level[]" value="1">Higher
+
+      @error('filter_level')
+      <p class="error">{{$message}}</p>
+      @enderror
+  </div>
+
+  <div class="field">
+      <label for="filter_topic">Topic</label>
+
+      <input type="text" name="filter_topic" id="filter_topic"/>
+
+
+      @error('filter_topic')
+      <p class="error">{{$message}}</p>
+      @enderror
+  </div>
+
+  <div>
+    <button type="submit">
+      Apply
+    </button>
+  </div>
+
+</form>
+
+<div class="">{{$results_count}} results</div>
+
 <section class="resources--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
     <h4 class="resources__header">Year</h4>
     <h4 class="resources__header">Paper</h4>
