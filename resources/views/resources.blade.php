@@ -203,15 +203,16 @@ $isLoggedIn = Auth::check();
     </div>
 
   </form>
+
+  <form action="/resources" method="GET">
+    <div>
+      <button type="submit">
+        Remove filters
+      </button>
+    </div>
+  </form>
 </section>
 
-<form action="/resources" method="GET">
-  <div>
-    <button type="submit">
-      Remove filters
-    </button>
-  </div>
-</form>
 
 <div class="page-break"></div>
 
