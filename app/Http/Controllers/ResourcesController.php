@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Resources;
 use App\Models\Papers;
+use App\Models\Topics;
+use App\Traits\TopicsTrait;
 
 class ResourcesController extends Controller
 {
+    use TopicsTrait;
+
     /**
      * points to resources view
      *
@@ -19,6 +23,7 @@ class ResourcesController extends Controller
             'pageInfo' => Resources::first(),
             'papers' => Papers::orderBy('year', 'desc')->get(),
             'results_count' => count(Papers::all()),
+            'topics' => Topics::all(),
         ]);
     }
 
@@ -37,7 +42,7 @@ class ResourcesController extends Controller
             'type' => 'required|string|in:Calculator,Non-calculator',
             'level' => 'required|string|in:Foundation,Higher',
             'question_number' => 'required|integer|min:1|max:25',
-            'topic' => 'required|string',
+            'topic' => 'required|string|in:' . ResourcesController::getTopicsString(),
         ]);
 
         $formFields['higher'] = $formFields['level'] == 'Higher' ? 1 : 0;
@@ -60,7 +65,8 @@ class ResourcesController extends Controller
         }
 
         return view('edit-resource', [
-            'resource' => $paper
+            'resource' => $paper,
+            'topics' => Topics::all(),
         ]);
     }
 
@@ -81,7 +87,7 @@ class ResourcesController extends Controller
                 'type' => 'required|string|in:Non-calculator,Calculator',
                 'level' => 'required|string|in:Foundation,Higher',
                 'question_number' => 'required|integer|min:1|max:25',
-                'topic' => 'required|string',
+                'topic' => 'required|string|in:' . ResourcesController::getTopicsString(),
             ]);
             // todo put form validation in new method since its reused
 
@@ -122,7 +128,7 @@ class ResourcesController extends Controller
             'filter_type*' => 'string|in:0 ,1',
             'filter_level' => 'nullable|array',
             'filter_level*' => 'string|in:0,1',
-            'filter_topic' => 'nullable|string',
+            'filter_topic' => 'nullable|string|in:' . ResourcesController::getTopicsString(),
         ]);
 
         $query = Papers::query();
@@ -147,6 +153,10 @@ class ResourcesController extends Controller
             $query->whereIn('higher', $request['filter_level']);
         }
 
+        if ($request['filter_topic']) {
+            $query->where('topic', $request['filter_topic']);
+        }
+
         // dd($query->toSql(), $query->getBindings());
         $filteredResources = $query->get();
 
@@ -154,6 +164,7 @@ class ResourcesController extends Controller
             'pageInfo' => Resources::first(),
             'papers' => $filteredResources,
             'results_count' => count($filteredResources),
+            'topics' => Topics::all(),
         ]);
     }
 }

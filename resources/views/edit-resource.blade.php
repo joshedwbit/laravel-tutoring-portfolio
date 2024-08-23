@@ -109,7 +109,13 @@
             <label for="topic">Topic</label>
 
             <div class="field__value">
-            <input type="text" name="topic" id="topic" value="{{$resource->topic}}"/>
+                <select id="topic" name="topic">
+                    <option value="{{$resource->topic}}" selected hidden>{{$resource->topic}}</option>
+                    @foreach($topics as $topic) {
+                        <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
+                    }
+                    @endforeach
+                </select>
             </div>
 
             @error('topic')
@@ -118,6 +124,13 @@
         </div>
 
         <button type="submit" class="submit">Save changes</button>
+    </form>
+    <form action="/resources" method="GET">
+        <div>
+          <button type="submit">
+            Back to resources
+          </button>
+        </div>
     </form>
 </section>
 @endsection

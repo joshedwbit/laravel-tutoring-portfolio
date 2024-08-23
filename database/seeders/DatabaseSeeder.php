@@ -9,11 +9,15 @@ use App\Models\Reviews;
 use App\Models\ReviewsPage;
 use App\Models\Resources;
 use App\Models\Papers;
+use App\Models\Topics;
+use App\Traits\TopicsTrait;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    use TopicsTrait;
+
     /**
      * Seed the application's database.
      */
@@ -73,6 +77,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Papers::factory(50)->create();
+
+        foreach (DatabaseSeeder::getTopics() as $topic) {
+            Topics::create([
+                'topic' => $topic
+            ]);
+        }
     }
 
     /**

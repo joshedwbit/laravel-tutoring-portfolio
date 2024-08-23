@@ -3,12 +3,15 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use app\Traits\TopicsTrait;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Papers>
  */
 class PapersFactory extends Factory
 {
+    use TopicsTrait;
+
     /**
      * Define the model's default state.
      *
@@ -28,7 +31,7 @@ class PapersFactory extends Factory
             'calculator' => $this->faker->boolean,
             'higher' => $this->faker->boolean,
             'question_number' => $this->faker->numberBetween($min = 1, $max = 24),
-            'topic' => $this->faker->text(12),
+            'topic' => $this->faker->randomElement(PapersFactory::getTopics()),
         ];
     }
 }

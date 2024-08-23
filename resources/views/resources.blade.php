@@ -92,7 +92,13 @@ $isLoggedIn = Auth::check();
     <div class="field">
         <label for="topic">Topic</label>
 
-        <input type="text" name="topic" id="topic"/>
+        <select id="topic" name="topic">
+          <option value="" disabled selected hidden>Please select topic</option>
+            @foreach($topics as $topic) {
+              <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
+            }
+            @endforeach
+        </select>
 
         @error('topic')
         <p class="error">{{$message}}</p>
@@ -170,7 +176,13 @@ $isLoggedIn = Auth::check();
   <div class="field">
       <label for="filter_topic">Topic</label>
 
-      <input type="text" name="filter_topic" id="filter_topic"/>
+      <select id="filter_topic" name="filter_topic">
+        <option value="" disabled selected hidden>Please select topic</option>
+          @foreach($topics as $topic) {
+            <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
+          }
+          @endforeach
+      </select>
 
 
       @error('filter_topic')
