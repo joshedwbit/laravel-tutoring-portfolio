@@ -30,9 +30,9 @@ class DatabaseSeeder extends Seeder
             'about_copy' => '<p>Maths Masters (MMATH) 2020 graduate from the University of Nottingham.</p><p>Experience tutoring KS3,
             KS4 and First year university maths, all with exceptional results.</p>',
             'aim_copy' => 'Helping students of all levels looking to work hard to achieve desired grades and beyond.',
-            'background_copy' => '<p>Hi, my name is Joshua. I currently work as a junior
-            implementation engineer and in my free time I tutor mathematics;
-            class of 2022/23 will be my third consecutive year one on one Tutoring.</p><p>
+            'background_copy' => '<p>Hi, my name is Joshua. I currently work as a software developer
+             and in my free time I tutor mathematics;
+            class of 2024/25 will be my fifth consecutive year one on one Tutoring.</p><p>
             In my experience so far I\'ve found it\'s never mathematical ability
             holding students back, rather a lack of confidence. I aim to adjust teaching
             style accordingly to suit the needs and learning styles of each student, and build
