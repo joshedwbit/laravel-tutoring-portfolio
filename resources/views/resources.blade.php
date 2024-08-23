@@ -2,6 +2,10 @@
 
 @section('title', 'Resources - Joshua Edwards Tutoring')
 
+@section('scripts')
+  @vite('resources/js/toggle-filters.js')
+@endsection
+
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 

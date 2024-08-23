@@ -1,6 +1,9 @@
 @extends('base')
 
 @section('title', 'Recent News - Joshua Edwards Tutoring')
+@section('scripts')
+  @vite('resources/js/twitter-dropdown.js')
+@endsection
 
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>

@@ -1,4 +1,6 @@
-export function twitterDropdown() {
+twitterDropdown();
+
+function twitterDropdown() {
     var edexcelButton = document.querySelector('.js-dropdown-edexcel')
     var ocrButton = document.querySelector('.js-dropdown-ocr')
     var aqaButton = document.querySelector('.js-dropdown-aqa')
