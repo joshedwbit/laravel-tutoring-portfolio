@@ -157,6 +157,8 @@ class ResourcesController extends Controller
             $query->where('topic', $request['filter_topic']);
         }
 
+        $query->orderBy('year', 'desc');
+
         // dd($query->toSql(), $query->getBindings());
         $filteredResources = $query->get();
 
