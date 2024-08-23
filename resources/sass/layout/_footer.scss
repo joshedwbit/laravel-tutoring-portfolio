@@ -26,6 +26,8 @@
     flex-direction: row;
     gap: 10px;
     cursor: pointer;
+    position: relative;
+    top: 3px;
 
     @include breakpoint(mobile) {
         gap: 20px;
