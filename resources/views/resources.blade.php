@@ -180,10 +180,18 @@ $isLoggedIn = Auth::check();
 
   <div>
     <button type="submit">
-      Apply
+      Apply filters
     </button>
   </div>
 
+</form>
+
+<form action="/resources" method="GET">
+  <div>
+    <button type="submit">
+      Remove filters
+    </button>
+  </div>
 </form>
 
 <div class="page-break"></div>
