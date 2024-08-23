@@ -15,10 +15,7 @@ $isLoggedIn = Auth::check();
 
     <div class="field">
       <label for="year">Year</label>
-
-      <div class="field__value">
-        <input type="text" name="year" id="year"/>
-      </div>
+      <input type="text" name="year" id="year"/>
 
       @error('year')
       <p class="error">{{$message}}</p>
@@ -28,14 +25,12 @@ $isLoggedIn = Auth::check();
     <div class="field">
       <label for="paper_number">Paper</label>
 
-      <div class="field__value">
-        <select id="paper_number" name="paper_number">
-            <option value="" disabled selected hidden>Please select paper</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
-      </div>
+      <select id="paper_number" name="paper_number">
+          <option value="" disabled selected hidden>Please select paper</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+      </select>
 
       @error('paper_number')
       <p class="error">{{$message}}</p>
@@ -45,13 +40,11 @@ $isLoggedIn = Auth::check();
     <div class="field">
       <label for="season">Season</label>
 
-      <div class="field__value">
-        <select id="season" name="season">
-            <option value="" disabled selected hidden>Please select season</option>
-            <option value="Winter">Winter</option>
-            <option value="Summer">Summer</option>
-        </select>
-      </div>
+      <select id="season" name="season">
+          <option value="" disabled selected hidden>Please select season</option>
+          <option value="Winter">Winter</option>
+          <option value="Summer">Summer</option>
+      </select>
 
       @error('season')
       <p class="error">{{$message}}</p>
@@ -61,13 +54,11 @@ $isLoggedIn = Auth::check();
     <div class="field">
         <label for="type">Type</label>
 
-        <div class="field__value">
-          <select id="type" name="type">
-              <option value="" disabled selected hidden>Please select paper type</option>
-              <option value="Calculator">Calculator</option>
-              <option value="Non-calculator">Non-calculator</option>
-          </select>
-        </div>
+        <select id="type" name="type">
+            <option value="" disabled selected hidden>Please select paper type</option>
+            <option value="Calculator">Calculator</option>
+            <option value="Non-calculator">Non-calculator</option>
+        </select>
 
         @error('type')
         <p class="error">{{$message}}</p>
@@ -77,13 +68,11 @@ $isLoggedIn = Auth::check();
     <div class="field">
         <label for="level">Level</label>
 
-        <div class="field__value">
-          <select id="level" name="level">
-              <option value="" disabled selected hidden>Please select level</option>
-              <option value="Foundation">Foundation</option>
-              <option value="Higher">Higher</option>
-          </select>
-        </div>
+        <select id="level" name="level">
+            <option value="" disabled selected hidden>Please select level</option>
+            <option value="Foundation">Foundation</option>
+            <option value="Higher">Higher</option>
+        </select>
 
         @error('level')
         <p class="error">{{$message}}</p>
@@ -93,11 +82,9 @@ $isLoggedIn = Auth::check();
     <div class="field">
       <label for="question_number">Question number</label>
 
-      <div class="field__value">
-        <input type="number" class="field--number" min='1' max='25' name="question_number" id="question_number" step="1"/>
-      </div>
-
+      <input type="number" class="field--number" min='1' max='25' name="question_number" id="question_number" step="1"/>
       @error('question_number')
+
       <p class="error">{{$message}}</p>
       @enderror
     </div>
@@ -105,9 +92,7 @@ $isLoggedIn = Auth::check();
     <div class="field">
         <label for="topic">Topic</label>
 
-        <div class="field__value">
-          <input type="text" name="topic" id="topic"/>
-        </div>
+        <input type="text" name="topic" id="topic"/>
 
         @error('topic')
         <p class="error">{{$message}}</p>
@@ -115,11 +100,14 @@ $isLoggedIn = Auth::check();
     </div>
 
     <div>
-      <button class="submit" type="submit">
+      <button type="submit">
         Save
       </button>
     </div>
   </form>
+
+<div class="page-break"></div>
+
 @endif
 
 <form action="/resources-filtered" method="POST">
@@ -197,6 +185,8 @@ $isLoggedIn = Auth::check();
   </div>
 
 </form>
+
+<div class="page-break"></div>
 
 <div class="">{{$results_count}} results</div>
 
