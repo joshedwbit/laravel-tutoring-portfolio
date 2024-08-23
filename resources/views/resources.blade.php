@@ -119,88 +119,91 @@ $isLoggedIn = Auth::check();
 <div class="page-break"></div>
 
 @endif
+<button class="js-add-filter">Show filters</button>
 
-<form action="/resources-filtered" method="POST">
-  @csrf
+<section class="js-filter-container resources__filters--hidden">
+  <form action="/resources-filtered" method="POST">
+    @csrf
 
-  <div class="field">
-    <label for="filter_year">Filter Year</label>
+    <div class="field">
+      <label for="filter_year">Filter Year</label>
 
-    <input type="text" name="filter_year" id="filter_year"/>
+      <input type="text" name="filter_year" id="filter_year"/>
 
 
-    @error('filter_year')
-    <p class="error">{{$message}}</p>
-    @enderror
-  </div>
-
-  <div class="field">
-    <label for="filter_paper_number">Filter Paper</label>
-
-      <input type="checkbox" name="filter_paper_number[]" value="1">1
-      <input type="checkbox" name="filter_paper_number[]" value="2">2
-      <input type="checkbox" name="filter_paper_number[]" value="3">3
-
-    @error('paper_number')
-    <p class="error">{{$message}}</p>
-    @enderror
-  </div>
-
-  <div class="field">
-    <label for="filter_season">Filter Season</label>
-    <input type="checkbox" name="filter_season[]" value="Winter">Winter
-    <input type="checkbox" name="filter_season[]" value="Summer">Summer
-
-    @error('filter_season')
-    <p class="error">{{$message}}</p>
-    @enderror
-  </div>
-
-  <div class="field">
-      <label for="filter_type">Filter Type</label>
-
-    <input type="checkbox" name="filter_type[]" value="1">Calculator
-    <input type="checkbox" name="filter_type[]" value="0">Non-calculator
-
-      @error('filter_type')
+      @error('filter_year')
       <p class="error">{{$message}}</p>
       @enderror
-  </div>
+    </div>
 
-  <div class="field">
-      <label for="filter_level">Level</label>
-    <input type="checkbox" name="filter_level[]" value="0">Foundation
-    <input type="checkbox" name="filter_level[]" value="1">Higher
+    <div class="field">
+      <label for="filter_paper_number">Filter Paper</label>
 
-      @error('filter_level')
+        <input type="checkbox" name="filter_paper_number[]" value="1">1
+        <input type="checkbox" name="filter_paper_number[]" value="2">2
+        <input type="checkbox" name="filter_paper_number[]" value="3">3
+
+      @error('paper_number')
       <p class="error">{{$message}}</p>
       @enderror
-  </div>
+    </div>
 
-  <div class="field">
-      <label for="filter_topic">Topic</label>
+    <div class="field">
+      <label for="filter_season">Filter Season</label>
+      <input type="checkbox" name="filter_season[]" value="Winter">Winter
+      <input type="checkbox" name="filter_season[]" value="Summer">Summer
 
-      <select id="filter_topic" name="filter_topic">
-        <option value="" disabled selected hidden>Please select topic</option>
-          @foreach($topics as $topic) {
-            <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
-          }
-          @endforeach
-      </select>
-
-
-      @error('filter_topic')
+      @error('filter_season')
       <p class="error">{{$message}}</p>
       @enderror
-  </div>
+    </div>
 
-  <div>
-    <button type="submit">
-      Apply filters
-    </button>
-  </div>
+    <div class="field">
+        <label for="filter_type">Filter Type</label>
 
-</form>
+      <input type="checkbox" name="filter_type[]" value="1">Calculator
+      <input type="checkbox" name="filter_type[]" value="0">Non-calculator
+
+        @error('filter_type')
+        <p class="error">{{$message}}</p>
+        @enderror
+    </div>
+
+    <div class="field">
+        <label for="filter_level">Level</label>
+      <input type="checkbox" name="filter_level[]" value="0">Foundation
+      <input type="checkbox" name="filter_level[]" value="1">Higher
+
+        @error('filter_level')
+        <p class="error">{{$message}}</p>
+        @enderror
+    </div>
+
+    <div class="field">
+        <label for="filter_topic">Topic</label>
+
+        <select id="filter_topic" name="filter_topic">
+          <option value="" disabled selected hidden>Please select topic</option>
+            @foreach($topics as $topic) {
+              <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
+            }
+            @endforeach
+        </select>
+
+
+        @error('filter_topic')
+        <p class="error">{{$message}}</p>
+        @enderror
+    </div>
+
+    <div>
+      <button type="submit">
+        Apply filters
+      </button>
+    </div>
+
+  </form>
+</section>
 
 <form action="/resources" method="GET">
   <div>
