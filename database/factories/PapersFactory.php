@@ -32,6 +32,7 @@ class PapersFactory extends Factory
             'higher' => $this->faker->boolean,
             'question_number' => $this->faker->numberBetween($min = 1, $max = 24),
             'topic' => $this->faker->randomElement(PapersFactory::getTopics()),
+            'notes' => null,
         ];
     }
 }

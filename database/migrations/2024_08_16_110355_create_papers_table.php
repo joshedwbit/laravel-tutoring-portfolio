@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean('higher');
             $table->integer('question_number');
             $table->text('topic');
+            $table->text('notes')->nullable();
         });
     }
 

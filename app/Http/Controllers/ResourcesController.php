@@ -162,6 +162,7 @@ class ResourcesController extends Controller
             'level' => 'required|string|in:0,1',
             'question_number' => 'required|integer|min:1|max:25',
             'topic' => 'required|string|in:' . ResourcesController::getTopicsString(),
+            'notes' => 'nullable|string|max:100',
         ]);
 
         $submittedFields['higher'] = $submittedFields['level'];

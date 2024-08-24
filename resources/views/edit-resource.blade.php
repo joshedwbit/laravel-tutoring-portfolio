@@ -123,6 +123,18 @@
             @enderror
         </div>
 
+        <div class="field">
+            <label for="notes">Notes</label>
+
+            <div class="field__value">
+                <input type="text" value="{{$resource->notes}}" name="notes" id="notes"/>
+            </div>
+
+            @error('notes')
+            <p class="error">{{$message}}</p>
+            @enderror
+        </div>
+
         <button type="submit" class="submit">Save changes</button>
     </form>
     <form action="/resources" method="GET">

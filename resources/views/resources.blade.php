@@ -109,6 +109,16 @@ $isLoggedIn = Auth::check();
         @enderror
     </div>
 
+    <div class="field">
+        <label for="notes">Notes</label>
+
+        <input type="text" name="notes" id="notes"/>
+
+        @error('notes')
+        <p class="error">{{$message}}</p>
+        @enderror
+    </div>
+
     <div>
       <button type="submit">
         Save
@@ -226,6 +236,7 @@ $isLoggedIn = Auth::check();
     <h4 class="resources__header">Level</h4>
     <h4 class="resources__header">Question</h4>
     <h4 class="resources__header">Topic(s)</h4>
+    <h4 class="resources__header">Notes</h4>
     @if ($isLoggedIn)
     <h4 class="resources__header"></h4>
     <h4 class="resources__header"></h4>
@@ -258,6 +269,10 @@ $isLoggedIn = Auth::check();
 
         <div>
             {{ $paper['topic'] }}
+        </div>
+
+        <div>
+            {{ $paper['notes'] }}
         </div>
 
         @if ($isLoggedIn)

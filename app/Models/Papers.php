@@ -17,5 +17,6 @@ class Papers extends Model
         'higher',
         'question_number',
         'topic',
+        'notes',
     ];
 }
