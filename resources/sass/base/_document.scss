@@ -22,11 +22,12 @@ html {
 body {
     margin: $site-gutter;
     user-select: none;
-    background-image: url("/public/images/jpg/mathBg.jpeg");
+    background-image: url("/public/images/jpg/mathBg.jpg");
     background-color: rgba(3, 0, 0, 0.7); /* white color with 50% opacity */
     background-blend-mode: overlay; /* blend the background color with the image */
     background-repeat: repeat;
-    background-size: contain;
+    // background-size: contain;
+    background-size: auto;
 
     @include breakpoint(mobile) {
         margin: $site-gutter-mobile;
