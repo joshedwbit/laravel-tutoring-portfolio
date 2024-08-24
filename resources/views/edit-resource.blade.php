@@ -63,9 +63,9 @@
 
             <div class="field__value">
             <select id="type" name="type">
-                <option value="{{$previousPaperType}}" selected hidden>{{$previousPaperType}}</option>
-                <option value="Calculator">Calculator</option>
-                <option value="Non-calculator">Non-calculator</option>
+                <option value="{{$resource->calculator}}" selected hidden>{{$previousPaperType}}</option>
+                <option value="1">Calculator</option>
+                <option value="0">Non-calculator</option>
             </select>
             </div>
 
@@ -82,9 +82,9 @@
 
             <div class="field__value">
             <select id="level" name="level">
-                <option value="{{$previousPaperLevel}}" selected hidden>{{$previousPaperLevel}}</option>
-                <option value="Foundation">Foundation</option>
-                <option value="Higher">Higher</option>
+                <option value="{{$resource->higher}}" selected hidden>{{$previousPaperLevel}}</option>
+                <option value="0">Foundation</option>
+                <option value="1">Higher</option>
             </select>
             </div>
 

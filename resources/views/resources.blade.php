@@ -60,8 +60,8 @@ $isLoggedIn = Auth::check();
 
         <select id="type" name="type">
             <option value="" disabled selected hidden>Please select paper type</option>
-            <option value="Calculator">Calculator</option>
-            <option value="Non-calculator">Non-calculator</option>
+            <option value="1">Calculator</option>
+            <option value="0">Non-calculator</option>
         </select>
 
         @error('type')
@@ -74,8 +74,8 @@ $isLoggedIn = Auth::check();
 
         <select id="level" name="level">
             <option value="" disabled selected hidden>Please select level</option>
-            <option value="Foundation">Foundation</option>
-            <option value="Higher">Higher</option>
+            <option value="0">Foundation</option>
+            <option value="1">Higher</option>
         </select>
 
         @error('level')
