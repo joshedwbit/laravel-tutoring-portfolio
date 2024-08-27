@@ -226,7 +226,7 @@ $isLoggedIn = Auth::check();
 
 <div class="page-break"></div>
 
-<div class="">{{$results_count}} {{ $results_count > 1 ? 'results' : 'result' }} </div>
+<div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}</div>
 
 <section class="resources--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
     <h4 class="resources__header">Year</h4>
