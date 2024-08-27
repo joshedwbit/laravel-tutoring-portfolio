@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Resources',
         ]);
 
-        Papers::factory(50)->create();
+        Papers::factory(20)->create();
 
         foreach (DatabaseSeeder::getTopics() as $topic) {
             Topics::create([
