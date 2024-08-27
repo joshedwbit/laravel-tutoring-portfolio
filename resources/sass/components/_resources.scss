@@ -9,11 +9,11 @@
     justify-items: center;
     align-items: start;
     margin: 0 80px;
-    overflow: scroll;
-    overflow-y: hidden;
 
     @include breakpoint(nav) {
         margin: 0 30px;
+        overflow: scroll;
+        overflow-y: hidden;
     }
 
     @include breakpoint(mobile) {
