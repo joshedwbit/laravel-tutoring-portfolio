@@ -2,7 +2,7 @@
 
 @section('title', 'Edit Resource - Joshua Edwards Tutoring')
 @section('meta_description', 'Edit and update an existing resource.')
-
+@section('robots_meta', 'noindex')
 
 @section('content')
 <h1 class="page-title">Edit resource</h1>

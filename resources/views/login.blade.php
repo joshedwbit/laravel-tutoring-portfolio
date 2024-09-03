@@ -2,7 +2,7 @@
 
 @section('title', 'User login - Joshua Edwards Tutoring')
 @section('meta_description', 'Login to access hidden areas of the site.')
-
+@section('robots_meta', 'noindex')
 
 @section('content')
 <h1 class="page-title">{{ auth()->check() ? 'Login' : 'Register / Login' }}</h1>

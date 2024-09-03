@@ -2,7 +2,7 @@
 
 @section('title', 'Review thanks - Joshua Edwards Tutoring')
 @section('meta_description', 'Thank you for a leaving a review.')
-
+@section('robots_meta', 'noindex')
 
 @section('content')
 <h1 class="home">Thanks for your feedback!</h1>
