@@ -4,6 +4,7 @@
 <head>
     <title>@yield('title', 'Joshua Edwards Tutoring')</title>
     <meta charset="UTF-8">
+    <meta name="description" content="@yield('meta_description', 'Welcome to Joshua Edwards tutoring portfolio. Discover personalised math tutoring services designed to help students achieve their academic goals. Explore resources, read reviews, and find out how I can support your learning journey.')">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
