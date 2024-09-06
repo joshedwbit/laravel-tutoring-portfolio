@@ -8,7 +8,7 @@
 
 
 @foreach ($reviews as $review)
-<section class="reviews reviews--container">
+<section class="reviews reviews--container" data-aos="fade-up">
     <div class="reviews__item">
         <h4>{{ $pageInfo['label_added'] }}</h4>
         {{ $review['created_at'] }}
