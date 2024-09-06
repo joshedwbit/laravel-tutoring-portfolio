@@ -1,6 +1,7 @@
 @extends('base')
 
 @section('title', 'Leave a review - Joshua Edwards Tutoring')
+@section('meta_description', 'Keen to share your experience? Write a review and helps others understand how tutoring can make a difference. Your feedback is invaluable in reaching new clients.')
 
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>

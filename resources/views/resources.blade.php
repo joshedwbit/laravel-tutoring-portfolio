@@ -1,6 +1,7 @@
 @extends('base')
 
 @section('title', 'Resources - Joshua Edwards Tutoring')
+@section('meta_description', 'Explore a collection of official past paper questions. Easily filter by year, season, topic and more to get exam ready.')
 
 @section('scripts')
   @vite('resources/js/toggle-filters.js')

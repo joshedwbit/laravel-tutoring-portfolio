@@ -1,13 +1,14 @@
 @extends('base')
 
 @section('title', 'Reviews - Joshua Edwards Tutoring')
+@section('meta_description', 'Read reviews from past students to discover how tutoring has made a difference. Want to share your own experience? Leave a review!')
 
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
 
 
 @foreach ($reviews as $review)
-<section class="reviews reviews--container">
+<section class="reviews reviews--container" data-aos="fade-up">
     <div class="reviews__item">
         <h4>{{ $pageInfo['label_added'] }}</h4>
         {{ $review['created_at'] }}
