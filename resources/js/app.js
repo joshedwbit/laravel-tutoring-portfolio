@@ -1,6 +1,7 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
 import Masonry from 'masonry-layout';
+import imagesLoaded from 'imagesloaded';
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
@@ -16,15 +17,20 @@ AOS.init({
 
 navDropdown();
 
-// init with element
-var grid = document.querySelector('.grid');
+document.addEventListener('DOMContentLoaded', function () {
+    var grid = document.querySelector('.grid');
 
-var msnry = new Masonry( grid, {
-    itemSelector: '.grid-item',
-    columnWidth: 300
-});
+    // init with element
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        gutter: 10
+      });
+    });
 
-// // init with selector
-// var msnry = new Masonry( '.grid', {
-//   // options...
-// });
+    // // init with selector
+    // var msnry = new Masonry( '.grid', {
+    //   // options...
+    // });
+  });
