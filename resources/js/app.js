@@ -1,6 +1,7 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
 
+// AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
     startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
     anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
