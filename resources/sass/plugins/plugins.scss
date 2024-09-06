@@ -1,2 +1,18 @@
 // AOS
 @import "aos/dist/aos.css";
+
+// Masonry
+.masonry {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    border:1px solid pink;
+    width: fit-content;
+    height: auto;
+
+    img {
+        width: 100%;
+    }
+}

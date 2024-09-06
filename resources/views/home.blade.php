@@ -31,4 +31,17 @@
         </div>
     </div>
 </section>
+
+<section class="masonry">
+    <div class="grid">
+        <div class="grid-item"><img src="https://picsum.photos/201/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/202/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/203/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/204/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/205/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/206/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/207/200" alt="Slide 1"></div>
+        <div class="grid-item"><img src="https://picsum.photos/208/200" alt="Slide 1"></div>
+    </div>
+</section>
 @endsection
