@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // init with element
     imagesLoaded(grid, function () {
       new Masonry(grid, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        gutter: 10
+        itemSelector: '.grid-item', //tells masonry what item selector is for items insdie grid
+        columnWidth: 200,
+        gutter: 0,
+        // originLeft: false,
+        // originTop: false,
       });
     });
 
