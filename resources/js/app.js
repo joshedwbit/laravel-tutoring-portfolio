@@ -1,5 +1,6 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
@@ -14,3 +15,10 @@ AOS.init({
 });
 
 navDropdown();
+
+const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery--getting-started',
+    children: 'a',
+    pswpModule: () => import('photoswipe')
+});
+lightbox.init();

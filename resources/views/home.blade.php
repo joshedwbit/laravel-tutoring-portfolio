@@ -31,4 +31,30 @@
         </div>
     </div>
 </section>
+
+<section class="photoswipe homepage">
+    <div id="gallery--getting-started">
+        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+            data-pswp-width="1669"
+            data-pswp-height="2500"
+            target="_blank">
+            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
+        </a>
+        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            {{-- data-cropped="true" --}}
+            target="_blank">
+            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
+        </a>
+        <a href="https://unsplash.com"
+            data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+            {{-- data-pswp-src takes priority over href  --}}
+            data-pswp-width="2500"
+            data-pswp-height="1666"
+            target="_blank">
+            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+        </a>
+      </div>
+</section>
 @endsection
