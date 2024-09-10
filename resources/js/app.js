@@ -1,6 +1,12 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+import 'owl.carousel';
 
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel();
+});
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
     startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -14,3 +20,25 @@ AOS.init({
 });
 
 navDropdown();
+
+// $(document).ready(function(){
+//     $('.owl-carousel').owlCarousel({
+//       loop: true,                // Loop items
+//       margin: 10,                // Margin between items
+//       nav: true,                 // Show navigation arrows
+//       dots: true,               // show pagination dots
+//       autoplay: true,           // auto scroll items
+//       autoplayTimeout: 3000,    // Autoplay interval (ms)
+//       responsive: {
+//         0: {
+//           items: 1               // 1 item on small screens
+//         },
+//         600: {
+//           items: 3               // 3 items on medium screens
+//         },
+//         1000: {
+//           items: 5               // 5 items on large screens
+//         }
+//       }
+//     });
+//   });
