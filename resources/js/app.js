@@ -1,7 +1,5 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
-import $ from 'jquery';
-window.$ = window.jQuery = $;
 import 'owl.carousel';
 
 $(document).ready(function(){
