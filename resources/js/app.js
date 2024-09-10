@@ -17,7 +17,7 @@ AOS.init({
 navDropdown();
 
 const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery--getting-started',
+    gallery: '#gallery--profile-photo',
     children: 'a',
     pswpModule: () => import('photoswipe')
 });

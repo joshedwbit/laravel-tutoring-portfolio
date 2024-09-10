@@ -14,9 +14,18 @@
         <h3 class="homepage__title">{{ $pageInfo['aim_title'] }}</h3>
         {!! $pageInfo['aim_copy'] !!}
     </div>
-    <figure class="homepage__image">
-        <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br">
-    </figure>
+
+    <div id="gallery--profile-photo">
+        <div class="homepage__image">
+            <a href="https://unsplash.com"
+                data-pswp-src="{{ asset('images/jpg/biopic.jpeg') }}"
+                data-pswp-width="1000"
+                data-pswp-height="560"
+                target="_blank">
+                <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="" class="br" />
+            </a>
+        </div>
+    </div>
     <div class="homepage__background">
         <h3 class="homepage__title">{{ $pageInfo['background_title'] }}</h3>
         <div>
@@ -30,31 +39,5 @@
             <p>If interested please <a class="homepage__link" href="/contact">get in contact.</a></p>
         </div>
     </div>
-</section>
-
-<section class="photoswipe homepage">
-    <div id="gallery--getting-started">
-        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-            data-pswp-width="1669"
-            data-pswp-height="2500"
-            target="_blank">
-            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
-        </a>
-        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
-            data-pswp-width="1875"
-            data-pswp-height="2500"
-            {{-- data-cropped="true" --}}
-            target="_blank">
-            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
-        </a>
-        <a href="https://unsplash.com"
-            data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
-            {{-- data-pswp-src takes priority over href  --}}
-            data-pswp-width="2500"
-            data-pswp-height="1666"
-            target="_blank">
-            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
-        </a>
-      </div>
 </section>
 @endsection
