@@ -3,6 +3,10 @@
 @section('title', 'Home - Joshua Edwards Tutoring')
 @section('meta_description', 'Welcome to Joshua Edwards Tutoring! I specialise in personalised maths tutoring for KS3 to A-level students, with a proven track record of outstanding results. My aim is to support dedicated learners in achieving their academic goals and exceeding their expectations. Learn how personalised tutoring can help you.')
 
+@section('scripts')
+  @vite('resources/js/dialog-element.js')
+@endsection
+
 @section('content')
 <section class="homepage">
     <h1 class="page-title">{{ $pageInfo['title'] }}</h1>
@@ -31,4 +35,12 @@
         </div>
     </div>
 </section>
+
+<dialog class="js-home-dialog home-dialog">
+    <div class="home-dialog__content js-home-dialog-content">
+        Modal copy here
+        <button class="js-home-dialog-hide" autofocus>Close</button>
+    </div>
+</dialog>
+<button class="js-home-dialog-show">Show the dialog</button>
 @endsection

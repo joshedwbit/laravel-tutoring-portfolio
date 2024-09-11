@@ -9,7 +9,8 @@ export default defineConfig({
                 'resources/sass/app.scss',
                 'resources/js/app.js',
                 'resources/js/toggle-filters.js',
-                'resources/js/twitter-dropdown.js'
+                'resources/js/twitter-dropdown.js',
+                'resources/js/dialog-element.js'
             ],
             refresh: true,
         }),
