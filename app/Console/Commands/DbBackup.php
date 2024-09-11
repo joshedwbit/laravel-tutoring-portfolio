@@ -26,7 +26,7 @@ class DbBackup extends Command
     public function handle()
     {
         $fileName = "backup_" . strtotime(now()) . ".sql" ;
-        $command = "mysqldump -u " .  env('DB_USERNAME') . " -p" . env('DB_PASSWORD') . " " . env('DB_DATABASE') . " users papers reviews > " . storage_path() . "/app/backup/" . $fileName;
+        $command = "mysqldump -u " .  env('DB_USERNAME') . " -p" . env('DB_PASSWORD') . " --no-tablespaces " . env('DB_DATABASE') . " users papers reviews > " . storage_path() . "/app/backup/" . $fileName;
 
         $output = null;
         $resultCode = null;
