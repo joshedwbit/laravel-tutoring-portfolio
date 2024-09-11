@@ -1,4 +1,0 @@
-mysqldump -u root -p laravel_tutoring_portfolio users papers reviews > db_backup.sql
-
-1.
-php artisan make:command DbBackup

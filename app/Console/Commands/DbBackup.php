@@ -11,20 +11,32 @@ class DbBackup extends Command
      *
      * @var string
      */
-    protected $signature = 'app:db-backup';
+    protected $signature = 'db:backup';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Create Database Backup - Users, Papers, Reviews tables';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        //
+        $fileName = "backup_" . strtotime(now()) . ".sql" ;
+        $command = "mysqldump -u " .  env('DB_USERNAME') . " -p" . env('DB_PASSWORD') . " " . env('DB_DATABASE') . " users papers reviews > " . storage_path() . "/app/backup/" . $fileName;
+
+        $output = null;
+        $resultCode = null;
+
+        exec($command, $output, $resultCode);
+
+        if ($resultCode === 0) {
+            $this->info('Backup completed successfully.');
+        } else {
+            $this->error('Backup failed.');
+        }
     }
 }
