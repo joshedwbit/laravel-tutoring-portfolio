@@ -1,5 +1,6 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
+import tippy from 'tippy.js';
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
