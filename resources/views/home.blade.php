@@ -31,4 +31,6 @@
         </div>
     </div>
 </section>
+
+<img id="unsplash-image" src="" alt="Unsplash Image">
 @endsection
