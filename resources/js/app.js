@@ -15,3 +15,9 @@ AOS.init({
 });
 
 navDropdown();
+
+tippy('.homepage__link', {
+    content: 'Tooltip test',
+    animation: 'scale',  // Scale animation
+    theme: 'light',      // Optional theme
+})
