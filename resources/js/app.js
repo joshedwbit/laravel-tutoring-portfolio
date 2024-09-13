@@ -1,5 +1,7 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
+import Swiper from 'swiper';
+// import { Navigation, Pagination } from 'swiper/modules';
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
@@ -14,3 +16,10 @@ AOS.init({
 });
 
 navDropdown();
+
+// const swiper = new Swiper('.swiper', {
+//     // configure Swiper to use modules
+//     modules: [Navigation, Pagination],
+// });
+
+const swiper = new Swiper();
