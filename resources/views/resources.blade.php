@@ -14,6 +14,10 @@
 $isLoggedIn = Auth::check();
 @endphp
 
+<p>
+  <a href="https://revisionmaths.com/gcse-maths/gcse-maths-past-papers/edexcel-gcse-maths-past-papers" target="_blank">Resources external link</a> (revisionmaths.com)
+</p>
+
 @if ($isLoggedIn)
 <form method="POST" action="/resources-submitted">
     @csrf
