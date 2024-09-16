@@ -5,8 +5,8 @@ Live site: https://www.joshuaedwardstutoring.com/
 
 This is my private tutoring portfolio built using the PHP Laravel framework.
 
-The website explains a bit about me and my tutoring/mathematical background, as well as my approach to general approach.
-It includes a contact page, and a listing of reviews from past students.  I am currently expanding the resources page to include past paper resources broken down my topic/year/etc.
+The website explains a bit about me and my tutoring/mathematical background, as well as my general approach.
+It includes a contact page, and a listing of reviews from past students.  I am currently expanding the resources page to include past paper resources broken down by topic/year/etc.
 
 <b>Project highlights:</b>
 <ul>
