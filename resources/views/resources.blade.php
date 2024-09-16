@@ -87,7 +87,7 @@ $isLoggedIn = Auth::check();
     <div class="field">
       <label for="question_number">Question number</label>
 
-      <input type="number" class="field--number" min='1' max='25' name="question_number" id="question_number" step="1"/>
+      <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1"/>
       @error('question_number')
 
       <p class="error">{{$message}}</p>
