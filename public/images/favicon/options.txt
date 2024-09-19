@@ -6,4 +6,3 @@ other favicon fonts considered:
 -Neucha
 -Protest Riot
 -Squada One
-test
