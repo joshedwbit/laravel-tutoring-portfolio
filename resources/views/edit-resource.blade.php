@@ -99,7 +99,7 @@
             <label for="question_number">Question number</label>
 
             <div class="field__value">
-                <input type="number" class="field--number" min='1' max='25' name="question_number" id="question_number" step="1" value="{{$resource->question_number}}"/>
+                <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1" value="{{$resource->question_number}}"/>
             </div>
 
             @error('question_number')

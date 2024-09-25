@@ -14,6 +14,10 @@
 $isLoggedIn = Auth::check();
 @endphp
 
+<p>
+  <a href="https://revisionmaths.com/gcse-maths/gcse-maths-past-papers/edexcel-gcse-maths-past-papers" target="_blank">Resources external link</a> (revisionmaths.com)
+</p>
+
 @if ($isLoggedIn)
 <form method="POST" action="/resources-submitted">
     @csrf
@@ -87,7 +91,7 @@ $isLoggedIn = Auth::check();
     <div class="field">
       <label for="question_number">Question number</label>
 
-      <input type="number" class="field--number" min='1' max='25' name="question_number" id="question_number" step="1"/>
+      <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1"/>
       @error('question_number')
 
       <p class="error">{{$message}}</p>
