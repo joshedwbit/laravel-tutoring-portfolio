@@ -14,9 +14,18 @@
         <h3 class="homepage__title">{{ $pageInfo['aim_title'] }}</h3>
         {!! $pageInfo['aim_copy'] !!}
     </div>
-    <figure class="homepage__image">
-        <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br">
-    </figure>
+
+    <div id="gallery--profile-photo">
+        <div class="homepage__image">
+            <a href="https://unsplash.com"
+                data-pswp-src="{{ asset('images/jpg/biopic.jpeg') }}"
+                data-pswp-width="1000"
+                data-pswp-height="560"
+                target="_blank">
+                <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="" class="br" />
+            </a>
+        </div>
+    </div>
     <div class="homepage__background">
         <h3 class="homepage__title">{{ $pageInfo['background_title'] }}</h3>
         <div>
