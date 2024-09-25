@@ -1,0 +1,15 @@
+::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.home-dialog {
+    padding: 0;
+}
+
+.home-dialog__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    cursor: default;
+}
