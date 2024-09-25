@@ -12,6 +12,8 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
-        "aos": "^2.3.4"
+        "aos": "^2.3.4",
+        "imagesloaded": "^5.0.0",
+        "masonry-layout": "^4.2.2"
     }
 }

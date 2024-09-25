@@ -1,2 +1,32 @@
 // AOS
 @import "aos/dist/aos.css";
+
+// Masonry
+.masonry {
+    padding: 100px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.grid-item {
+    width: fit-content;
+    height: fit-content;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    // zoom on hover
+    overflow: hidden;
+
+    &:hover {
+        img {
+            transform: scale(1.2);
+        }
+    }
+}
