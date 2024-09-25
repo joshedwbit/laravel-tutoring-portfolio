@@ -31,4 +31,13 @@
         </div>
     </div>
 </section>
+<div class="owl-carousel owl-theme">
+    <div><img src="https://picsum.photos/200/200" alt="Slide 1" title="1"></div>
+    <div><img src="https://picsum.photos/205/200" alt="Slide 2" title="2"></div>
+    <div><img src="https://picsum.photos/200/205" alt="Slide 3" title="3"></div>
+    <div><img src="https://picsum.photos/195/250" alt="Slide 4" title="4"></div>
+    <div><img src="https://picsum.photos/200/195" alt="Slide 5" title="5"></div>
+    <div><img src="https://picsum.photos/195/195" alt="Slide 6" title="6"></div>
+    <div><img src="https://picsum.photos/205/205" alt="Slide 7" title="7"></div>
+  </div>
 @endsection
