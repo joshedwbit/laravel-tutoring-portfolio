@@ -31,4 +31,25 @@
         </div>
     </div>
 </section>
+
+<!-- main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="https://picsum.photos/id/100/200/200" alt="Slide 1" title="1"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/200/200/200" alt="Slide 2" title="2"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/300/200/200" alt="Slide 3" title="3"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/400/200/200" alt="Slide 3" title="3"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/500/200/200" alt="Slide 3" title="3"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/600/200/200" alt="Slide 3" title="3"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/700/200/200" alt="Slide 3" title="3"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/800/200/200" alt="Slide 3" title="3"></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/id/900/200/200" alt="Slide 3" title="3"></div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
 @endsection

@@ -1,5 +1,7 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
+import Swiper from 'swiper/bundle';
+import { Navigation, Pagination } from 'swiper/modules';
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
@@ -14,3 +16,25 @@ AOS.init({
 });
 
 navDropdown();
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    // spaceBetween: 100,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: "progressbar",
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

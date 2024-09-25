@@ -1,2 +1,22 @@
 // AOS
 @import "aos/dist/aos.css";
+
+// Swiper
+@import 'swiper/css/bundle';
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        display: block;
+        object-fit: cover;
+    }
+  }
