@@ -31,7 +31,7 @@
         </div>
     </div>
     <!--you don't need the "data-step" attr, but can be useful for storing instructions for JS -->
-    <div class="step homepage__approach" data-step="a">
+    {{-- <div class="step homepage__approach" data-step="a">
         <h3 class="homepage__title">Dummy A</h3>
         <div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ad alias, quis quaerat magnam nemo suscipit provident eius vitae ut dolorem impedit sint? Quae cum mollitia ex quidem eaque magni sed, aliquam natus voluptatibus, saepe cumque at aperiam nulla non. Itaque deserunt culpa nihil assumenda doloremque ut harum recusandae tempora. Minus aliquid laudantium minima quod corrupti deleniti dolores pariatur saepe maiores iusto. Vel tempore assumenda eaque cupiditate, commodi repellendus porro, culpa vitae quod beatae aliquam nostrum alias blanditiis enim modi ratione nemo. Expedita accusamus voluptas esse beatae? Laborum ratione expedita, minima recusandae officia aliquam obcaecati sunt illum doloremque harum aut.
@@ -51,6 +51,20 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veritatis at vero impedit, quia quae accusamus eveniet officia, repellendus excepturi fuga labore dolorum doloribus architecto? Veritatis fugiat explicabo, recusandae temporibus voluptate minus? Incidunt pariatur ex explicabo possimus vitae mollitia qui molestiae fugiat ad, temporibus unde eius rem officia sint tempora ducimus facere tempore maiores. Sit doloribus similique fuga maxime velit excepturi doloremque iure, minus corporis non eius consequuntur, commodi temporibus quos earum qui esse ratione?
         </div>
         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, beatae ab. Corrupti tenetur dicta culpa possimus fugit ipsam repellendus consectetur, tempora molestias qui, voluptas ex laudantium natus aut dolor unde et pariatur molestiae voluptates mollitia dignissimos laborum odit ipsa. Quos iste explicabo deserunt laborum sint vitae ipsa, error architecto amet culpa soluta quidem aut iusto illo? Ipsa officia iste aspernatur laudantium cum id eum pariatur obcaecati sapiente commodi molestiae sit nam inventore nobis tenetur autem culpa facilis earum, error natus. Commodi, delectus. Quas amet dolorum illo perspiciatis atque aspernatur accusamus asperiores repellendus voluptates! Assumenda ex, quis iusto dolorem consectetur minima?</div>
+    </div> --}}
+
+    <div class="container">
+        <div class="sticky-graphic">
+            <p id="graphic">
+                👀 Scroll!
+            </p>
+        </div>
+            <div class="content">
+            <div class="step" data-step="1">Section 1</div>
+            <div class="step" data-step="2">Section 2</div>
+            <div class="step" data-step="3">Section 3</div>
+            <div class="step" data-step="4">Section 4</div>
+        </div>
     </div>
 </section>
 @endsection
