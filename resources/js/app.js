@@ -1,6 +1,7 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
 import $ from 'jquery';
+import scrollama from "scrollama";
 window.$ = window.jQuery = $;
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
@@ -16,3 +17,19 @@ AOS.init({
 });
 
 navDropdown();
+
+
+// instantiate the scrollama
+const scroller = scrollama();
+
+// setup the instance, pass callback functions
+scroller
+  .setup({
+    step: ".step",
+  })
+  .onStepEnter((response) => {
+    // { element, index, direction }
+  })
+  .onStepExit((response) => {
+    // { element, index, direction }
+  });
