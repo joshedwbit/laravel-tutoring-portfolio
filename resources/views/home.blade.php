@@ -31,4 +31,11 @@
         </div>
     </div>
 </section>
+<section class="slick-messabout">
+    <div class="your-carousel-class">
+        <div><img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="Slide 1"></div>
+        <div><img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="Slide 2"></div>
+        <div><img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="Slide 3"></div>
+    </div>
+</section>
 @endsection
