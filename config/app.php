@@ -186,4 +186,6 @@ return [
     ])->toArray(),
 
     'review_passcode' => env('REVIEW_PASSCODE'),
+    'register_passcode' => env('REGISTER_PASSCODE'),
+    'login_passcode' => env('LOGIN_PASSCODE'),
 ];
