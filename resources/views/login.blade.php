@@ -55,6 +55,18 @@
       @enderror
     </div>
 
+    <div class="field">
+      <label for="passcode">Passcode</label>
+
+      <div class="field__value">
+        <input type="text" name="passcode" placeholder="passcode" id="passcode"/>
+      </div>
+
+      @error('passcode')
+      <p class="error">{{$message}}</p>
+      @enderror
+    </div>
+
     <div>
       <button class="submit" type="submit">
         Register
@@ -68,10 +80,10 @@
     @csrf
 
     <div class="field">
-      <label for="email">Email</label>
+      <label for="login-email">Email</label>
 
       <div class="field__value">
-        <input type="text" placeholder="email" name="login-email" id="email"/>
+        <input type="text" placeholder="email" name="login-email" id="login-email"/>
       </div>
 
       @error('login-email')
@@ -80,13 +92,25 @@
     </div>
 
     <div class="field">
-      <label for="password">Password</label>
+      <label for="login-password">Password</label>
 
       <div class="field__value">
-        <input type="password" placeholder="password" name="login-password" id="password"/>
+        <input type="password" placeholder="password" name="login-password" id="login-password"/>
       </div>
 
       @error('login-password')
+      <p class="error">{{$message}}</p>
+      @enderror
+    </div>
+
+    <div class="field">
+      <label for="login-passcode">Passcode</label>
+
+      <div class="field__value">
+        <input type="text" name="login-passcode" placeholder="passcode" id="login-passcode"/>
+      </div>
+
+      @error('login-passcode')
       <p class="error">{{$message}}</p>
       @enderror
     </div>
