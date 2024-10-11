@@ -43,11 +43,11 @@ textarea {
 }
 
 .field--textarea {
-    font-family: $font-base;
+    font-family: $font-base, $font-default;
     padding: 15px;
 
     &::placeholder {
-        font-family: $font-alt;
+        font-family: $font-alt, $font-default;
         font-style: italic;
     }
 }
