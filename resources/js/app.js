@@ -2,6 +2,20 @@ import AOS from "aos";
 import { navDropdown } from "./navbar";
 import $ from 'jquery';
 window.$ = window.jQuery = $;
+import 'slick-carousel';
+
+navDropdown();
+
+$(document).ready(function(){
+    $('.your-carousel-class').slick({
+        // Slick carousel options
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+    });
+});
 
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
@@ -14,5 +28,3 @@ AOS.init({
     once: true, // whether animation should happen only once - while scrolling down
     mirror: true, // whether elements should animate out while scrolling past them
 });
-
-navDropdown();
