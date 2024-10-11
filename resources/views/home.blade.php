@@ -15,7 +15,7 @@
         {!! $pageInfo['aim_copy'] !!}
     </div>
     <figure class="homepage__image">
-        <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br">
+        <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br" loading="lazy">
     </figure>
     <div class="homepage__background">
         <h3 class="homepage__title">{{ $pageInfo['background_title'] }}</h3>

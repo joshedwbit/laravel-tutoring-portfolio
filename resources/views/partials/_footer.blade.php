@@ -4,10 +4,10 @@
     </span>
     <span class="footer__socials">
         <a href="mailto: {{ config('contact.email') }}">
-            <img class="footer__socials--icon-email" src="{{ asset('images/svg/footer/mail.svg') }}" alt="email">
+            <img class="footer__socials--icon-email" src="{{ asset('images/svg/footer/mail.svg') }}" alt="email" loading="lazy">
         </a>
         <a href="tel: {{ config('contact.mobile') }}">
-            <img class="footer__socials--icon-whatsapp" src="{{ asset('images/svg/footer/whatsapp.svg') }}" alt="whatsapp">
+            <img class="footer__socials--icon-whatsapp" src="{{ asset('images/svg/footer/whatsapp.svg') }}" alt="whatsapp" loading="lazy">
         </a>
     </span>
 </footer>
