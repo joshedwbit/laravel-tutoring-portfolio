@@ -82,7 +82,7 @@
 
 .header__logo-title {
     @include font(24px, 30px, 1.5px);
-    font-family: $font-decorative, $font-default;
+    font-family: $font-decorative, $font-base;
     background-color: rgba(3, 0, 0, 0.2); /* white color with 50% opacity */
     background-blend-mode: overlay; /* blend the background color with the image */
     border: 6px solid #8E8E8E;
