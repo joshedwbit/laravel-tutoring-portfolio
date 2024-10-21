@@ -14,8 +14,19 @@
 }
 
 .header--fixed {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+
     .header__logo-title {
         background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .header__navbar {
+        top: 85px;
+
+        @include breakpoint(mobile) {
+            top: 35px + $site-gutter-mobile + $content-gutter-vert-mobile;
+        }
     }
 }
 
