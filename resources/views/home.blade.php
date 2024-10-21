@@ -23,17 +23,16 @@
             {!! $pageInfo['background_copy'] !!}
         </div>
     </div>
+    <h3 class="homepage__title">Success stories</h3>
+    <div class="feedback-success-carousel--container br" data-aos="fade-up">
+        @include('partials._feedback-success-carousel')
+    </div>
     <div class="homepage__approach">
         <h3 class="homepage__title">{{ $pageInfo['approach_title'] }}</h3>
         <div>
             {!! $pageInfo['approach_copy'] !!}
             <p>If interested please <a class="homepage__link" href="/contact">get in contact.</a></p>
         </div>
-    </div>
-
-    <h3 class="homepage__title">Success stories</h3>
-    <div class="feedback-success-carousel--container br" data-aos="fade-up">
-        @include('partials._feedback-success-carousel')
     </div>
 </section>
 @endsection
