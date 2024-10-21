@@ -31,6 +31,9 @@
         </div>
     </div>
 
-    @include('partials._feedback-success-carousel')
+    <h3 class="homepage__title">Success stories</h3>
+    <div class="feedback-success-carousel--container br">
+        @include('partials._feedback-success-carousel')
+    </div>
 </section>
 @endsection
