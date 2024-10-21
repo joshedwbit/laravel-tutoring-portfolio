@@ -32,7 +32,7 @@
     </div>
 
     <h3 class="homepage__title">Success stories</h3>
-    <div class="feedback-success-carousel--container br">
+    <div class="feedback-success-carousel--container br" data-aos="fade-up">
         @include('partials._feedback-success-carousel')
     </div>
 </section>
