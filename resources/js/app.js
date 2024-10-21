@@ -36,7 +36,9 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
-    // spaceBetween: 100,
+    autoHeight: true,
+    spaceBetween: 15,
+    grabCursor: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -45,11 +47,11 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        type: "progressbar",
     },
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    breakpoints: {
+        555: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    }
 });

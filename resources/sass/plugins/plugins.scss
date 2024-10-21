@@ -9,6 +9,11 @@
     height: 100%;
 }
 
+.swiper-wrapper.swiper-wrapper-centered {
+    display: flex;
+    align-items: center;
+}
+
 .swiper-slide {
     text-align: center;
     display: flex;
@@ -18,5 +23,7 @@
     img {
         display: block;
         object-fit: cover;
+        width: 100%; //optional
+        height: 100%; //optional
     }
   }
