@@ -86,6 +86,10 @@
 
 // ------logo------
 
+.header__logo {
+    text-decoration: none;
+}
+
 .header__logo-title {
     @include font(24px, 30px, 1.5px);
     font-family: $font-decorative, $font-base;
