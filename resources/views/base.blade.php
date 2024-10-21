@@ -14,6 +14,37 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
+    <style>
+        .container {
+          display: flex;
+        }
+
+        .sticky-graphic {
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          width: 40%;
+          background: lightblue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2em;
+        }
+
+        .step {
+          margin: 50px 0;
+          padding: 20px;
+          background: lightgrey;
+          width: 60%;
+          opacity: 0.3;
+          transition: opacity 0.3s ease;
+        }
+
+        .step.is-active {
+          opacity: 1;
+          background: coral;
+        }
+      </style>
 </head>
 <body>
     <header class="js-header">
