@@ -16,7 +16,7 @@
     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
 </head>
 <body>
-    <header>
+    <header class="js-header">
         @include('partials._navbar')
         @include('partials._logo')
     </header>

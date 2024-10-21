@@ -38,6 +38,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: sticky;
+    padding: 0 20px;
+    z-index: 1000;
+    top: 0;
 }
 
 main {

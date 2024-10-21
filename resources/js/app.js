@@ -3,6 +3,19 @@ import { navDropdown } from "./navbar";
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
+const documentHeader = document.querySelector('.js-header')
+const scrollHeaderThreshold = 50;
+
+window.addEventListener('scroll', function(e) {
+    let scrollPosition= window.scrollY;
+
+    if (scrollPosition > scrollHeaderThreshold) {
+        documentHeader.classList.add('header--fixed')
+    } else {
+        documentHeader.classList.remove('header--fixed')
+    }
+})
+
 // AOS not needed on every page so *could* go into its own file and imported as and when
 AOS.init({
     startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
