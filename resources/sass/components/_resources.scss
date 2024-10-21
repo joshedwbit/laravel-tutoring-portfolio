@@ -9,6 +9,7 @@
     justify-items: center;
     align-items: start;
     margin: 0 80px;
+    user-select: text;
 
     @include breakpoint(nav) {
         margin: 0 30px;
