@@ -38,6 +38,16 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: sticky;
+    top: 20px;
+    padding: 0 20px;
+    z-index: 1000;
+
+    @include breakpoint(mobile) {
+        top: 10px;
+    }
 }
 
 main {
