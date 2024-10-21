@@ -4,10 +4,11 @@ import { Navigation, Pagination } from 'swiper/modules';
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
-    centeredSlides: true,
-    autoHeight: true,
-    spaceBetween: 15,
+    // centeredSlides: true,
+    // autoHeight: true,
+    spaceBetween: 10,
     grabCursor: true,
+
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -20,7 +21,7 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
         555: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
     }
 });
