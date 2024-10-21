@@ -8,6 +8,9 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+    const PASSCODE_REQUIRED = 'Please enter the passcode. If you have not been given one please contact the site owner.';
+    const PASSCODE_INCORRECT = 'The passcode you entered is incorrect. If you have not been given one please contact the site owner.';
+
     /**
      * points to login page
      *
@@ -26,10 +29,20 @@ class UserController extends Controller
      */
     public function userLogin(Request $request)
     {
+        $loginPasscode = config('app.login_passcode');
+
         $formFields = $request->validate([
             'login-email' => 'required',
             'login-password' => 'required',
+            'login-passcode' => 'required|in:' . $loginPasscode,
+        ], [
+            'login-email.required' => 'The email field is required',
+            'login-password.required' => 'The password field is required.',
+            'login-passcode.in' => self::PASSCODE_INCORRECT,
+            'login-passcode.required' => self::PASSCODE_REQUIRED,
         ]);
+
+        unset($formFields['passcode']);
 
         $credentials = [
             'email' => $formFields['login-email'],
@@ -38,6 +51,10 @@ class UserController extends Controller
 
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();
+        } else {
+            return back()->withErrors([
+                'login-password' => 'These credentials do not match our records.'
+            ]);
         }
 
         return redirect('/login');
@@ -62,11 +79,19 @@ class UserController extends Controller
      */
     public function register(Request $request)
     {
+        $registerPassword = config('app.register_passcode');
+
         $formFields = $request->validate([
             'name' => 'required|min:3|max:10',
             'email' => 'required|email|' . Rule::unique('users', 'email'),
             'password' => 'required|min:6|max:15',
+            'passcode' => 'required|in:' . $registerPassword,
+        ], [
+            'passcode.in' => self::PASSCODE_INCORRECT,
+            'passcode.required' => self::PASSCODE_REQUIRED,
         ]);
+
+        unset($formFields['passcode']);
 
         $formFields['password'] = bcrypt($formFields['password']);
         $user = User::create($formFields);

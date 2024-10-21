@@ -13,6 +13,6 @@
     },
     "dependencies": {
         "aos": "^2.3.4",
-        "swiper": "^11.1.14"
+        "jquery": "^3.7.1"
     }
 }

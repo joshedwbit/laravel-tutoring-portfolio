@@ -54,6 +54,9 @@ class ReviewsController extends Controller
             'rating' => 'required|in:1,2,3,4,5',
             'comments' => 'required|min:20|max:1200',
             'passcode' => 'required|in:' . $reviewPasscode,
+        ], [
+            'passcode.in' => 'The passcode you entered is incorrect. If you have not been given one please contact the site owner.',
+            'passcode.required' => 'Please enter the passcode. If you have not been given one please contact the site owner.',
         ]);
 
         unset($formFields['passcode']);
