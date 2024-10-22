@@ -1,11 +1,16 @@
+@use "../theme/variables";
+@use "../tools/mixins/border-radius";
+@use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
 .field {
     label {
-        @include font(18px, 20px, normal, 600);
+        @include font.font(18px, 20px, normal, 600);
     }
 
     .error {
-        border: 1px solid $c-red;
-        background-color: $c-pink;
+        border: 1px solid variables.$c-red;
+        background-color: variables.$c-pink;
         width: fit-content;
         padding: 10px;
         border-radius: 0.5rem;
@@ -28,13 +33,13 @@ textarea {
         padding: 0 10px;
         cursor: pointer;
 
-        @include breakpoint(nav) {
+        @include breakpoints.breakpoint(nav) {
             width: 100%;
         }
     }
 
     select {
-        @include br(0.5rem);
+        @include border-radius.br(0.5rem);
     }
 
     textarea {
@@ -43,11 +48,11 @@ textarea {
 }
 
 .field--textarea {
-    font-family: $font-base;
+    font-family: variables.$font-base;
     padding: 15px;
 
     &::placeholder {
-        font-family: $font-alt;
+        font-family: variables.$font-alt;
         font-style: italic;
     }
 }

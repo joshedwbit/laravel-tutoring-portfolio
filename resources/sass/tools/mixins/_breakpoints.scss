@@ -1,18 +1,20 @@
+@use "../../theme/variables";
+
 @mixin breakpoint($breakpoint) {
     @if $breakpoint == 'nav' {
-      @media (max-width: $bp-nav) {
+      @media (max-width: variables.$bp-nav) {
         @content;
       }
     } @else if $breakpoint == 'tablet' {
-      @media (max-width: $bp-tablet) {
+      @media (max-width: variables.$bp-tablet) {
         @content;
       }
     } @else if $breakpoint == 'mobile' {
-      @media (max-width: $bp-mobile) {
+      @media (max-width: variables.$bp-mobile) {
         @content;
       }
     } @else if $breakpoint == 'tiny' {
-      @media (max-width: $bp-tiny) {
+      @media (max-width: variables.$bp-tiny) {
         @content;
       }
     } @else {

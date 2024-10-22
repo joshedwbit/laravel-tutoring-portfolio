@@ -1,14 +1,18 @@
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
 .header__menu {
     cursor: pointer;
-    background-color: $bg-primary;
-    border: 3px solid $bg-secondary;
+    background-color: variables.$bg-primary;
+    border: 3px solid variables.$bg-secondary;
     margin: 10px 0;
 
     &:hover {
-        box-shadow: 0px 0px 20px 3px $bg-secondary;
+        box-shadow: 0px 0px 20px 3px variables.$bg-secondary;
     }
 
-    @include breakpoint(mobile){
+    @include breakpoints.breakpoint(mobile){
         margin: 0;
     }
 }
@@ -24,8 +28,8 @@
     .header__navbar {
         top: 85px;
 
-        @include breakpoint(mobile) {
-            top: 35px + $site-gutter-mobile + $content-gutter-vert-mobile;
+        @include breakpoints.breakpoint(mobile) {
+            top: 35px + variables.$site-gutter-mobile + variables.$content-gutter-vert-mobile;
         }
     }
 }
@@ -43,7 +47,7 @@
 
 .header__navbar {
     z-index: 100;
-    border: 3px solid $bg-secondary;
+    border: 3px solid variables.$bg-secondary;
     visibility: hidden;
     opacity: 0;
     display: flex;
@@ -52,12 +56,12 @@
     position: absolute;
     top: 70px;
     width:300px;
-    background-color: $bg-primary;
+    background-color: variables.$bg-primary;
     /* animation: fadeIn 0.4s; */
 
-    @include breakpoint(mobile) {
+    @include breakpoints.breakpoint(mobile) {
         width: 250px;
-        top: 20px + $site-gutter-mobile + $content-gutter-vert-mobile;
+        top: 20px + variables.$site-gutter-mobile + variables.$content-gutter-vert-mobile;
     }
 }
 
@@ -73,8 +77,8 @@
 
     &:hover {
         font-size: 1.05rem;
-        background-color: $pacific-cyan;
-        box-shadow: 0px 0px 20px 3px $bg-secondary;
+        background-color: variables.$pacific-cyan;
+        box-shadow: 0px 0px 20px 3px variables.$bg-secondary;
     }
 }
 
@@ -91,7 +95,7 @@
 }
 
 .header__navbar-item:not(:last-child) {
-    border-bottom: 3px solid $bg-secondary;
+    border-bottom: 3px solid variables.$bg-secondary;
 }
 
 
@@ -102,18 +106,18 @@
 }
 
 .header__logo-title {
-    @include font(24px, 30px, 1.5px);
-    font-family: $font-decorative, $font-base;
+    @include font.font(24px, 30px, 1.5px);
+    font-family: variables.$font-decorative, variables.$font-base;
     background-color: rgba(3, 0, 0, 0.2); /* white color with 50% opacity */
     background-blend-mode: overlay; /* blend the background color with the image */
     border: 6px solid #8E8E8E;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     text-align: center;
-    color: $text-primary;
+    color: variables.$text-primary;
     padding: 15px 20px;
 
-    @include breakpoint(mobile) {
-        @include font(16px, 24px, 1.5px);
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(16px, 24px, 1.5px);
         padding: 10px;
     }
 }

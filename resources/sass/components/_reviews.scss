@@ -1,3 +1,5 @@
+@use "../tools/mixins/breakpoints";
+
 .reviews--container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,11 +8,11 @@
     align-items: start;
     margin: 0 80px;
 
-    @include breakpoint(nav) {
+    @include breakpoints.breakpoint(nav) {
         margin: 0 30px;
     }
 
-    @include breakpoint(mobile) {
+    @include breakpoints.breakpoint(mobile) {
         grid-template-columns: 1fr 1fr;
         margin: 0px;
     }
@@ -18,7 +20,7 @@
     .page-break {
         grid-column: 1 / 4;
 
-        @include breakpoint(mobile) {
+        @include breakpoints.breakpoint(mobile) {
             grid-column: 1 / 3;
         }
     }
@@ -35,7 +37,7 @@
     text-align: left;
     grid-column: 1 / 4;
 
-    @include breakpoint(mobile) {
+    @include breakpoints.breakpoint(mobile) {
         grid-column: 1 / 3;
     }
 }

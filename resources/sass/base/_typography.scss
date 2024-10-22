@@ -1,8 +1,11 @@
+@use "../theme/variables";
+@use "../tools/mixins/font";
+
 // titles
 
 .page-title {
-    @include font(30px, 36px, 2px, 700);
-    font-family: $font-decorative, $font-base;
+    @include font.font(30px, 36px, 2px, 700);
+    font-family: variables.$font-decorative, variables.$font-base;
     animation: slide-up 1s ease;
     // Callie Chalk Font
     text-align: center;

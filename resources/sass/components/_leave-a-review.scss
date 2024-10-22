@@ -1,10 +1,12 @@
+@use "../tools/mixins/breakpoints";
+
 .leave-a-review {
 }
 
 .leave-a-review__intro {
     margin: 50px 0;
 
-    @include breakpoint(mobile) {
+    @include breakpoints.breakpoint(mobile) {
         margin: 40px 0;
     }
 }

@@ -1,4 +1,4 @@
-@import "mixins/breakpoints";
-@import 'mixins/border-radius';
-@import 'mixins/bg-image-properties';
-@import 'mixins/font'
+@use "mixins/breakpoints";
+@use 'mixins/border-radius';
+@use 'mixins/bg-image-properties';
+@use 'mixins/font'

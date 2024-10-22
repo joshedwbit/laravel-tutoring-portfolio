@@ -1,3 +1,6 @@
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+
 // body,html,main,header,footer
 
 // html {
@@ -16,11 +19,11 @@
 
 
 html {
-    font-family: $font-base;
+    font-family: variables.$font-base;
 }
 
 body {
-    margin: $site-gutter;
+    margin: variables.$site-gutter;
     user-select: none;
     background-image: url("/public/images/jpg/mathBg.jpg");
     background-color: rgba(3, 0, 0, 0.7); /* white color with 50% opacity */
@@ -29,8 +32,8 @@ body {
     // background-size: contain;
     background-size: auto;
 
-    @include breakpoint(mobile) {
-        margin: $site-gutter-mobile;
+    @include breakpoints.breakpoint(mobile) {
+        margin: variables.$site-gutter-mobile;
     }
 }
 
@@ -47,18 +50,18 @@ header {
 }
 
 main {
-    margin: $content-gutter-vert 0;
-    padding: $content-padding;
-    background-color: $bg-primary;
-    border: 6px solid $bg-secondary;
+    margin: variables.$content-gutter-vert 0;
+    padding: variables.$content-padding;
+    background-color: variables.$bg-primary;
+    border: 6px solid variables.$bg-secondary;
 
     &:hover {
-        box-shadow: 0px 0px 20px 2px $bg-secondary;
+        box-shadow: 0px 0px 20px 2px variables.$bg-secondary;
     }
 
-    @include breakpoint(mobile) {
-        padding: $content-padding-mobile;
-        margin: $content-gutter-vert-mobile 0;
+    @include breakpoints.breakpoint(mobile) {
+        padding: variables.$content-padding-mobile;
+        margin: variables.$content-gutter-vert-mobile 0;
     }
 }
 

@@ -1,10 +1,15 @@
+@use "../theme/variables";
+@use "../tools/mixins/bg-image-properties";
+@use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
 .contact {
     display: flex;
     flex-direction: row;
-    border: 6px solid $bg-secondary;
+    border: 6px solid variables.$bg-secondary;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    @include breakpoint(nav) {
+    @include breakpoints.breakpoint(nav) {
         flex-direction: column;
         align-items: center;
     }
@@ -15,7 +20,7 @@
     flex: 1 0 auto;
     height: 400px;
 
-    @include breakpoint(nav) {
+    @include breakpoints.breakpoint(nav) {
         width: 100%;
     }
 
@@ -29,7 +34,7 @@
 .contact__item--linkedin,
 .contact__item--email,
 .contact__item--whatsapp {
-    @include bg-image-properties;
+    @include bg-image-properties.bg-image-properties;
 
     &::before {
         content: "";
@@ -42,7 +47,7 @@
         opacity: 0;
         transition: opacity 0.3s;
 
-        @include breakpoint(tablet) {
+        @include breakpoints.breakpoint(tablet) {
             transition: opacity 0.5s;
         }
     }
@@ -66,27 +71,27 @@
 
 
 .contact__item__text {
-    @include font(16px, 24px, 0.5px, 600);
+    @include font.font(16px, 24px, 0.5px, 600);
     opacity: 0;
     text-align: center;
-    color: $text-primary;
+    color: variables.$text-primary;
     transition: opacity 0.8s ease;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: $pacific-cyan;
+    background-color: variables.$pacific-cyan;
     padding: 20px;
 
-    @include breakpoint(tablet) {
+    @include breakpoints.breakpoint(tablet) {
         transition: opacity 0.1s ease;
     }
 
     a {
-        color: $text-greyed;
+        color: variables.$text-greyed;
     }
 
-    @include breakpoint(tiny) {
-        @include font(14px, 18px, 0.5px, 500);
+    @include breakpoints.breakpoint(tiny) {
+        @include font.font(14px, 18px, 0.5px, 500);
     }
 }

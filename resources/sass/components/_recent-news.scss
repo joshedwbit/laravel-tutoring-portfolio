@@ -1,9 +1,13 @@
+@use "sass:color";
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+
 .recent-news__container {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 
-    @include breakpoint(nav) {
+    @include breakpoints.breakpoint(nav) {
         display: flex;
         flex-direction: column;
     }
@@ -19,8 +23,8 @@
         letter-spacing: 0.1em;
         margin-bottom: 10px;
         cursor: pointer;
-        border: 3px solid adjust-hue($bg-secondary, -50deg);
-        background-color: $pacific-cyan;
+        border: 3px solid color.adjust(variables.$bg-secondary, $hue: -50deg);
+        background-color: variables.$pacific-cyan;
 
         img {
             width: 10px;
@@ -28,7 +32,7 @@
         }
 
         &:hover {
-            background-color: $menu-primary;
+            background-color: variables.$menu-primary;
         }
     }
 

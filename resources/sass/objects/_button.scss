@@ -1,3 +1,6 @@
+@use "../theme/variables";
+@use "../tools/mixins/border-radius";
+
 button {
     cursor: pointer;
 }
@@ -5,7 +8,7 @@ button {
 button.submit {
     margin: 10px 0;
     padding: 16px 32px;
-    @include br();
+    @include border-radius.br();
     font-weight: bold;
-    border: 1px solid $c-grey;
+    border: 1px solid variables.$c-grey;
 }

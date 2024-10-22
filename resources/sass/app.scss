@@ -1,31 +1,31 @@
 // themes
-@import "theme/variables";
-@import "theme/fonts";
-@import "theme/global-classes";
+@use "theme/variables";
+@use "theme/fonts";
+@use "theme/global-classes";
 
 // tools
-@import "tools/mixins";
+@use "tools/mixins";
 
 // base
-@import "base/band";
-@import "base/document";
-@import "base/typography";
+@use "base/band";
+@use "base/document";
+@use "base/typography";
 
 // layout
-@import "layout/header";
-@import "layout/footer";
+@use "layout/header";
+@use "layout/footer";
 
 // objects
-@import "objects/button";
-@import "objects/fields";
+@use "objects/button";
+@use "objects/fields";
 
 // components
-@import "components/aboutpage";
-@import "components/homepage";
-@import "components/recent-news";
-@import "components/leave-a-review";
-@import "components/reviews";
-@import "components/resources";
+@use "components/aboutpage";
+@use "components/homepage";
+@use "components/recent-news";
+@use "components/leave-a-review";
+@use "components/reviews";
+@use "components/resources";
 
 // plugins
-@import "plugins/plugins.scss"
+@use "plugins/plugins.scss"
