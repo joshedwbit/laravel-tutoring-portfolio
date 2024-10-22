@@ -65,6 +65,10 @@
         width: 100%;
         gap: 15px;
     }
+
+    iframe {
+        max-height: 500px;
+    }
 }
 
 .recent-news__wrapper-container {
