@@ -20,116 +20,116 @@ $isLoggedIn = Auth::check();
 
 @if ($isLoggedIn)
 <form method="POST" action="/resources-submitted">
-    @csrf
+  @csrf
 
-    <div class="field">
-      <label for="year">Year</label>
-      <input type="text" name="year" id="year"/>
+  <div class="field">
+    <label for="year">Year</label>
+    <input type="text" name="year" id="year"/>
 
-      @error('year')
-      <p class="error">{{$message}}</p>
-      @enderror
-    </div>
+    @error('year')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
 
-    <div class="field">
-      <label for="paper_number">Paper</label>
+  <div class="field">
+    <label for="paper_number">Paper</label>
 
-      <select id="paper_number" name="paper_number">
-          <option value="" disabled selected hidden>Please select paper</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
+    <select id="paper_number" name="paper_number">
+        <option value="" disabled selected hidden>Please select paper</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+    @error('paper_number')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="field">
+    <label for="season">Season</label>
+
+    <select id="season" name="season">
+        <option value="" disabled selected hidden>Please select season</option>
+        <option value="Winter">Winter</option>
+        <option value="Summer">Summer</option>
+    </select>
+
+    @error('season')
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="field">
+      <label for="type">Type</label>
+
+      <select id="type" name="type">
+          <option value="" disabled selected hidden>Please select paper type</option>
+          <option value="1">Calculator</option>
+          <option value="0">Non-calculator</option>
       </select>
 
-      @error('paper_number')
+      @error('type')
       <p class="error">{{$message}}</p>
       @enderror
-    </div>
+  </div>
 
-    <div class="field">
-      <label for="season">Season</label>
+  <div class="field">
+      <label for="level">Level</label>
 
-      <select id="season" name="season">
-          <option value="" disabled selected hidden>Please select season</option>
-          <option value="Winter">Winter</option>
-          <option value="Summer">Summer</option>
+      <select id="level" name="level">
+          <option value="" disabled selected hidden>Please select level</option>
+          <option value="0">Foundation</option>
+          <option value="1">Higher</option>
       </select>
 
-      @error('season')
+      @error('level')
       <p class="error">{{$message}}</p>
       @enderror
-    </div>
+  </div>
 
-    <div class="field">
-        <label for="type">Type</label>
+  <div class="field">
+    <label for="question_number">Question number</label>
 
-        <select id="type" name="type">
-            <option value="" disabled selected hidden>Please select paper type</option>
-            <option value="1">Calculator</option>
-            <option value="0">Non-calculator</option>
-        </select>
+    <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1"/>
+    @error('question_number')
 
-        @error('type')
-        <p class="error">{{$message}}</p>
-        @enderror
-    </div>
+    <p class="error">{{$message}}</p>
+    @enderror
+  </div>
 
-    <div class="field">
-        <label for="level">Level</label>
+  <div class="field">
+      <label for="topic">Topic</label>
 
-        <select id="level" name="level">
-            <option value="" disabled selected hidden>Please select level</option>
-            <option value="0">Foundation</option>
-            <option value="1">Higher</option>
-        </select>
+      <select id="topic" name="topic">
+        <option value="" disabled selected hidden>Please select topic</option>
+          @foreach($topics as $topic) {
+            <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
+          }
+          @endforeach
+      </select>
 
-        @error('level')
-        <p class="error">{{$message}}</p>
-        @enderror
-    </div>
-
-    <div class="field">
-      <label for="question_number">Question number</label>
-
-      <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1"/>
-      @error('question_number')
-
+      @error('topic')
       <p class="error">{{$message}}</p>
       @enderror
-    </div>
+  </div>
 
-    <div class="field">
-        <label for="topic">Topic</label>
+  <div class="field">
+      <label for="notes">Notes</label>
 
-        <select id="topic" name="topic">
-          <option value="" disabled selected hidden>Please select topic</option>
-            @foreach($topics as $topic) {
-              <option value="{{ $topic['topic'] }}">{{ $topic['topic'] }}</option>
-            }
-            @endforeach
-        </select>
+      <input type="text" name="notes" id="notes"/>
 
-        @error('topic')
-        <p class="error">{{$message}}</p>
-        @enderror
-    </div>
+      @error('notes')
+      <p class="error">{{$message}}</p>
+      @enderror
+  </div>
 
-    <div class="field">
-        <label for="notes">Notes</label>
-
-        <input type="text" name="notes" id="notes"/>
-
-        @error('notes')
-        <p class="error">{{$message}}</p>
-        @enderror
-    </div>
-
-    <div>
-      <button type="submit">
-        Save
-      </button>
-    </div>
-  </form>
+  <div>
+    <button type="submit">
+      Save
+    </button>
+  </div>
+</form>
 
 <div class="page-break"></div>
 
@@ -234,65 +234,65 @@ $isLoggedIn = Auth::check();
 <div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}</div>
 
 <section class="resources--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
-    <h4 class="resources__header">Year</h4>
-    <h4 class="resources__header">Paper</h4>
-    <h4 class="resources__header">Season</h4>
-    <h4 class="resources__header">Type</h4>
-    <h4 class="resources__header">Level</h4>
-    <h4 class="resources__header">Question</h4>
-    <h4 class="resources__header">Topic(s)</h4>
-    <h4 class="resources__header">Notes</h4>
+  <h4 class="resources__header">Year</h4>
+  <h4 class="resources__header">Paper</h4>
+  <h4 class="resources__header">Season</h4>
+  <h4 class="resources__header">Type</h4>
+  <h4 class="resources__header">Level</h4>
+  <h4 class="resources__header">Question</h4>
+  <h4 class="resources__header">Topic(s)</h4>
+  <h4 class="resources__header">Notes</h4>
+  @if ($isLoggedIn)
+  <h4 class="resources__header"></h4>
+  <h4 class="resources__header"></h4>
+  @endif
+
+  @foreach ($papers as $paper)
+    <div>
+        {{ $paper['year'] }}
+    </div>
+
+    <div>
+        {{ $paper['paper_number'] }}
+    </div>
+
+    <div>
+        {{ $paper['season'] }}
+    </div>
+
+    <div>
+        {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
+    </div>
+
+    <div>
+        {{ $paper['higher'] ? 'higher' : 'foundation' }}
+    </div>
+
+    <div>
+        {{ $paper['question_number'] }}
+    </div>
+
+    <div>
+        {{ $paper['topic'] }}
+    </div>
+
+    <div>
+        {{ $paper['notes'] }}
+    </div>
+
     @if ($isLoggedIn)
-    <h4 class="resources__header"></h4>
-    <h4 class="resources__header"></h4>
+    <div>
+      <a href="/edit-resource/{{ $paper->id }}">Edit</a>
+    </div>
+
+    <form action="/delete-resource/{{ $paper->id }}" method="POST">
+      @csrf
+      @method('DELETE')
+      <button>Delete</button>
+    </form>
     @endif
+  @endforeach
 
-    @foreach ($papers as $paper)
-        <div>
-            {{ $paper['year'] }}
-        </div>
-
-        <div>
-            {{ $paper['paper_number'] }}
-        </div>
-
-        <div>
-            {{ $paper['season'] }}
-        </div>
-
-        <div>
-            {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
-        </div>
-
-        <div>
-            {{ $paper['higher'] ? 'higher' : 'foundation' }}
-        </div>
-
-        <div>
-            {{ $paper['question_number'] }}
-        </div>
-
-        <div>
-            {{ $paper['topic'] }}
-        </div>
-
-        <div>
-            {{ $paper['notes'] }}
-        </div>
-
-        @if ($isLoggedIn)
-        <div>
-          <a href="/edit-resource/{{ $paper->id }}">Edit</a>
-        </div>
-
-        <form action="/delete-resource/{{ $paper->id }}" method="POST">
-          @csrf
-          @method('DELETE')
-          <button>Delete</button>
-        </form>
-        @endif
-    @endforeach
-
-    </section>
+</section>
 
 @endsection
