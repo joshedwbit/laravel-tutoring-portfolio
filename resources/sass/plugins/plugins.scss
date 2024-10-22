@@ -1,10 +1,10 @@
 @use "../theme/variables";
 
 // AOS
-@import "aos/dist/aos.css";
+@use "aos/dist/aos.css";
 
 // Swiper
-@import 'swiper/swiper-bundle.css';
+@use 'swiper/swiper-bundle.css';
 
 .feedback-success-carousel--container {
     padding: 10px;
