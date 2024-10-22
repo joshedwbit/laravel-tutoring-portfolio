@@ -2,7 +2,12 @@
 @use "../theme/variables";
 @use "../tools/mixins/breakpoints";
 
-.recent-news__container {
+.recent-news__content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.recent-news__button-container {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -10,6 +15,12 @@
     @include breakpoints.breakpoint(nav) {
         display: flex;
         flex-direction: column;
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -40,10 +51,15 @@
         transform: rotate(180deg);
 
     }
+
+    @include breakpoints.breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .recent-news__wrapper {
     display: none;
+    width: 100%;
 
     a {
         color: black;
@@ -54,6 +70,10 @@
         width: 100%;
         gap: 15px;
     }
+}
+
+.recent-news__wrapper-container {
+    margin: 0 auto;
 }
 
 .dropdown-content--active {
