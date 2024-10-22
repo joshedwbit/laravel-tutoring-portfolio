@@ -1,4 +1,5 @@
 {
+    "name": "laravel-tutoring-portfolio",
     "private": true,
     "type": "module",
     "scripts": {
