@@ -33,13 +33,13 @@
 
     <div class="recent-news__wrapper-container">
         <div class="recent-news__wrapper js-wrapper-edexcel">
-            <a class="twitter-timeline" data-height="600" data-theme="dark" href="{{ config('globals.twitter-api.edexcel') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-height="600" data-theme="dark" data-chrome="noheader noborders noscrollbar" href="{{ config('globals.twitter-api.edexcel') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <div class="recent-news__wrapper js-wrapper-ocr">
-            <a class="twitter-timeline" data-height="600" data-theme="dark" href="{{ config('globals.twitter-api.ocr') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-height="600" data-theme="dark" data-chrome="noheader noborders noscrollbar" href="{{ config('globals.twitter-api.ocr') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <div class="recent-news__wrapper js-wrapper-aqa">
-            <a class="twitter-timeline" data-height="600" data-theme="dark" href="{{ config('globals.twitter-api.aqa') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-height="600" data-theme="dark" data-chrome="noheader noborders noscrollbar" href="{{ config('globals.twitter-api.aqa') }}">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
 </section>
