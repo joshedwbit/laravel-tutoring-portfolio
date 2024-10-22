@@ -5,6 +5,7 @@
 
 @section('scripts')
   @vite('resources/js/toggle-filters.js')
+  @vite('resources/js/update-resources-table.js')
 @endsection
 
 @section('content')
