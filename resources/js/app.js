@@ -29,3 +29,11 @@ AOS.init({
 });
 
 navDropdown();
+
+fetch('https://api.unsplash.com/photos/random?client_id=K7eFADKP4CeSbBMdw6LlzxNlJcRgYEq1nPc45XLRtIg')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    document.querySelector('#unsplash-image').src= data.urls.regular;
+  })
+  .catch(error => console.log('Error:', error));
