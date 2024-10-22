@@ -19,7 +19,7 @@
         letter-spacing: 0.1em;
         margin-bottom: 10px;
         cursor: pointer;
-        border: 3px solid adjust-hue($bg-secondary, $degrees: -50);
+        border: 3px solid adjust-hue($bg-secondary, -50deg);
         background-color: $pacific-cyan;
 
         img {
