@@ -14,11 +14,6 @@
 
     @include breakpoints.breakpoint(nav) {
         display: flex;
-        flex-direction: column;
-    }
-
-    @include breakpoints.breakpoint(mobile) {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -52,7 +47,7 @@
 
     }
 
-    @include breakpoints.breakpoint(mobile) {
+    @include breakpoints.breakpoint(nav) {
         width: 100%;
     }
 }
