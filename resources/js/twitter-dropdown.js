@@ -37,10 +37,10 @@ function twitterDropdown() {
     })
 };
 
-function activateTwitterFeed(link, arrow, button) {
-    link.classList.toggle('dropdown-content--active');
-    arrow.classList.toggle('arrow-icon--active');
-    button.classList.add('twitter-feed--active')
+function activateTwitterFeed(feedLink, feedArrow, feedButton) {
+    feedLink.classList.toggle('dropdown-content--active');
+    feedArrow.classList.toggle('arrow-icon--active');
+    feedButton.classList.add('twitter-feed--active')
 }
 
 function isButtonActive(element) {
