@@ -15,17 +15,55 @@ function twitterDropdown() {
 
 
     edexcelButton.addEventListener('click', function(e) {
-        edexcelLink.classList.toggle('dropdown-content--active')
-        edexcelButtonArrow.classList.toggle('arrow-icon--active');
+        if (!isButtonActive(e.target)) {
+            clearTwitterContent();
+        }
+        activateTwitterFeed(edexcelLink, edexcelButtonArrow, edexcelButton)
     });
 
     ocrButton.addEventListener('click', function(e) {
-        ocrLink.classList.toggle('dropdown-content--active')
-        ocrButtonArrow.classList.toggle('arrow-icon--active');
+        if (!isButtonActive(e.target)) {
+            clearTwitterContent();
+        }
+        activateTwitterFeed(ocrLink, ocrButtonArrow, ocrButton);
     });
 
     aqaButton.addEventListener('click', function(e) {
-        aqaLink.classList.toggle('dropdown-content--active')
-        aqaButtonArrow.classList.toggle('arrow-icon--active');
+        console.log(e.target)
+        if (!isButtonActive(e.target)) {
+            clearTwitterContent();
+        }
+        activateTwitterFeed(aqaLink, aqaButtonArrow, aqaButton);
     })
 };
+
+function activateTwitterFeed(feedLink, feedArrow, feedButton) {
+    feedLink.classList.toggle('dropdown-content--active');
+    feedArrow.classList.toggle('arrow-icon--active');
+    feedButton.classList.add('twitter-feed--active')
+}
+
+function isButtonActive(element) {
+    return element.classList.contains('twitter-feed--active');
+}
+
+function clearTwitterContent() {
+    let openTwitterContent = document.querySelectorAll('.dropdown-content--active');
+    let openArrowIcons = document.querySelectorAll('.arrow-icon--active');
+    let activeButtons = document.querySelectorAll('.twitter-feed--active')
+    if (openTwitterContent) {
+        openTwitterContent.forEach(function(e) {
+            e.classList.remove('dropdown-content--active')
+        })
+    }
+    if (openArrowIcons) {
+        openArrowIcons.forEach(function(e) {
+            e.classList.remove('arrow-icon--active');
+        })
+    }
+    if (activeButtons) {
+        activeButtons.forEach(function(e) {
+            e.classList.remove('twitter-feed--active')
+        })
+    }
+}
