@@ -249,48 +249,50 @@ $isLoggedIn = Auth::check();
   @endif
 
   @foreach ($papers as $paper)
-    <div>
+    <div class="resources__item resources__item--year">
         {{ $paper['year'] }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--paper">
         {{ $paper['paper_number'] }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--season">
         {{ $paper['season'] }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--calculator">
         {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--higher">
         {{ $paper['higher'] ? 'higher' : 'foundation' }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--question">
         {{ $paper['question_number'] }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--topic">
         {{ $paper['topic'] }}
     </div>
 
-    <div>
+    <div class="resources__item resources__item--notes">
         {{ $paper['notes'] }}
     </div>
 
     @if ($isLoggedIn)
-    <div>
+    <div class="resources__item resources__item--edit">
       <a href="/edit-resource/{{ $paper->id }}">Edit</a>
     </div>
 
-    <form action="/delete-resource/{{ $paper->id }}" method="POST">
-      @csrf
-      @method('DELETE')
-      <button>Delete</button>
-    </form>
+    <div class="resources__item resources__item--delete">
+      <form action="/delete-resource/{{ $paper->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button>Delete</button>
+      </form>
+    </div>
     @endif
   @endforeach
 
