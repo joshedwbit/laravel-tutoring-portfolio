@@ -35,7 +35,7 @@
       <label for="email">Email</label>
 
       <div class="field__value">
-        <input type="text" placeholder="email" name="email" id="email"/>
+        <input type="email" placeholder="email" name="email" id="email"/>
       </div>
 
       @error('email')
@@ -83,7 +83,7 @@
       <label for="login-email">Email</label>
 
       <div class="field__value">
-        <input type="text" placeholder="email" name="login-email" id="login-email"/>
+        <input type="email" placeholder="email" name="login-email" id="login-email"/>
       </div>
 
       @error('login-email')
