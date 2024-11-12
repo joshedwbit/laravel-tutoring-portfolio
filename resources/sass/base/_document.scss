@@ -18,11 +18,15 @@
 // }
 
 
-html {
+html:not(.html-v2) {
     font-family: variables.$font-base;
 }
 
-body {
+.html-v2 {
+    font-family: variables.$coolvetica;
+}
+
+body:not(.body-v2) {
     margin: variables.$site-gutter;
     user-select: none;
     background-image: url("/public/images/jpg/mathBg.jpg");
@@ -31,6 +35,16 @@ body {
     background-repeat: repeat;
     // background-size: contain;
     background-size: auto;
+
+    @include breakpoints.breakpoint(mobile) {
+        margin: variables.$site-gutter-mobile;
+    }
+}
+
+.body-v2 {
+    margin: variables.$site-gutter;
+    user-select: none;
+    background-color: variables.$bg-white;
 
     @include breakpoints.breakpoint(mobile) {
         margin: variables.$site-gutter-mobile;
