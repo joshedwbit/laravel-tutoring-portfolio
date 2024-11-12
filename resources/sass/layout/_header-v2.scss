@@ -1,0 +1,44 @@
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
+.v2header__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.v2header__nav-logo {
+    text-decoration: none;
+    color: variables.$c-black;
+}
+
+.v2header__navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.v2header__navbar-item {
+    color: variables.$c-black-fade;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: variables.$c-black;
+    }
+
+    &.active {
+        color: variables.$c-black;
+        text-decoration: underline;
+    }
+}
+
+.v2header__contact-button {
+    text-decoration: none;
+    color: variables.$c-black;
+    border: 1px solid variables.$c-grey-2;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
