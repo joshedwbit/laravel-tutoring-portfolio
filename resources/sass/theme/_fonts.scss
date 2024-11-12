@@ -11,3 +11,32 @@
     src: url('/public/fonts/djb-chalk-it-up.woff') format('woff');
     font-display: swap;
 }
+
+@font-face {
+    font-family: variables.$coolvetica-compressed;
+    src: url('/public/fonts/coolvetica-compressed-rg.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: variables.$coolvetica-condensed;
+    src: url('/public/fonts/coolvetica-condensed-rg.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: variables.$coolvetica-crammed;
+    src: url('/public/fonts/coolvetica-crammed-rg.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: variables.$coolvetica;
+    src: url('/public/fonts/coolvetica-rg.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: variables.$coolvetica-italic;
+    src: url('/public/fonts/coolvetica-rg-it.woff') format('woff');
+}
