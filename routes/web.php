@@ -47,4 +47,5 @@ Route::put('/edit-resource/{paper}', [ResourcesController::class, 'updateResourc
 Route::delete('/delete-resource/{paper}', [ResourcesController::class, 'deleteResource']);
 Route::post('/resources-filtered', [ResourcesController::class, 'filter']);
 
-Route::get('/new-home', [HomeController::class, 'newHome']);
+Route::get('/new-home', [HomeController::class, 'HomeV2']);
+// todo change /new-home to /

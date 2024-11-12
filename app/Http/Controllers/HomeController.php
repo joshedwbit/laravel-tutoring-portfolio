@@ -21,13 +21,13 @@ class HomeController extends Controller
 
 
     /**
-     * points to redesigned home page
+     * points to redesigned home page V2
      *
      * @return void
      */
-    public function newHome()
+    public function HomeV2()
     {
-        return view('new-home', [
+        return view('home-v2', [
             'pageInfo' => Home::first(),
         ]);
     }
