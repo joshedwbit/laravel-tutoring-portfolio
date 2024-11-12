@@ -18,4 +18,17 @@ class HomeController extends Controller
             'pageInfo' => Home::first(),
         ]);
     }
+
+
+    /**
+     * points to redesigned home page
+     *
+     * @return void
+     */
+    public function newHome()
+    {
+        return view('new-home', [
+            'pageInfo' => Home::first(),
+        ]);
+    }
 }
