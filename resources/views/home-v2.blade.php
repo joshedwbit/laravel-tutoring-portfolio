@@ -29,4 +29,33 @@
 
 <div class="v2homepage__subtitle v2homepage__subtitle--contact">Contact</div>
 
+<div class="v2homepage__contact">
+    <div class="v2homepage__contact-item">
+        <div class="v2homepage__contact--label v2homepage__contact--label-email">Gmail</div>
+        <div class="v2homepage__contact--value v2homepage__contact--value--email">
+            <a href="mailto:{{ config('contact.email') }}">
+                {{ config('contact.email') }}
+            </a>
+        </div>
+    </div>
+
+    <div class="v2homepage__contact-item">
+        <div class="v2homepage__contact--label v2homepage__contact--label-whatsapp">Whatsapp</div>
+        <div class="v2homepage__contact--value v2homepage__contact--value--whatsapp">
+            <a href="tel:{{ config('contact.mobile') }}">
+                {{ config('contact.mobile') }}
+            </a>
+        </div>
+    </div>
+
+    <div class="v2homepage__contact-item">
+        <div class="v2homepage__contact--label v2homepage__contact--label-linkedin">Linkedin</div>
+        <div class="v2homepage__contact--value v2homepage__contact--value--linkedin">
+            <a href="{{ config('contact.linkedin') }}" target="_blank">
+                /in/joshua-edwards
+            </a>
+        </div>
+    </div>
+</div>
+
 @endsection
