@@ -77,6 +77,12 @@
     z-index:1000;
 }
 
+.v2homepage__subtitle--contact {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
 // ****************** reviews carousel ***********************
 .v2homepage__reviews-card {
     display: grid;
@@ -97,6 +103,11 @@
 .v2homepage__reviews-card--comments {
     grid-area: comments;
     text-align: center;
+
+    a {
+        text-decoration: none;
+        color: variables.$c-black;
+    }
 }
 
 .v2homepage__reviews-card--name {

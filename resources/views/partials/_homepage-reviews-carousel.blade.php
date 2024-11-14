@@ -9,7 +9,7 @@
             <div class="swiper-slide">
                 <div class="v2homepage__reviews-card v2homepage__reviews-card--styles">
                     <div class="v2homepage__reviews-card--comments">
-                        "{{ $review['comments'] }}"
+                        "{{ substr($review['comments'], 0, 350) }}{!! strlen($review['comments']) > 350 ? '<a href="/reviews">..read more</a>' : '' !!}"
                     </div>
                     <div class="v2homepage__reviews-card--name">
                         {{ $review['name'] ?? 'none' }}

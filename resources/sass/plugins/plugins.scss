@@ -94,6 +94,12 @@
         }
     }
 
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+
     .swiper-pagination {
         top: -45px;
         left: unset;
