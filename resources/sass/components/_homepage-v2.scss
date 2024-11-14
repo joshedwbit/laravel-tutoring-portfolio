@@ -1,37 +1,66 @@
 @use "../theme/variables";
 @use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
+.main-v2 {
+    font-family: variables.$futura-cyrillic-demi;
+}
 
 .v2homepage__name {
     text-transform: uppercase;
-    font-size: 11vw;
+    // find a better way of doing this
+    font-size: clamp(4rem, 15vw - 50px, 14rem);
+    font-family: variables.$coolvetica;
     width: 100%;
 }
 
 .v2homepage__job-title {
     text-align: right;
+    text-transform: uppercase;
+    // letter-spacing: 1px;
+    @include font.font(20px, 26px, 1px, 400, variables.$c-black-fade);
+    // color: variables.$c-black-fade;
 }
 
-// .homepage__image {
-//     padding: 30px 0;
+.v2homepage__education-title {
+    @include font.font(24px, 28px, 1px, 400, variables.$c-black-fade);
+    font-family: variables.$futura-cyrillic-heavy;
+    max-width: 350px;
+}
 
-//     @include breakpoints.breakpoint(mobile) {
-//         padding: 20px 0;
-//         margin: 0;
-//     }
+.v2homepage__image {
+    margin: 0 auto;
+    // max-width: 1000px;
 
-//     img {
-//         aspect-ratio: 85 / 47;
-//         width:70%;
-//         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-//         border: 3px solid variables.$bg-secondary;
-//         transition: transform 0.5s ease;
+    img {
+        width: 100%;
+        aspect-ratio: 85 / 47;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
 
-//         &:hover {
-//             transform: scale(1.01);
-//         }
+.v2homepage__current-information {
+    @include font.font(32px, 40px, 1px, 400, variables.$c-black);
+    font-family: variables.$futura-cyrillic-bold;
+}
 
-//         @include breakpoints.breakpoint(nav) {
-//             width: 100%;
-//         }
-//     }
-// }
+.v2homepage__background-info-container {
+    display: flex;
+    justify-content: flex-end
+}
+
+.v2homepage__background-info {
+    @include font.font(20px, 26px, 1px, 400, variables.$c-black-fade);
+    max-width: 300px;
+    text-align: right;
+}
+
+.v2homepage__background-info-continue {
+    text-decoration: none;
+    @include font.font(18px, 20px, 1px, 400, variables.$c-black);
+}
+
+.v2homepage__subtitle {
+    font-family: variables.$coolvetica;
+    @include font.font(38px, 40px, 1px, 400, variables.$c-black);
+}
