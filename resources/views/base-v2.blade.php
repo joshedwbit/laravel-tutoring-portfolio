@@ -19,7 +19,7 @@
         @include('partials._navbar-v2')
     </header>
 
-    <main class="br">
+    <main class="main-v2">
         @yield('content')
     </main>
 
