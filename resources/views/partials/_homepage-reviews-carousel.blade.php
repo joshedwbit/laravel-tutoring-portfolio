@@ -11,14 +11,29 @@
                     <div class="v2homepage__reviews-card--comments">
                         "{{ substr($review['comments'], 0, 350) }}{!! strlen($review['comments']) > 350 ? '<a href="/reviews">..read more</a>' : '' !!}"
                     </div>
-                    <div class="v2homepage__reviews-card--name">
-                        {{ $review['name'] ?? 'none' }}
+                    <div class="v2homepage__reviews-card-field v2homepage__reviews-card--name">
+                        <div class="v2homepage__reviews-card--label">
+                            Name
+                        </div>
+                        <div class="v2homepage__reviews-card--value">
+                            {{ $review['name'] ?? 'none' }}
+                        </div>
                     </div>
-                    <div class="v2homepage__reviews-card--predicted">
-                        {{ $review['predicted'] }}
+                    <div class="v2homepage__reviews-card-field v2homepage__reviews-card--predicted">
+                        <div class="v2homepage__reviews-card--label">
+                            Predicted grade
+                        </div>
+                        <div class="v2homepage__reviews-card--value">
+                            {{ $review['predicted'] }}
+                        </div>
                     </div>
-                    <div class="v2homepage__reviews-card--achieved">
-                        {{ $review['achieved'] }}
+                    <div class="v2homepage__reviews-card-field v2homepage__reviews-card--achieved">
+                        <div class="v2homepage__reviews-card--label">
+                            Achieved grade
+                        </div>
+                        <div class="v2homepage__reviews-card--value">
+                            {{ $review['achieved'] }}
+                        </div>
                     </div>
                 </div>
             </div>
