@@ -15,7 +15,7 @@
     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
 </head>
 <body class="body-v2">
-    <header class="header-v2">
+    <header class="v2header">
         @include('partials._navbar-v2')
     </header>
 
@@ -23,8 +23,8 @@
         @yield('content')
     </main>
 
-    <footer>
-        @include('partials._footer')
+    <footer class="v2footer">
+        @include('partials._footer-v2')
     </footer>
 </body>
 </html>
