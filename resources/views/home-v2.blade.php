@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="v2homepage__subtitle">Reviews</div>
+<div class="v2homepage__subtitle v2homepage__subtitle--reviews">Reviews</div>
 @include('partials._homepage-reviews-carousel', ['reviews' => $reviews])
 
 

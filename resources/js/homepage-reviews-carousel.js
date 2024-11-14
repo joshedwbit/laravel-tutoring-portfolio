@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import { Navigation, Pagination } from 'swiper/modules';
 
 const swiper = new Swiper('.reviews-swiper', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: false,
     // centeredSlides: true,
     // autoHeight: true,
@@ -14,14 +14,19 @@ const swiper = new Swiper('.reviews-swiper', {
         disableOnInteraction: true,
     },
 
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
         555: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 3,
+            spaceBetween: 40,
         },
     },
 });

@@ -67,6 +67,10 @@
     @include font.font(38px, 40px, 1px, 400, variables.$c-black);
 }
 
+.v2homepage__subtitle--reviews {
+    position: absolute;
+}
+
 .v2homepage__reviews-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
