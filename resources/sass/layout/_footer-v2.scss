@@ -2,7 +2,7 @@
 @use "../tools/mixins/breakpoints";
 @use "../tools/mixins/font";
 
-.v2footer {
+.footer-v2 {
     background-color: variables.$c-black;
     margin: variables.$site-gutter * -1;
     color: variables.$c-white-2;
@@ -47,6 +47,12 @@
     flex: 1;
 }
 
+.v2footer__content-contact {
+    @include breakpoints.breakpoint(mobile) {
+        align-items: center;
+    }
+}
+
 .v2footer__socials {
     display: flex;
     flex-direction: row;
@@ -55,6 +61,16 @@
     @include breakpoints.breakpoint(mobile) {
         flex-direction: column;
         gap: 5px;
+
+        img.footer__socials--icon-email {
+            max-width: 30px;
+            max-height: 30px;
+        }
+
+        img.footer__socials--icon-whatsapp {
+            max-width: 27px;
+            max-height: 27px;
+        }
     }
 
     img {
@@ -64,6 +80,7 @@
 
 .v2footer__content-signature {
     @include font.font(26px, 30px);
+    max-width: 250px;
 
     @include breakpoints.breakpoint(mobile) {
         @include font.font(16px, 20px);
