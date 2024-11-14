@@ -21,4 +21,8 @@
     </div>
 </div>
 
+<div class="v2homepage__subtitle">Reviews</div>
+@include('partials._homepage-reviews-carousel', ['reviews' => $reviews])
+
+
 @endsection

@@ -64,3 +64,36 @@
     font-family: variables.$coolvetica;
     @include font.font(38px, 40px, 1px, 400, variables.$c-black);
 }
+
+.v2homepage__reviews-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    grid-template-areas:
+    "comments comments comments"
+    "name predicted achieved";
+}
+
+.v2homepage__reviews-card--styles {
+    @include font.font(16px, 20px, 1px, 400, variables.$c-black-fade);
+    font-family: variables.$futura-cyrillic-medium;
+    padding: 20px;
+    background-color: variables.$bg-grey;
+}
+
+.v2homepage__reviews-card--comments {
+    grid-area: comments;
+    text-align: center;
+}
+
+.v2homepage__reviews-card--name {
+    grid-area: name;
+}
+
+.v2homepage__reviews-card--predicted {
+    grid-area: predicted;
+}
+
+.v2homepage__reviews-card--achieved {
+    grid-area: achieved;
+}
