@@ -1,0 +1,28 @@
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
+.v2homepage__contact-item {
+    font-family: variables.$coolvetica;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid variables.$c-grey;
+    padding: 10px 0;
+
+    &:last-child {
+        border-bottom: 1px solid variables.$c-grey;
+    }
+}
+
+.v2homepage__contact--label {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 4rem, 6rem);
+}
+
+.v2homepage__contact--value {
+    a {
+        color: variables.$c-black-fade;
+        text-decoration: none;
+    }
+}
