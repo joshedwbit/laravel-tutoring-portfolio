@@ -40,3 +40,18 @@
     font-family: variables.$coolvetica-italic;
     src: url('/public/fonts/coolvetica-rg-it.woff') format('woff');
 }
+
+@font-face {
+    font-family: variables.$futura-cyrillic-book;
+    src: url('/public/fonts/futura-cyrillic-book.woff') format('woff');
+}
+
+@font-face {
+    font-family: variables.$futura-cyrillic-light;
+    src: url('/public/fonts/futura-cyrillic-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: variables.$futura-cyrillic-medium;
+    src: url('/public/fonts/futura-cyrillic-medium.woff') format('woff');
+}
