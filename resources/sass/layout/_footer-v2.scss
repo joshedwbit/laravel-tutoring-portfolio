@@ -91,9 +91,9 @@
     text-align: center;
     color: variables.$c-white-2-fade;
     @include font.font(10px, 18px);
-    padding-bottom: variables.$footer-gutter-h / 2;
+    padding-bottom: calc(variables.$footer-gutter-h / 2);
 
     @include breakpoints.breakpoint(mobile) {
-        padding-bottom: variables.$footer-gutter-mobile / 2;
+        padding-bottom: calc(variables.$footer-gutter-mobile / 2);
     }
 }
