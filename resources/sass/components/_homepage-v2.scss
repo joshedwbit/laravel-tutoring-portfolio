@@ -71,6 +71,13 @@
     position: absolute;
 }
 
+.v2homepage__leave-a-review {
+    position:absolute;
+    left:200px;
+    z-index:1000;
+}
+
+// ****************** reviews carousel ***********************
 .v2homepage__reviews-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

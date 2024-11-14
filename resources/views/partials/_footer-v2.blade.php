@@ -8,9 +8,9 @@
     </div>
     <div class="v2footer__content-links">
         <h4 class="v2footer__content-title">Links</h4>
-        <a href="#">News</a>
+        <a href="/recent-news">News</a>
         <a href="/resources">Resources</a>
-        <a href="/reviews">Write a review</a>
+        <a href="/leave-a-review">Write a review</a>
     </div>
     <div class="v2footer__content-contact">
         <h4 class="v2footer__content-title">

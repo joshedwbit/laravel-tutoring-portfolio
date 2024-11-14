@@ -22,6 +22,9 @@
 </div>
 
 <div class="v2homepage__subtitle v2homepage__subtitle--reviews">Reviews</div>
+    <a href="/leave-a-review" class="v2homepage__leave-a-review button button--standard">
+        Write a review
+    </a>
 @include('partials._homepage-reviews-carousel', ['reviews' => $reviews])
 
 
