@@ -17,24 +17,20 @@
     src: url('/public/fonts/coolvetica-compressed-rg.woff') format('woff');
 }
 
-
 @font-face {
     font-family: variables.$coolvetica-condensed;
     src: url('/public/fonts/coolvetica-condensed-rg.woff') format('woff');
 }
-
 
 @font-face {
     font-family: variables.$coolvetica-crammed;
     src: url('/public/fonts/coolvetica-crammed-rg.woff') format('woff');
 }
 
-
 @font-face {
     font-family: variables.$coolvetica;
     src: url('/public/fonts/coolvetica-rg.woff') format('woff');
 }
-
 
 @font-face {
     font-family: variables.$coolvetica-italic;
@@ -54,4 +50,19 @@
 @font-face {
     font-family: variables.$futura-cyrillic-medium;
     src: url('/public/fonts/futura-cyrillic-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: variables.$futura-cyrillic-bold;
+    src: url('/public/fonts/futura-cyrillic-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: variables.$futura-cyrillic-demi;
+    src: url('/public/fonts/futura-cyrillic-demi.woff') format('woff');
+}
+
+@font-face {
+    font-family: variables.$futura-cyrillic-heavy;
+    src: url('/public/fonts/futura-cyrillic-heavy.woff') format('woff');
 }
