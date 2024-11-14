@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Home;
+use App\Models\Reviews;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -25,10 +26,11 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function HomeV2()
+    public function homeV2()
     {
         return view('home-v2', [
             'pageInfo' => Home::first(),
+            'reviews' => Reviews::latest()->get(),
         ]);
     }
 }
