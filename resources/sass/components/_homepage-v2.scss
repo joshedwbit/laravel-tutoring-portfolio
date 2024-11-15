@@ -8,7 +8,7 @@
 
 .v2homepage__name {
     text-transform: uppercase;
-    // find a better way of doing this
+    // todo find a better way of doing this
     font-size: clamp(4rem, 15vw - 50px, 14rem);
     font-family: variables.$coolvetica;
     width: 100%;
