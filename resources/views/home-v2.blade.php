@@ -31,21 +31,30 @@
 
 <div class="v2homepage__contact" data-aos="fade-up" data-aos-duration="800">
     <a class="v2homepage__contact-item" href="mailto:{{ config('contact.email') }}">
-        <div class="v2homepage__contact--label v2homepage__contact--label-email">Gmail</div>
+        <div class="v2homepage__contact--label v2homepage__contact--label-email">
+            Gmail
+            <x-external-link-svg />
+        </div>
         <div class="v2homepage__contact--value v2homepage__contact--value--email">
             {{ config('contact.email') }}
         </div>
     </a>
 
     <a class="v2homepage__contact-item" href="tel:{{ config('contact.mobile') }}">
-        <div class="v2homepage__contact--label v2homepage__contact--label-whatsapp">Whatsapp</div>
+        <div class="v2homepage__contact--label v2homepage__contact--label-whatsapp">
+            Whatsapp
+            <x-external-link-svg />
+        </div>
         <div class="v2homepage__contact--value v2homepage__contact--value--whatsapp">
             {{ config('contact.mobile') }}
         </div>
     </a>
 
     <a class="v2homepage__contact-item" href="{{ config('contact.linkedin') }}" target="_blank">
-        <div class="v2homepage__contact--label v2homepage__contact--label-linkedin">Linkedin</div>
+        <div class="v2homepage__contact--label v2homepage__contact--label-linkedin">
+            Linkedin
+            <x-external-link-svg />
+        </div>
         <div class="v2homepage__contact--value v2homepage__contact--value--linkedin">
             /in/joshua-edwards
         </div>

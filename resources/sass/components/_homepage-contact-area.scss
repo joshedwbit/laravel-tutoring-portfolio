@@ -20,11 +20,6 @@
 .v2homepage__contact--label {
     text-transform: uppercase;
     font-size: clamp(2rem, 4rem, 6rem);
-
-    &::after {
-        padding-left: 5px;
-        content: "\2197"; /* Unicode escape sequence */
-    }
 }
 
 .v2homepage__contact--value {
