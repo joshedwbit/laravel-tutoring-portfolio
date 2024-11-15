@@ -3,7 +3,7 @@
 @endsection
 
 <section class="homepage-reviews-carousel--container">
-    <div class="reviews-swiper homepage-reviews-carousel" data-aos="fade-up">
+    <div class="swiper--reviews homepage-reviews-carousel" data-aos="fade-up">
         <div class="swiper-wrapper swiper-wrapper-centered">
             @foreach ($reviews as $review)
             <div class="swiper-slide">

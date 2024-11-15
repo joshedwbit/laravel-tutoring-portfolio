@@ -2,7 +2,7 @@
   @vite('resources/js/feedback-success-carousel.js')
 @endsection
 
-<div class="swiper">
+<div class="swiper swiper--success-stories">
     <div class="swiper-wrapper swiper-wrapper-centered">
         <div class="swiper-slide"><img src="{{ asset('images/png/a2-a.png') }}" alt="a2 grade a" title="a2 grade a"></div>
         <div class="swiper-slide"><img src="{{ asset('images/png/a2-b.png') }}" alt="a2 grade b" title="a2 grade b"></div>

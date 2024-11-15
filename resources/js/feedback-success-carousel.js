@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 import { Navigation, Pagination } from 'swiper/modules';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper--success-stories', {
     slidesPerView: 1,
     loop: true,
     // centeredSlides: true,
