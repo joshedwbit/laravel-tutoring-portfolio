@@ -30,32 +30,26 @@
 <div class="v2homepage__subtitle v2homepage__subtitle--contact">Contact</div>
 
 <div class="v2homepage__contact">
-    <div class="v2homepage__contact-item">
+    <a class="v2homepage__contact-item" href="mailto:{{ config('contact.email') }}">
         <div class="v2homepage__contact--label v2homepage__contact--label-email">Gmail</div>
         <div class="v2homepage__contact--value v2homepage__contact--value--email">
-            <a href="mailto:{{ config('contact.email') }}">
-                {{ config('contact.email') }}
-            </a>
+            {{ config('contact.email') }}
         </div>
-    </div>
+    </a>
 
-    <div class="v2homepage__contact-item">
+    <a class="v2homepage__contact-item" href="tel:{{ config('contact.mobile') }}">
         <div class="v2homepage__contact--label v2homepage__contact--label-whatsapp">Whatsapp</div>
         <div class="v2homepage__contact--value v2homepage__contact--value--whatsapp">
-            <a href="tel:{{ config('contact.mobile') }}">
-                {{ config('contact.mobile') }}
-            </a>
+            {{ config('contact.mobile') }}
         </div>
-    </div>
+    </a>
 
-    <div class="v2homepage__contact-item">
+    <a class="v2homepage__contact-item" href="{{ config('contact.linkedin') }}" target="_blank">
         <div class="v2homepage__contact--label v2homepage__contact--label-linkedin">Linkedin</div>
         <div class="v2homepage__contact--value v2homepage__contact--value--linkedin">
-            <a href="{{ config('contact.linkedin') }}" target="_blank">
-                /in/joshua-edwards
-            </a>
+            /in/joshua-edwards
         </div>
-    </div>
+    </a>
 </div>
 
 @endsection
