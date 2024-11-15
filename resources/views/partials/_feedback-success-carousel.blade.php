@@ -1,6 +1,6 @@
-@section('scripts')
+@push('scripts')
   @vite('resources/js/feedback-success-carousel.js')
-@endsection
+@endpush
 
 <div class="swiper swiper--success-stories">
     <div class="swiper-wrapper swiper-wrapper-centered">

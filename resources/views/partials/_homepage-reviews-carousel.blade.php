@@ -1,6 +1,6 @@
-@section('scripts')
+@push('scripts')
   @vite('resources/js/homepage-reviews-carousel.js')
-@endsection
+@endpush
 
 <section class="homepage-reviews-carousel--container">
     <div class="swiper--reviews homepage-reviews-carousel" data-aos="fade-up">
