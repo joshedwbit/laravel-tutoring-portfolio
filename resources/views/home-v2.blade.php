@@ -52,4 +52,10 @@
     </a>
 </div>
 
+<div class="v2homepage__subtitle v2homepage__subtitle--stories">Success stories</div>
+
+<div class="feedback-success-carousel--container" data-aos="fade-up">
+    @include('partials._feedback-success-carousel')
+</div>
+
 @endsection
