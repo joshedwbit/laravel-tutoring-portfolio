@@ -30,7 +30,11 @@
 
 .v2homepage__image {
     margin: 0 auto;
-    // max-width: 1000px;
+    max-width: 1450px;
+
+    @include breakpoints.breakpoint(xlarge) {
+        padding: 20px 0;
+    }
 
     img {
         width: 100%;
