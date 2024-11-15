@@ -43,6 +43,7 @@ body:not(.body-v2) {
 
 .body-v2 {
     margin: variables.$site-gutter;
+    margin-bottom: 0;
     user-select: none;
     background-color: variables.$bg-white;
 
