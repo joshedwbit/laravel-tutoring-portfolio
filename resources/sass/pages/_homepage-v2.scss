@@ -71,7 +71,8 @@
     @include font.font(38px, 40px, 1px, 400, variables.$c-black);
 }
 
-.v2homepage__subtitle--reviews {
+.v2homepage__subtitle--reviews,
+.v2homepage__subtitle--stories {
     position: absolute;
 }
 
@@ -90,8 +91,8 @@
     margin: 20px 0;
 }
 
-.v2homepage__subtitle--contact,
-.v2homepage__subtitle--stories {
-    text-align: center;
-    margin: 20px 0;
+.v2homepage__stories--container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: variables.$content-gutter-vert;
 }

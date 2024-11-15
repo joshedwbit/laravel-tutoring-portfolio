@@ -61,10 +61,11 @@
     </a>
 </div>
 
-<div class="v2homepage__subtitle v2homepage__subtitle--stories">Success stories</div>
-
-<div class="feedback-success-carousel--container" data-aos="fade-up">
-    @include('partials._feedback-success-carousel')
-</div>
+<section class="v2homepage__stories--container" data-aos="fade-up">
+    <div class="v2homepage__subtitle v2homepage__subtitle--stories">Success stories</div>
+    <div class="feedback-success-carousel--container">
+        @include('partials._feedback-success-carousel-v2')
+    </div>
+</section>
 
 @endsection

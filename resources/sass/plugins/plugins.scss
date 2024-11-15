@@ -83,15 +83,21 @@
     .main-v2 & {
         border: unset;
         padding: unset;
-        max-width: 850px;
         margin: 0 auto;
 
-        .swiper-pagination-bullet-active {
-            background: variables.$c-black;
+        .swiper {
+            padding-top: 50px;
         }
 
         .swiper-button-next,
         .swiper-button-prev {
+            top: 32px;
+            left: unset;
+            right: 1px;
+        }
+
+        .swiper-button-prev {
+            right: 45px;
         }
     }
 }
