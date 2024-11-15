@@ -1,8 +1,19 @@
 // site gutter, colors
 
 // fonts
-$font-base: 'Calibri', sans-serif;
+$font-base: 'Calibri';
 $font-decorative: 'DJB Chalk It Up';
+$coolvetica: 'Coolvetica';
+$coolvetica-compressed: 'Coolvetica Compressed Regular';
+$coolvetica-condensed: 'Coolvetica Condensed Regular';
+$coolvetica-crammed: 'Coolvetica Crammed Regular';
+$coolvetica-italic: 'Coolvetica Regular Italic';
+$futura-cyrillic-book: 'Futura Cyrillic Book';
+$futura-cyrillic-light: 'Futura Cyrillic Light';
+$futura-cyrillic-medium: 'Futura Cyrillic Medium';
+$futura-cyrillic-demi: 'Futura Cyrillic Demi';
+$futura-cyrillic-heavy: 'Futura Cyrillic Heavy';
+$futura-cyrillic-bold: 'Futura Cyrillic Bold';
 $font-decorative-secondary: 'Callie Chalk Font';
 $font-alt: 'lato', sans-serif;
 
@@ -13,8 +24,12 @@ $content-gutter-vert: 30px;
 $content-gutter-vert-mobile: 20px;
 $content-padding: 40px;
 $content-padding-mobile: 40px 20px;
+$footer-gutter-w: 60px;
+$footer-gutter-h: 30px;
+$footer-gutter-mobile: 15px;
 
 // Breakpoints
+$bp-xlarge: 1600px;
 $bp-nav: 1200px;
 $bp-tablet: 999px;
 $bp-mobile: 550px;
@@ -33,6 +48,18 @@ $c-pink: lightpink;
 $c-white: whitesmoke;
 $c-charcoal: #36454f;
 $c-catch: #BF3400;
+
+$bg-white: #f2f2f2;
+$bg-grey: #EAEAEA;
+$c-black: #111111;
+$c-black-fade: #111111BF;
+$c-grey-2: #11111180;
+$c-white-2: #FFFFFF;
+$c-white-2-fade: #D0D0D0;
+$c-charcoal-2: #333333;
+$c-grey-3: #2c2c2c;
+
+
 
 // colors
 

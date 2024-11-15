@@ -12,3 +12,11 @@ button.submit {
     font-weight: bold;
     border: 1px solid variables.$c-grey;
 }
+
+.button--standard {
+    text-decoration: none;
+    color: variables.$c-black;
+    border: 1px solid variables.$c-grey-2;
+    padding: 10px 20px;
+    border-radius: 50px;
+}

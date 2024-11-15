@@ -1,7 +1,11 @@
 @use "../../theme/variables";
 
 @mixin breakpoint($breakpoint) {
-    @if $breakpoint == 'nav' {
+    @if $breakpoint == 'xlarge' {
+      @media(min-width: variables.$bp-xlarge) {
+        @content;
+      }
+    } @else if $breakpoint == 'nav' {
       @media (max-width: variables.$bp-nav) {
         @content;
       }

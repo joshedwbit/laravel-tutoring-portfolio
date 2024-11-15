@@ -3,9 +3,9 @@
 @section('title', 'Recent News - Joshua Edwards Tutoring')
 @section('meta_description', 'Stay updated with the latest news and announcements from key examination bodies. Discover recent developments in syllabus changes, exam updates and more.')
 
-@section('scripts')
+@push('scripts')
   @vite('resources/js/twitter-dropdown.js')
-@endsection
+@endpush
 
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>

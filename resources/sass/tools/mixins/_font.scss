@@ -1,6 +1,7 @@
-@mixin font($fontSize, $lineHeight, $spacing: normal, $fontWeight: 400) {
+@mixin font($fontSize, $lineHeight, $spacing: normal, $fontWeight: 400, $color: inherit) {
     font-size: $fontSize;
     line-height: $lineHeight;
     letter-spacing: $spacing;
     font-weight: $fontWeight;
+    color: $color;
 }

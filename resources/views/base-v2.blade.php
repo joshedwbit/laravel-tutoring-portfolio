@@ -1,6 +1,5 @@
-{{-- <div class="">base template</div> --}}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html-v2">
 <head>
     <title>@yield('title', 'Joshua Edwards Tutoring')</title>
     <meta charset="UTF-8">
@@ -15,18 +14,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
 </head>
-<body>
-    <header class="js-header">
-        @include('partials._navbar')
-        @include('partials._logo')
+<body class="body-v2">
+    <header class="header-v2">
+        @include('partials._navbar-v2')
     </header>
 
-    <main class="br">
+    <main class="main-v2">
         @yield('content')
     </main>
 
-    <footer>
-        @include('partials._footer')
+    <footer class="footer-v2">
+        @include('partials._footer-v2')
     </footer>
 </body>
 </html>

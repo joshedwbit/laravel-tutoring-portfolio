@@ -18,11 +18,15 @@
 // }
 
 
-html {
+html:not(.html-v2) {
     font-family: variables.$font-base;
 }
 
-body {
+.html-v2 {
+    font-family: variables.$coolvetica;
+}
+
+body:not(.body-v2) {
     margin: variables.$site-gutter;
     user-select: none;
     background-image: url("/public/images/jpg/mathBg.jpg");
@@ -37,7 +41,18 @@ body {
     }
 }
 
-header {
+.body-v2 {
+    margin: variables.$site-gutter;
+    margin-bottom: 0;
+    user-select: none;
+    background-color: variables.$bg-white;
+
+    @include breakpoints.breakpoint(mobile) {
+        margin: variables.$site-gutter-mobile;
+    }
+}
+
+header:not(.header-v2) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,7 +64,7 @@ header {
     top: 0;
 }
 
-main {
+main:not(.main-v2) {
     margin: variables.$content-gutter-vert 0;
     padding: variables.$content-padding;
     background-color: variables.$bg-primary;
@@ -61,6 +76,14 @@ main {
 
     @include breakpoints.breakpoint(mobile) {
         padding: variables.$content-padding-mobile;
+        margin: variables.$content-gutter-vert-mobile 0;
+    }
+}
+
+.main-v2 {
+    margin: variables.$content-gutter-vert 0;
+
+    @include breakpoints.breakpoint(mobile) {
         margin: variables.$content-gutter-vert-mobile 0;
     }
 }
