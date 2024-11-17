@@ -97,5 +97,6 @@
 
     @include breakpoints.breakpoint(mobile) {
         padding-bottom: calc(variables.$footer-gutter-mobile / 2);
+        @include font.font(variables.$font-mobile--x-small, 14px);
     }
 }

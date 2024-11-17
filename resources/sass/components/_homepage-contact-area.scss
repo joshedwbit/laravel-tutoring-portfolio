@@ -28,6 +28,10 @@
     @include breakpoints.breakpoint(mobile) {
         font-size: clamp(2rem, 2rem, 3rem);
     }
+
+    @include breakpoints.breakpoint(tiny) {
+        font-size: clamp(1.5rem, 1.5rem, 3rem);
+    }
 }
 
 .v2homepage__contact--value {

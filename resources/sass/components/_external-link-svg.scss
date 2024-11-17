@@ -13,4 +13,9 @@
         width: 24px;
         height: 24px;
     }
+
+    @include breakpoints.breakpoint(tiny) {
+        width: 18px;
+        height: 18px;
+    }
 }

@@ -61,7 +61,7 @@
     margin: 20px 0;
 
     @include breakpoints.breakpoint(tablet) {
-        @include font.font(variables.$font-mobile--title, 40px);
+        @include font.font(variables.$font-mobile--title, 32px);
     }
 
     @include breakpoints.breakpoint(mobile) {
@@ -81,7 +81,7 @@
     text-align: right;
 
     @include breakpoints.breakpoint(tablet) {
-        @include font.font(variables.$font-mobile--large, 40px);
+        @include font.font(variables.$font-mobile--large, 32px);
     }
 
     @include breakpoints.breakpoint(mobile) {
