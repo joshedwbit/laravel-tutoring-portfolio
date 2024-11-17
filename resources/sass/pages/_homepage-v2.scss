@@ -47,6 +47,10 @@
     @include font.font(variables.$font--title, 40px, 1px, 400, variables.$c-black);
     font-family: variables.$futura-cyrillic-bold;
     margin: 20px 0;
+
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--title, 40px);
+    }
 }
 
 .v2homepage__background-info-container {
@@ -59,6 +63,10 @@
     @include font.font(variables.$font--large, 26px, 1px, 400, variables.$c-black-fade);
     max-width: 400px;
     text-align: right;
+
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--large, 40px);
+    }
 }
 
 .v2homepage__background-info-continue {
@@ -69,6 +77,10 @@
 .v2homepage__subtitle {
     font-family: variables.$coolvetica;
     @include font.font(variables.$font--title--large, 40px, 1px, 400, variables.$c-black);
+
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--title--large, 40px);
+    }
 }
 
 .v2homepage__subtitle--reviews,

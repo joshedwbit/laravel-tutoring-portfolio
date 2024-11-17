@@ -82,6 +82,10 @@
     @include font.font(variables.$font--x-large, 30px);
     max-width: 250px;
 
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--x-large, 20px);
+    }
+
     @include breakpoints.breakpoint(mobile) {
         @include font.font(variables.$font-mobile--med, 20px);
     }

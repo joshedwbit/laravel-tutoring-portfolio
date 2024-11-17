@@ -1,4 +1,11 @@
+@use "../tools/mixins/breakpoints";
+
 .external-link-svg {
     width: 40px;
     height: 40px;
+
+    @include breakpoints.breakpoint(tablet) {
+        width: 30px;
+        height: 30px;
+    }
 }

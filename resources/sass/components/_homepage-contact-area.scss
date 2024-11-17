@@ -20,6 +20,10 @@
 .v2homepage__contact--label {
     text-transform: uppercase;
     font-size: clamp(2rem, 4rem, 6rem);
+
+    @include breakpoints.breakpoint(tablet) {
+        font-size: clamp(2rem, 3rem, 4rem);
+    }
 }
 
 .v2homepage__contact--value {
