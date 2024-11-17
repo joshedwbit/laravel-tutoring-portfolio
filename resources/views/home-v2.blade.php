@@ -66,5 +66,4 @@
         @include('partials._feedback-success-carousel-v2')
     </div>
 </section>
-
 @endsection
