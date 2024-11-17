@@ -131,4 +131,8 @@
     max-width: 850px;
     margin: 0 auto;
     padding-top: variables.$content-gutter-vert;
+
+    @include breakpoints.breakpoint(tablet) {
+        margin: 20px auto;
+    }
 }
