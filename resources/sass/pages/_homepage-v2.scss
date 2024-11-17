@@ -17,12 +17,12 @@
 .v2homepage__job-title {
     text-align: right;
     text-transform: uppercase;
-    @include font.font(20px, 26px, 1px, 400, variables.$c-black-fade);
+    @include font.font(variables.$font--large, 26px, 1px, 400, variables.$c-black-fade);
     margin: 10px 0;
 }
 
 .v2homepage__education-title {
-    @include font.font(24px, 28px, 1px, 400, variables.$c-black-fade);
+    @include font.font(variables.$font--x-large, 28px, 1px, 400, variables.$c-black-fade);
     font-family: variables.$futura-cyrillic-heavy;
     max-width: 350px;
     margin: 20px 0;
@@ -44,7 +44,7 @@
 }
 
 .v2homepage__current-information {
-    @include font.font(32px, 40px, 1px, 400, variables.$c-black);
+    @include font.font(variables.$font--title, 40px, 1px, 400, variables.$c-black);
     font-family: variables.$futura-cyrillic-bold;
     margin: 20px 0;
 }
@@ -56,19 +56,19 @@
 }
 
 .v2homepage__background-info {
-    @include font.font(20px, 26px, 1px, 400, variables.$c-black-fade);
+    @include font.font(variables.$font--large, 26px, 1px, 400, variables.$c-black-fade);
     max-width: 400px;
     text-align: right;
 }
 
 .v2homepage__background-info-continue {
     text-decoration: none;
-    @include font.font(18px, 20px, 1px, 400, variables.$c-black);
+    @include font.font(variables.$font--med, 20px, 1px, 400, variables.$c-black);
 }
 
 .v2homepage__subtitle {
     font-family: variables.$coolvetica;
-    @include font.font(38px, 40px, 1px, 400, variables.$c-black);
+    @include font.font(variables.$font--title--large, 40px, 1px, 400, variables.$c-black);
 }
 
 .v2homepage__subtitle--reviews,

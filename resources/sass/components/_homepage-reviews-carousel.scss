@@ -12,7 +12,7 @@
 }
 
 .v2homepage__reviews-card--styles {
-    @include font.font(16px, 20px, 1px, 400, variables.$c-black-fade);
+    @include font.font(variables.$font--standard, 20px, 1px, 400, variables.$c-black-fade);
     font-family: variables.$futura-cyrillic-medium;
     padding: 20px;
     background-color: variables.$bg-grey;
