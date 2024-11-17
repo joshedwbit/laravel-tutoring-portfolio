@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/js/toggle-filters.js',
                 'resources/js/twitter-dropdown.js',
                 'resources/js/feedback-success-carousel.js',
+                'resources/js/feedback-success-carousel-v2.js',
                 'resources/js/homepage-reviews-carousel.js'
             ],
             refresh: true,

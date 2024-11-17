@@ -17,6 +17,32 @@ $futura-cyrillic-bold: 'Futura Cyrillic Bold';
 $font-decorative-secondary: 'Callie Chalk Font';
 $font-alt: 'lato', sans-serif;
 
+// font sizes
+$font--tiny: 12px;
+$font--small: 14px;
+$font--standard: 16px;
+$font--med: 18px;
+$font--large: 20px;
+$font--x-large: 24px;
+
+$font--title: 30px;
+$font--title-med: 34px;
+$font--title--large: 38px;
+
+$font-mobile--x-small: 10px;
+$font-mobile--small: 12px;
+$font-mobile--standard: 14px;
+$font-mobile--med: 16px;
+$font-mobile--large: 18px;
+$font-mobile--x-large: 20px;
+
+$font-mobile--title--small: 22px;
+$font-mobile--title--med: 24px;
+$font-mobile--title: 26px;
+$font-mobile--title--large: 34px;
+// $font-large:
+// $font-x-large:
+
 // gutters
 $site-gutter: 50px;
 $site-gutter-mobile: 20px;

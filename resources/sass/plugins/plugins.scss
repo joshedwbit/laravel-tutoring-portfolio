@@ -1,10 +1,55 @@
 @use "../theme/variables";
+@use "../tools/mixins/breakpoints";
 
 // AOS
 @use "aos/dist/aos.css";
 
 // Swiper
 @use 'swiper/swiper-bundle.css';
+
+.swiper-button-next,
+.swiper-button-prev {
+    // all that needs to be added is positioning
+    position: absolute;
+    z-index: 100;
+
+    border:  1px solid variables.$c-charcoal-2;
+    color: variables.$c-charcoal-2;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+
+    &::after {
+        transition: transform 0.2s ease;
+        font-size: 20px;
+        color: #000;
+    }
+}
+
+.swiper-button-next {
+    &::after {
+        content: '\1F852';
+    }
+
+    &:hover {
+        &::after {
+            transform: translateX(2px);
+        }
+    }
+}
+
+.swiper-button-prev {
+    &::after {
+        content: '\1F850';
+    }
+
+    &:hover {
+        &::after {
+            transform: translateX(-2px);
+        }
+    }
+}
 
 .feedback-success-carousel--container {
     padding: 10px;
@@ -34,7 +79,36 @@
             width: 100%;
             height: 100%;
         }
-      }
+    }
+
+    .main-v2 & {
+        border: unset;
+        padding: unset;
+        margin: 0 auto;
+
+        .swiper {
+            padding-top: 50px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 32px;
+            left: unset;
+            right: 1px;
+        }
+
+        .swiper-button-prev {
+            right: 45px;
+        }
+
+        @include breakpoints.breakpoint(tablet) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: 24px;
+            }
+
+        }
+    }
 }
 
 .homepage-reviews-carousel--container {
@@ -48,50 +122,13 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-        position: absolute;
         top:-30px;
         left: unset;
         right: 0;
-        z-index: 10;
-
-        border:  1px solid variables.$c-charcoal-2;
-        color: variables.$c-charcoal-2;
-        border-radius: 50%; /* Optional: make them circular */
-        padding: 5px;
-        width: 20px;
-        height: 20px;
-
-        &::after {
-            transition: transform 0.2s ease;
-            font-size: 20px;
-            color: #000;
-        }
-    }
-
-    .swiper-button-next {
-        &::after {
-            content: '\1F852';
-        }
-
-        &:hover {
-            &::after {
-                transform: translateX(2px);
-            }
-        }
     }
 
     .swiper-button-prev {
         right: 45px;
-
-        &::after {
-            content: '\1F850';
-        }
-
-        &:hover {
-            &::after {
-                transform: translateX(-2px);
-            }
-        }
     }
 
     .swiper-wrapper {
@@ -105,5 +142,27 @@
         left: unset;
         text-align: right;
         transform: translateX(-100px); /* Moves the element 10px to the left */
+    }
+
+    @include breakpoints.breakpoint(tablet) {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: -32px;
+        }
+
+        .swiper-pagination {
+            top: -48px;
+        }
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: -40px;
+        }
+
+        .swiper-pagination {
+            top: -56px;
+        }
     }
 }
