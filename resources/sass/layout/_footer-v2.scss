@@ -89,8 +89,7 @@
 
 .v2footer__credits {
     text-align: center;
-    color: variables.$c-white-2-fade;
-    @include font.font(14px, 18px);
+    @include font.font(14px, 18px, normal, 400, variables.$c-white-2-fade);
     padding-bottom: calc(variables.$footer-gutter-h / 2);
 
     @include breakpoints.breakpoint(mobile) {
