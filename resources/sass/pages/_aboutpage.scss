@@ -71,10 +71,9 @@
 
 
 .contact__item__text {
-    @include font.font(16px, 24px, 0.5px, 600);
+    @include font.font(variables.$font--standard, 24px, 0.5px, 600, variables.$text-primary);
     opacity: 0;
     text-align: center;
-    color: variables.$text-primary;
     transition: opacity 0.8s ease;
     position: absolute;
     top: 50%;
@@ -92,6 +91,6 @@
     }
 
     @include breakpoints.breakpoint(tiny) {
-        @include font.font(14px, 18px, 0.5px, 500);
+        @include font.font(variables.$font-mobile--standard, 18px, 0.5px, 500);
     }
 }

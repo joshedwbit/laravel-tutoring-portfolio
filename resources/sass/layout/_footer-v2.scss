@@ -28,7 +28,7 @@
     justify-content: space-between;
 
     @include breakpoints.breakpoint(mobile) {
-        @include font.font(12px, 14px);
+        @include font.font(variables.$font-mobile--small, 14px);
         padding: variables.$footer-gutter-mobile;
         gap: 20px;
         flex-wrap: wrap;
@@ -59,7 +59,6 @@
     gap: 10px;
 
     @include breakpoints.breakpoint(mobile) {
-        flex-direction: column;
         gap: 5px;
 
         img.footer__socials--icon-email {
@@ -79,21 +78,25 @@
 }
 
 .v2footer__content-signature {
-    @include font.font(26px, 30px);
+    @include font.font(variables.$font--x-large, 30px);
     max-width: 250px;
 
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--x-large, 20px);
+    }
+
     @include breakpoints.breakpoint(mobile) {
-        @include font.font(16px, 20px);
+        @include font.font(variables.$font-mobile--standard, 20px);
     }
 }
 
 .v2footer__credits {
     text-align: center;
-    color: variables.$c-white-2-fade;
-    @include font.font(14px, 18px);
+    @include font.font(variables.$font--small, 18px, normal, 400, variables.$c-white-2-fade);
     padding-bottom: calc(variables.$footer-gutter-h / 2);
 
     @include breakpoints.breakpoint(mobile) {
         padding-bottom: calc(variables.$footer-gutter-mobile / 2);
+        @include font.font(variables.$font-mobile--x-small, 14px);
     }
 }

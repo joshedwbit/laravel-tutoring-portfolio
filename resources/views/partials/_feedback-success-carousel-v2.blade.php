@@ -1,5 +1,5 @@
 @push('scripts')
-  @vite('resources/js/feedback-success-carousel.js')
+  @vite('resources/js/feedback-success-carousel-v2.js')
 @endpush
 
 <div class="swiper swiper--success-stories">
@@ -13,5 +13,6 @@
         <div class="swiper-slide"><img src="{{ asset('images/png/gcse-8.png') }}" alt="gcse grade 8" title="gcse grade 8"></div>
     </div>
 
-    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>

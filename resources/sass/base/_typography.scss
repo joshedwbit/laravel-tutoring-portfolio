@@ -4,7 +4,7 @@
 // titles
 
 .page-title {
-    @include font.font(30px, 36px, 2px, 700);
+    @include font.font(variables.$font--title, 36px, 2px, 700);
     font-family: variables.$font-decorative, variables.$font-base;
     animation: slide-up 1s ease;
     // Callie Chalk Font

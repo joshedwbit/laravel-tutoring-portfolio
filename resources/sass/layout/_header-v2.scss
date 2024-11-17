@@ -34,3 +34,9 @@
         text-decoration: underline;
     }
 }
+
+.v2header__contact-button {
+    @include breakpoints.breakpoint(mobile) {
+        display: none;
+    }
+}

@@ -106,18 +106,17 @@ header.header--fixed {
 }
 
 .header__logo-title {
-    @include font.font(24px, 30px, 1.5px);
+    @include font.font(variables.$font--x-large, 30px, 1.5px, 400, variables.$text-primary);
     font-family: variables.$font-decorative, variables.$font-base;
     background-color: rgba(3, 0, 0, 0.2); /* white color with 50% opacity */
     background-blend-mode: overlay; /* blend the background color with the image */
     border: 6px solid #8E8E8E;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     text-align: center;
-    color: variables.$text-primary;
     padding: 15px 20px;
 
     @include breakpoints.breakpoint(mobile) {
-        @include font.font(16px, 24px, 1.5px);
+        @include font.font(variables.$font-mobile--med, 24px, 1.5px);
         padding: 10px;
     }
 }

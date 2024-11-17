@@ -5,7 +5,7 @@
 
 .field {
     label {
-        @include font.font(18px, 20px, normal, 600);
+        @include font.font(variables.$font--med, 20px, normal, 600);
     }
 
     .error {

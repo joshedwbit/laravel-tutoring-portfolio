@@ -21,35 +21,50 @@
     </div>
 </div>
 
-<div class="v2homepage__subtitle v2homepage__subtitle--reviews">Reviews</div>
+<div class="v2homepage__subtitle v2homepage__subtitle--reviews scroll-centered" id="section--reviews">Reviews</div>
 <a href="/leave-a-review" class="v2homepage__leave-a-review button button--standard">
     Write a review
 </a>
 @include('partials._homepage-reviews-carousel', ['reviews' => $reviews])
 
-<div class="v2homepage__subtitle v2homepage__subtitle--contact">Contact</div>
-
+<div class="v2homepage__subtitle v2homepage__subtitle--contact scroll-centered" id="section--contact">Contact</div>
 <div class="v2homepage__contact" data-aos="fade-up" data-aos-duration="800">
     <a class="v2homepage__contact-item" href="mailto:{{ config('contact.email') }}">
-        <div class="v2homepage__contact--label v2homepage__contact--label-email">Gmail</div>
+        <div class="v2homepage__contact--label v2homepage__contact--label-email">
+            Gmail
+            <x-external-link-svg />
+        </div>
         <div class="v2homepage__contact--value v2homepage__contact--value--email">
             {{ config('contact.email') }}
         </div>
     </a>
 
     <a class="v2homepage__contact-item" href="tel:{{ config('contact.mobile') }}">
-        <div class="v2homepage__contact--label v2homepage__contact--label-whatsapp">Whatsapp</div>
+        <div class="v2homepage__contact--label v2homepage__contact--label-whatsapp">
+            Whatsapp
+            <x-external-link-svg />
+        </div>
         <div class="v2homepage__contact--value v2homepage__contact--value--whatsapp">
             {{ config('contact.mobile') }}
         </div>
     </a>
 
     <a class="v2homepage__contact-item" href="{{ config('contact.linkedin') }}" target="_blank">
-        <div class="v2homepage__contact--label v2homepage__contact--label-linkedin">Linkedin</div>
+        <div class="v2homepage__contact--label v2homepage__contact--label-linkedin">
+            Linkedin
+            <x-external-link-svg />
+        </div>
         <div class="v2homepage__contact--value v2homepage__contact--value--linkedin">
             /in/joshua-edwards
         </div>
     </a>
 </div>
+
+<section class="v2homepage__stories--container" data-aos="fade-up">
+    <div class="v2homepage__subtitle v2homepage__subtitle--stories">Success stories</div>
+    <div class="feedback-success-carousel--container">
+        @include('partials._feedback-success-carousel-v2')
+    </div>
+</section>
 
 @endsection

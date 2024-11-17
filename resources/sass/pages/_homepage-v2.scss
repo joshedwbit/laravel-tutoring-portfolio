@@ -1,0 +1,138 @@
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+@use "../tools/mixins/font";
+
+.main-v2 {
+    font-family: variables.$futura-cyrillic-demi;
+}
+
+.v2homepage__name {
+    text-transform: uppercase;
+    // todo find a better way of doing this
+    font-size: clamp(4rem, 15vw - 50px, 14rem);
+    font-family: variables.$coolvetica;
+    width: 100%;
+
+    @include breakpoints.breakpoint(mobile) {
+        font-size: clamp(2rem, 11vw, 4rem);
+    }
+}
+
+.v2homepage__job-title {
+    text-align: right;
+    text-transform: uppercase;
+    @include font.font(variables.$font--large, 26px, 1px, 400, variables.$c-black-fade);
+    margin: 10px 0;
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--x-large, 12px, 0.5px);
+    }
+}
+
+.v2homepage__education-title {
+    @include font.font(variables.$font--x-large, 28px, 1px, 400, variables.$c-black-fade);
+    font-family: variables.$futura-cyrillic-heavy;
+    max-width: 350px;
+    margin: 20px 0;
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--x-large, 26px, 0.5px, 400, variables.$c-black-fade);
+    }
+}
+
+.v2homepage__image {
+    margin: 0 auto;
+    max-width: 1450px;
+
+    @include breakpoints.breakpoint(xlarge) {
+        padding: 20px 0;
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 85 / 47;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
+
+.v2homepage__current-information {
+    @include font.font(variables.$font--title, 40px, 1px, 400, variables.$c-black);
+    font-family: variables.$futura-cyrillic-bold;
+    margin: 20px 0;
+
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--title, 32px);
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--x-large, 30px, 0.5px);
+    }
+}
+
+.v2homepage__background-info-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0;
+}
+
+.v2homepage__background-info {
+    @include font.font(variables.$font--large, 26px, 1px, 400, variables.$c-black-fade);
+    max-width: 400px;
+    text-align: right;
+
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--large, 32px);
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--med, 26px);
+    }
+}
+
+.v2homepage__background-info-continue {
+    text-decoration: none;
+    @include font.font(variables.$font--med, 20px, 1px, 400, variables.$c-black);
+}
+
+.v2homepage__subtitle {
+    font-family: variables.$coolvetica;
+    @include font.font(variables.$font--title--large, 40px, 1px, 400, variables.$c-black);
+
+    @include breakpoints.breakpoint(tablet) {
+        @include font.font(variables.$font-mobile--title--large, 40px);
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--title--large, 26px);
+    }
+}
+
+.v2homepage__subtitle--reviews,
+.v2homepage__subtitle--stories {
+    position: absolute;
+}
+
+.v2homepage__leave-a-review {
+    position: absolute;
+    left: 200px;
+    z-index: 1000;
+
+    @include breakpoints.breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.v2homepage__subtitle--contact {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.v2homepage__stories--container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: variables.$content-gutter-vert;
+
+    @include breakpoints.breakpoint(tablet) {
+        margin: 20px auto;
+    }
+}
