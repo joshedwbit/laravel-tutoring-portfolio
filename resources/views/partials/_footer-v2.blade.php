@@ -3,10 +3,10 @@
     <div class="v2footer__content-menu">
         <h4 class="v2footer__content-title">Menu</h4>
         <a href="/new-home">Home</a>
-        <a href="/reviews">Reviews</a>
-        <a href="/contact">Contact</a>
+        <a href="/new-home#section--reviews">Reviews</a>
+        <a href="/new-home#section--contact">Contact</a>
     </div>
-    <div class="v2footer__content-links">
+    <div class="v2footer__content-links" id="section--links">
         <h4 class="v2footer__content-title">Links</h4>
         <a href="/recent-news">News</a>
         <a href="/resources">Resources</a>

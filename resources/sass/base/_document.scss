@@ -24,6 +24,7 @@ html:not(.html-v2) {
 
 .html-v2 {
     font-family: variables.$coolvetica;
+    scroll-behavior:smooth;
 }
 
 body:not(.body-v2) {
@@ -49,6 +50,7 @@ body:not(.body-v2) {
 
     @include breakpoints.breakpoint(mobile) {
         margin: variables.$site-gutter-mobile;
+        margin-bottom: 0;
     }
 }
 
@@ -87,4 +89,3 @@ main:not(.main-v2) {
         margin: variables.$content-gutter-vert-mobile 0;
     }
 }
-
