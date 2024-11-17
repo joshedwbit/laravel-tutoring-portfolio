@@ -1,4 +1,5 @@
 @use "../theme/variables";
+@use "../tools/mixins/breakpoints";
 
 // AOS
 @use "aos/dist/aos.css";
@@ -99,6 +100,14 @@
         .swiper-button-prev {
             right: 45px;
         }
+
+        @include breakpoints.breakpoint(tablet) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: 24px;
+            }
+
+        }
     }
 }
 
@@ -133,5 +142,27 @@
         left: unset;
         text-align: right;
         transform: translateX(-100px); /* Moves the element 10px to the left */
+    }
+
+    @include breakpoints.breakpoint(tablet) {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: -32px;
+        }
+
+        .swiper-pagination {
+            top: -48px;
+        }
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: -40px;
+        }
+
+        .swiper-pagination {
+            top: -56px;
+        }
     }
 }

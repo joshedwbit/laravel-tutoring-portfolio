@@ -12,6 +12,10 @@
     font-size: clamp(4rem, 15vw - 50px, 14rem);
     font-family: variables.$coolvetica;
     width: 100%;
+
+    @include breakpoints.breakpoint(mobile) {
+        font-size: clamp(2rem, 11vw, 4rem);
+    }
 }
 
 .v2homepage__job-title {
@@ -19,6 +23,11 @@
     text-transform: uppercase;
     @include font.font(variables.$font--large, 26px, 1px, 400, variables.$c-black-fade);
     margin: 10px 0;
+
+    @include breakpoints.breakpoint(mobile) {
+    @include font.font(variables.$font--large, 12px, 0.5px, 400, variables.$c-black-fade);
+
+    }
 }
 
 .v2homepage__education-title {
@@ -26,6 +35,10 @@
     font-family: variables.$futura-cyrillic-heavy;
     max-width: 350px;
     margin: 20px 0;
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--x-large, 26px, 0.5px, 400, variables.$c-black-fade);
+    }
 }
 
 .v2homepage__image {
@@ -51,6 +64,10 @@
     @include breakpoints.breakpoint(tablet) {
         @include font.font(variables.$font-mobile--title, 40px);
     }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--x-large, 30px, 0.5px);
+    }
 }
 
 .v2homepage__background-info-container {
@@ -67,6 +84,10 @@
     @include breakpoints.breakpoint(tablet) {
         @include font.font(variables.$font-mobile--large, 40px);
     }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--med, 26px);
+    }
 }
 
 .v2homepage__background-info-continue {
@@ -80,6 +101,10 @@
 
     @include breakpoints.breakpoint(tablet) {
         @include font.font(variables.$font-mobile--title--large, 40px);
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font-mobile--title--large, 26px);
     }
 }
 

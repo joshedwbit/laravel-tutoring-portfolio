@@ -8,4 +8,9 @@
         width: 30px;
         height: 30px;
     }
+
+    @include breakpoints.breakpoint(mobile) {
+        width: 24px;
+        height: 24px;
+    }
 }
