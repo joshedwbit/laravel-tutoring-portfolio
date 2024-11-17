@@ -116,7 +116,7 @@ header.header--fixed {
     padding: 15px 20px;
 
     @include breakpoints.breakpoint(mobile) {
-        @include font.font(16px, 24px, 1.5px, 400, variables.$text-primary);
+        @include font.font(16px, 24px, 1.5px);
         padding: 10px;
     }
 }
