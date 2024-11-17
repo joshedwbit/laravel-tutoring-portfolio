@@ -21,13 +21,13 @@
     </div>
 </div>
 
-<div class="v2homepage__subtitle v2homepage__subtitle--reviews" id="section--reviews">Reviews</div>
+<div class="v2homepage__subtitle v2homepage__subtitle--reviews scroll-centered" id="section--reviews">Reviews</div>
 <a href="/leave-a-review" class="v2homepage__leave-a-review button button--standard">
     Write a review
 </a>
 @include('partials._homepage-reviews-carousel', ['reviews' => $reviews])
 
-<div class="v2homepage__subtitle v2homepage__subtitle--contact" id="section--contact">Contact</div>
+<div class="v2homepage__subtitle v2homepage__subtitle--contact scroll-centered" id="section--contact">Contact</div>
 <div class="v2homepage__contact" data-aos="fade-up" data-aos-duration="800">
     <a class="v2homepage__contact-item" href="mailto:{{ config('contact.email') }}">
         <div class="v2homepage__contact--label v2homepage__contact--label-email">

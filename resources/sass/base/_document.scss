@@ -89,3 +89,7 @@ main:not(.main-v2) {
         margin: variables.$content-gutter-vert-mobile 0;
     }
 }
+
+.scroll-centered {
+    scroll-margin-top: 10vh;
+}

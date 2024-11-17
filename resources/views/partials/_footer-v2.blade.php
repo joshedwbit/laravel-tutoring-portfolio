@@ -6,7 +6,7 @@
         <a href="/new-home#section--reviews">Reviews</a>
         <a href="/new-home#section--contact">Contact</a>
     </div>
-    <div class="v2footer__content-links" id="section--links">
+    <div class="v2footer__content-links scroll-centered" id="section--links">
         <h4 class="v2footer__content-title">Links</h4>
         <a href="/recent-news">News</a>
         <a href="/resources">Resources</a>
