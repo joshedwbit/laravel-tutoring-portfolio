@@ -11,7 +11,7 @@
         <a href="#section--links" class="v2header__navbar-item">Links</a>
     </div>
 
-    <a href="/contact" class="button v2header__contact-button button--standard">
+    <a href="#section--contact" class="button v2header__contact-button button--standard">
         Contact me
     </a>
 </nav>
