@@ -33,10 +33,11 @@ It includes a contact page, and a listing of reviews from past students.  I am c
 <li>git clone https://github.com/joshedwbit/laravel-tutoring-portfolio.git</li>
 <li>composer install</li>
 <li>npm install</li>
-<li>env file - configure db credentials</li>
+<li>env file - configure db credentials (create a new database if applicable)</li>
 <li>php artisan key:generate</li>
 <li>php artisan migrate --seed</li>
 <li>php artisan serve</li>
+<li>npm run dev</li>
 </ol>
 
 # Contributions
