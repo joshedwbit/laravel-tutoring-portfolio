@@ -91,7 +91,20 @@
 
 .v2homepage__background-info-continue {
     text-decoration: none;
+    margin: 10px 0;
     @include font.font(variables.$font--med, 20px, 1px, 400, variables.$c-black);
+
+    &::marker {
+        content: "";
+    }
+}
+
+.v2homepage__background-info-continue-item {
+    margin: 0;
+
+    &:not(:last-child) {
+        padding-bottom: 10px;
+    }
 }
 
 .v2homepage__subtitle {
