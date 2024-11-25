@@ -13,13 +13,15 @@
 </figure>
 
 <div class="v2homepage__current-information" data-aos="fade-right">I currently work as a software developer and in my free time I tutor mathematics.</div>
-<div class="v2homepage__current-information" data-aos="fade-right">Experience tutoring KS3, KS4, and university level maths, all with exceptional results.</div>
 <div class="v2homepage__background-info-container">
     <div class="v2homepage__background-info" data-aos="fade-left">
         The class of 2024/2025 will be my fifth consecutive year one on one tutoring.  My aim is to motivate students of all
          levels to work hard to achieve desired grades and beyond.<br>
          <details>
             <summary class="v2homepage__background-info-continue">Continue reading</summary>
+            <p class="v2homepage__background-info-continue-item">
+                I have experience tutoring KS3, KS4, and university level maths, all with exceptional results.
+            </p>
             <p class="v2homepage__background-info-continue-item">
                 Through my experience, I’ve found it’s rarely mathematical ability holding students back, rather a lack of confidence.
             </p>
