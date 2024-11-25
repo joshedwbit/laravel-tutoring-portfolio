@@ -93,10 +93,6 @@
     text-decoration: none;
     margin: 10px 0;
     @include font.font(variables.$font--med, 20px, 1px, 400, variables.$c-black);
-
-    &::marker {
-        content: "";
-    }
 }
 
 .v2homepage__background-info-continue-item {
