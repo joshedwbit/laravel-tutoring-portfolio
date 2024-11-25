@@ -20,6 +20,7 @@
          levels to work hard to achieve desired grades and beyond.<br>
          <details>
             <summary class="v2homepage__background-info-continue">Continue reading</summary>
+            {{-- <p class="v2homepage__background-info-continue-item">I have experience tutoring KS3, KS4, and unviersity level maths, all with exceptional results.</p> --}}
             <p class="v2homepage__background-info-continue-item">
                 Through my experience, I’ve found it’s rarely mathematical ability holding students back, rather a lack of confidence.
             </p>
@@ -74,7 +75,7 @@
 
 <section class="v2homepage__stories--container" data-aos="fade-up">
     <div class="v2homepage__subtitle v2homepage__subtitle--stories">Success stories</div>
-    <div class="feedback-success-carousel__container">
+    <div class="feedback-success-carousel--container">
         @include('partials._feedback-success-carousel-v2')
     </div>
 </section>

@@ -11,19 +11,19 @@
     "name predicted achieved";
 }
 
-.v2homepage__reviews-card-styles {
+.v2homepage__reviews-card--styles {
     @include font.font(variables.$font--standard, 20px, 1px, 400, variables.$c-black-fade);
     font-family: variables.$futura-cyrillic-medium;
     padding: 20px;
     background-color: variables.$bg-grey;
 }
 
-.v2homepage__reviews-card-comments {
+.v2homepage__reviews-card--comments {
     grid-area: comments;
     text-align: center;
     margin-bottom: 15px;
 
-    .v2homepage__reviews-card-read-more {
+    a {
         text-decoration: none;
         color: variables.$c-black;
     }
@@ -36,19 +36,19 @@
     gap: 5px;
 }
 
-.v2homepage__reviews-card-value {
+.v2homepage__reviews-card--value {
     font-family: variables.$futura-cyrillic-demi;
     color: variables.$c-black;
 }
 
-.v2homepage__reviews-card-name {
+.v2homepage__reviews-card--name {
     grid-area: name;
 }
 
-.v2homepage__reviews-card-predicted {
+.v2homepage__reviews-card--predicted {
     grid-area: predicted;
 }
 
-.v2homepage__reviews-card-achieved {
+.v2homepage__reviews-card--achieved {
     grid-area: achieved;
 }
