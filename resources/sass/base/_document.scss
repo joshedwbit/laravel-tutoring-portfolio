@@ -96,4 +96,8 @@ main:not(.main-v2) {
 
 summary {
     cursor: pointer;
+
+    &::marker {
+        content: "";
+    }
 }
