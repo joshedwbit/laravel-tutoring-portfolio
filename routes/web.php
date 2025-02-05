@@ -23,15 +23,15 @@ use App\Http\Controllers\UserController;
 //     return view('home');
 // });
 
-Route::get('/', [HomeController::class, 'home']);
-Route::get('/contact', [ContactController::class, 'contact']);
-Route::get('/recent-news', [RecentNewsController::class, 'news']);
-Route::get('/leave-a-review', [ReviewsController::class, 'leaveReview']);
+Route::get('/', [HomeController::class, 'homeV2'])->name('home');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+Route::get('/recent-news', [RecentNewsController::class, 'news'])->name('recent-news');
+Route::get('/leave-a-review', [ReviewsController::class, 'leaveReview'])->name('leave-a-review');
 
 // Reviews related routes
-Route::get('/reviews', [ReviewsController::class, 'reviews']);
-Route::post('/review-submitted', [ReviewsController::class, 'submission']);
-Route::get('/review-thanks', [ReviewsController::class, 'thanks']);
+Route::get('/reviews', [ReviewsController::class, 'reviews'])->name('reviews');
+Route::post('/review-submitted', [ReviewsController::class, 'submission'])->name('review-submitted');
+Route::get('/review-thanks', [ReviewsController::class, 'thanks'])->name('review-thanks');
 
 // User related routes
 Route::get('/login', [userController::class, 'login']);

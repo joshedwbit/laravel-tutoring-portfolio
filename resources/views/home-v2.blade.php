@@ -17,7 +17,8 @@
     <div class="v2homepage__background-info" data-aos="fade-left">
         The class of 2024/2025 will be my fifth consecutive year one on one tutoring.  My aim is to motivate students of all
          levels to work hard to achieve desired grades and beyond.<br>
-         <a href="/about" class="v2homepage__background-info-continue">Continue reading</a>
+         {{-- @todo create about page  --}}
+         {{-- <a href="/about" class="v2homepage__background-info-continue">Continue reading</a> --}}
     </div>
 </div>
 

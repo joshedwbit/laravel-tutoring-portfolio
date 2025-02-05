@@ -2,7 +2,7 @@
     <img class="header__menu-icon js-header-menu-icon" src="{{ asset('images/svg/menu.svg') }}" alt="nav-menu">
 </button>
 <nav class="header__navbar js-header-navbar br">
-    <a href="/" class="header__navbar-item">
+    <a href="{{ route('home') }}" class="header__navbar-item">
         <img class="header__navbar-item-icon" src="{{ asset('images/svg/home.svg')}}" alt="Home">
         Home
     </a>
