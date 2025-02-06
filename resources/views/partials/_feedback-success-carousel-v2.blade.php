@@ -13,6 +13,10 @@
         <div class="swiper-slide"><img src="{{ asset('images/png/gcse-8.png') }}" alt="gcse grade 8" title="gcse grade 8"></div>
     </div>
 
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next">
+      <img class="" src="{{ asset('images/svg/arrow-right.svg') }}" alt="arrow-right">
+    </div>
+    <div class="swiper-button-prev">
+      <img class="" src="{{ asset('images/svg/arrow-left.svg') }}" alt="arrow-left">
+    </div>
 </div>
