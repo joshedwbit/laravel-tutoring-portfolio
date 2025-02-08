@@ -44,4 +44,7 @@
     </div>
 </section>
 
+<section>
+    <livewire:test-run />
+</section>
 @endsection
