@@ -153,7 +153,7 @@ class ResourcesController extends Controller
         // dd($query->toSql(), $query->getBindings());
         $filteredResources = $query->get();
 
-        return view('resources', [
+        return view('resources-v2', [
             'pageInfo' => Resources::first(),
             'papers' => $filteredResources,
             'results_count' => count($filteredResources),
