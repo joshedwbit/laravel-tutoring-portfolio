@@ -32,6 +32,8 @@
                 By creating a supportive environment, I work to build their confidence, spark a genuine interest in the subject, and inspire a real desire to succeed.
             </p>
          </details>
+         {{-- @todo create about page  --}}
+         {{-- <a href="/about" class="v2homepage__background-info-continue">Continue reading</a> --}}
     </div>
 </div>
 

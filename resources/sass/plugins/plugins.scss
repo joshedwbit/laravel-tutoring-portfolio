@@ -20,33 +20,31 @@
     width: 20px;
     height: 20px;
 
-    &::after {
+    img {
         transition: transform 0.2s ease;
-        font-size: 20px;
-        color: #000;
     }
 }
 
 .swiper-button-next {
     &::after {
-        content: '\1F852';
+        content: '';
     }
 
     &:hover {
-        &::after {
-            transform: translateX(2px);
+        img {
+            transform: translateX(1px);
         }
     }
 }
 
 .swiper-button-prev {
     &::after {
-        content: '\1F850';
+        content: '';
     }
 
     &:hover {
-        &::after {
-            transform: translateX(-2px);
+        img {
+            transform: translateX(-1px);
         }
     }
 }

@@ -39,8 +39,12 @@
             </div>
             @endforeach
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next">
+            <img class="" src="{{ asset('images/svg/arrow-right.svg') }}" alt="arrow-right">
+        </div>
+        <div class="swiper-button-prev">
+            <img class="" src="{{ asset('images/svg/arrow-left.svg') }}" alt="arrow-left">
+        </div>
         <div class="swiper-pagination"></div>
     </div>
 </section>

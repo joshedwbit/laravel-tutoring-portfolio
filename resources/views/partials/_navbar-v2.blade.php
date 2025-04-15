@@ -1,5 +1,5 @@
 <nav class="v2header__nav">
-    <a href="/new-home" class="v2header__nav-logo">
+    <a href="{{ route('home')}}" class="v2header__nav-logo">
         JE
     </a>
 
