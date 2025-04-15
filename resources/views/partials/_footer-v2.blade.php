@@ -8,7 +8,7 @@
     </div>
     <div class="v2footer__content-links scroll-centered" id="section--links">
         <h4 class="v2footer__content-title">Links</h4>
-        <a href="/recent-news">News</a>
+        {{-- <a href="/recent-news">News</a> --}}
         <a href="/resources">Resources</a>
         <a href="/leave-a-review">Write a review</a>
     </div>
