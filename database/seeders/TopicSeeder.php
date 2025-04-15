@@ -16,7 +16,6 @@ class TopicSeeder extends Seeder
     public function run(): void
     {
         foreach (TopicSeeder::getTopics() as $topic) {
-            var_dump($topic);
             Topics::create([
                 'topic' => $topic
             ]);
