@@ -1,4 +1,5 @@
 @use "../tools/mixins/breakpoints";
+@use "../theme/variables";
 
 .v2resources--container {
     display: flex;
@@ -32,10 +33,51 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
 }
 
-.resources__header {
+.v2resources__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.v2resources__header {
     padding: 0 30px;
 }
 
-.resources__filters--hidden {
-    display: none;
-}
+.v2resources__sidebar-wrapper {
+    position: fixed;
+    // top: 0;
+    left: 0;
+    // height: 100vh;
+    width: 300px; // or any width
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    background: variables.$bg-white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .v2resources__sidebar {
+      padding: 40px 20px 20px;
+      position: relative;
+
+      .sidebar__close {
+        background: none;
+        border: none;
+        font-size: 1rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #555;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+
