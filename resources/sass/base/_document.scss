@@ -93,3 +93,11 @@ main:not(.main-v2) {
 .scroll-centered {
     scroll-margin-top: 10vh;
 }
+
+summary {
+    cursor: pointer;
+
+    &::marker {
+        content: "";
+    }
+}

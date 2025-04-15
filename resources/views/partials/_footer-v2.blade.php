@@ -2,9 +2,9 @@
 <div class="v2footer__content">
     <div class="v2footer__content-menu">
         <h4 class="v2footer__content-title">Menu</h4>
-        <a href="/new-home">Home</a>
-        <a href="/new-home#section--reviews">Reviews</a>
-        <a href="/new-home#section--contact">Contact</a>
+        <a href="{{ route('home') }}">Home</a>
+        <a href="{{ route('home') }}#section--reviews">Reviews</a>
+        <a href="{{ route('home') }}#section--contact">Contact</a>
     </div>
     <div class="v2footer__content-links scroll-centered" id="section--links">
         <h4 class="v2footer__content-title">Links</h4>

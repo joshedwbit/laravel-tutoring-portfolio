@@ -1,6 +1,7 @@
 import AOS from "aos";
 import { navDropdown } from "./navbar";
 import $ from 'jquery';
+import { continueReading } from "./continue-reading";
 window.$ = window.jQuery = $;
 
 const documentHeader = document.querySelector('.js-header')
@@ -29,3 +30,5 @@ AOS.init({
 });
 
 navDropdown();
+
+continueReading();

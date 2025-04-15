@@ -28,6 +28,21 @@ class ResourcesController extends Controller
     }
 
     /**
+     * points to redesigned resources page V2
+     *
+     * @return void
+     */
+    public function resourcesV2()
+    {
+        return view('resources-v2', [
+            'pageInfo' => Resources::first(),
+            'papers' => Papers::orderBy('year', 'desc')->get(),
+            'results_count' => count(Papers::all()),
+            'topics' => Topics::all(),
+        ]);
+    }
+
+    /**
      * Handles resources form submission
      *
      * @return void

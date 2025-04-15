@@ -1,0 +1,41 @@
+@use "../tools/mixins/breakpoints";
+
+.v2resources--container {
+    display: flex;
+}
+
+.v2resources-table--container {
+    div {
+        text-align: center;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr;
+    grid-template-rows: repeat(1, min-content);
+    justify-items: center;
+    align-items: start;
+    margin: 0 80px;
+    user-select: text;
+
+    @include breakpoints.breakpoint(nav) {
+        margin: 0 30px;
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        margin: 0px;
+    }
+}
+
+.resources--logged-in {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
+}
+
+.resources__header {
+    padding: 0 30px;
+}
+
+.resources__filters--hidden {
+    display: none;
+}

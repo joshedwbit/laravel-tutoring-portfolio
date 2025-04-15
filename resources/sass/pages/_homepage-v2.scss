@@ -42,16 +42,28 @@
 
 .v2homepage__image {
     margin: 0 auto;
+    padding: 40px 0;
     max-width: 1450px;
+    display: flex;
+    justify-content: center;
+
 
     @include breakpoints.breakpoint(xlarge) {
         padding: 20px 0;
     }
 
+    @include breakpoints.breakpoint(tablet) {
+        padding: 0;
+    }
+
     img {
-        width: 100%;
+        width: 75%;
         aspect-ratio: 85 / 47;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        @include breakpoints.breakpoint(tablet) {
+            width: 100%;
+        }
     }
 }
 
@@ -91,7 +103,16 @@
 
 .v2homepage__background-info-continue {
     text-decoration: none;
+    margin: 10px 0;
     @include font.font(variables.$font--med, 20px, 1px, 400, variables.$c-black);
+}
+
+.v2homepage__background-info-continue-item {
+    margin: 0;
+
+    &:not(:last-child) {
+        padding-bottom: 10px;
+    }
 }
 
 .v2homepage__subtitle {
