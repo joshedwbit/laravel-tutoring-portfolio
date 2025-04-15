@@ -5,10 +5,10 @@
 
     <div class="v2header__navbar">
         {{-- todo implement toggle js  --}}
-        <a href="/new-home" class="v2header__navbar-item active">Home</a>
-        <a href="/new-home#section--reviews" class="v2header__navbar-item">Reviews</a>
-        <a href="/new-home#section--contact" class="v2header__navbar-item">Contact</a>
-        <a href="/new-home#section--links" class="v2header__navbar-item">Links</a>
+        <a href="{{ route('home') }}" class="v2header__navbar-item active">Home</a>
+        <a href="{{ route('home') }}#section--reviews" class="v2header__navbar-item">Reviews</a>
+        <a href="{{ route('home') }}#section--contact" class="v2header__navbar-item">Contact</a>
+        <a href="{{ route('home') }}#section--links" class="v2header__navbar-item">Links</a>
     </div>
 
     <a href="#section--contact" class="button v2header__contact-button button--standard">
