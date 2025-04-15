@@ -42,16 +42,28 @@
 
 .v2homepage__image {
     margin: 0 auto;
+    padding: 40px 0;
     max-width: 1450px;
+    display: flex;
+    justify-content: center;
+
 
     @include breakpoints.breakpoint(xlarge) {
         padding: 20px 0;
     }
 
+    @include breakpoints.breakpoint(tablet) {
+        padding: 0;
+    }
+
     img {
-        width: 100%;
+        width: 75%;
         aspect-ratio: 85 / 47;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        @include breakpoints.breakpoint(tablet) {
+            width: 100%;
+        }
     }
 }
 
