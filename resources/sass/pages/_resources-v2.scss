@@ -1,5 +1,6 @@
 @use "../tools/mixins/breakpoints";
 @use "../theme/variables";
+@use "../tools/mixins/font";
 
 .v2resources--container {
     display: flex;
@@ -9,6 +10,8 @@
     span {
         text-align: center;
     }
+    @include font.font(variables.$font--standard, 20px, 0, 300, variables.$c-black-fade);
+    font-family: variables.$futura-cyrillic-medium;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
