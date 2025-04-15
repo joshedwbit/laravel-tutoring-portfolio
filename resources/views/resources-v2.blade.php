@@ -251,42 +251,42 @@ $isLoggedIn = Auth::check();
     @endif
 
     @foreach ($papers as $paper)
-        <div>
+        <span>
             {{ $paper['year'] }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['paper_number'] }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['season'] }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['higher'] ? 'higher' : 'foundation' }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['question_number'] }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['topic'] }}
-        </div>
+        </span>
 
-        <div>
+        <span>
             {{ $paper['notes'] }}
-        </div>
+        </span>
 
         @if ($isLoggedIn)
-        <div>
+        <span>
           <a href="/edit-resource/{{ $paper->id }}">Edit</a>
-        </div>
+        </span>
 
         <form action="/delete-resource/{{ $paper->id }}" method="POST">
           @csrf

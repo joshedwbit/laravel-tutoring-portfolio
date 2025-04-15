@@ -6,7 +6,7 @@
 }
 
 .v2resources-table--container {
-    div {
+    span {
         text-align: center;
     }
 
@@ -15,8 +15,9 @@
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
     align-items: start;
-    margin: 0 80px;
+    // margin: 0 80px;
     user-select: text;
+    row-gap: 10px;
 
     @include breakpoints.breakpoint(nav) {
         margin: 0 30px;
@@ -80,4 +81,3 @@
       }
     }
   }
-
