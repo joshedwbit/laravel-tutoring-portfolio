@@ -225,7 +225,7 @@ $isLoggedIn = Auth::check();
 
             </form>
 
-            <form action="/new-resources" method="GET">
+            <form action="/resources" method="GET">
                 <div>
                 <button type="submit">
                     Remove filters

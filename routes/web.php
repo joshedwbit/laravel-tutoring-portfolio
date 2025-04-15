@@ -40,7 +40,7 @@ Route::post('/logout', [UserController::class, 'logout']);
 Route::post('/user-login', [UserController::class, 'userLogin']);
 
 // Resource related routes
-Route::get('/resources', [ResourcesController::class, 'resources']);
+// Route::get('/resources', [ResourcesController::class, 'resources']);
 Route::post('/resources-submitted', [ResourcesController::class, 'submission']);
 Route::get('/edit-resource/{paper}', [ResourcesController::class, 'editResource']);
 Route::put('/edit-resource/{paper}', [ResourcesController::class, 'updateResource']);
@@ -49,4 +49,4 @@ Route::post('/resources-filtered', [ResourcesController::class, 'filter']);
 
 Route::get('/home', [HomeController::class, 'homeV2'])->name('home');
 Route::redirect('/new-home', '/home');
-Route::get('/new-resources', [ResourcesController::class, 'resourcesV2']);
+Route::get('/resources', [ResourcesController::class, 'resourcesV2'])->name('resources');
