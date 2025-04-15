@@ -9,7 +9,7 @@
 <div class="v2homepage__education-title">Maths Masters graduate from the University of Nottingham</div>
 
 <figure class="v2homepage__image">
-    <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br" loading="lazy">
+    <img src="{{ asset('images/jpg/biopic.jpeg') }}" alt="profile picture" title="Joshua Edwards Tutoring" class="br" loading="lazy" draggable="false">
 </figure>
 
 <div class="v2homepage__current-information" data-aos="fade-right">I currently work as a software developer and in my free time I tutor mathematics.</div>
