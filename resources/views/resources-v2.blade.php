@@ -16,7 +16,7 @@ $isLoggedIn = Auth::check();
 <a href="https://revisionmaths.com/gcse-maths/gcse-maths-past-papers/edexcel-gcse-maths-past-papers" target="_blank">Resources external link</a> (revisionmaths.com)
 </p>
 {{-- display number of results  --}}
-<div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}</div>
+<div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}{{ $filtered ? ' (filters applied)' : '' }}</div>
 
 <div class="v2resources--container">
     <div class="v2resources__sidebar-wrapper">
