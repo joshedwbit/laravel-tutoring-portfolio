@@ -4,7 +4,7 @@
 @section('meta_description', 'Explore a collection of official past paper questions. Easily filter by year, season, topic and more to get exam ready.')
 
 @section('content')
-<h1 class="page-title">{{ $pageInfo['title'] }}</h1>
+<h1 class="v2page-title">{{ $pageInfo['title'] }}</h1>
 
 @php
 $isLoggedIn = Auth::check();
@@ -13,7 +13,7 @@ $isLoggedIn = Auth::check();
 <button id="sidebarToggle">Toggle filters</button>
 {{-- link to papers  --}}
 <p>
-<a href="https://revisionmaths.com/gcse-maths/gcse-maths-past-papers/edexcel-gcse-maths-past-papers" target="_blank">Resources external link</a> (revisionmaths.com)
+<a href="https://www.mathsgenie.co.uk/papers.php" target="_blank">Resources external link</a> (mathsgenie.co.uk)
 </p>
 {{-- display number of results  --}}
 <div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}{{ $filtered ? ' (filters applied)' : '' }}</div>
