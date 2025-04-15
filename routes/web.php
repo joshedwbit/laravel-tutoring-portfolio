@@ -48,4 +48,5 @@ Route::delete('/delete-resource/{paper}', [ResourcesController::class, 'deleteRe
 Route::post('/resources-filtered', [ResourcesController::class, 'filter']);
 
 Route::get('/home', [HomeController::class, 'homeV2'])->name('home');
+Route::redirect('/new-home', '/home');
 Route::get('/new-resources', [ResourcesController::class, 'resourcesV2']);
