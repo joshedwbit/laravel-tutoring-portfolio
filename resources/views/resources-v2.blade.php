@@ -38,41 +38,41 @@ image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
                 @csrf
 
                 <div class="field">
-                <label for="year">Year</label>
-                <input type="text" name="year" id="year"/>
+                    <label for="year">Year</label>
+                    <input type="text" name="year" id="year"/>
 
-                @error('year')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('year')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
-                <label for="paper_number">Paper</label>
+                    <label for="paper_number">Paper</label>
 
-                <select id="paper_number" name="paper_number">
-                    <option value="" disabled selected hidden>Please select paper</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
+                    <select id="paper_number" name="paper_number">
+                        <option value="" disabled selected hidden>Please select paper</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
 
-                @error('paper_number')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('paper_number')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
-                <label for="season">Season</label>
+                    <label for="season">Season</label>
 
-                <select id="season" name="season">
-                    <option value="" disabled selected hidden>Please select season</option>
-                    <option value="Winter">Winter</option>
-                    <option value="Summer">Summer</option>
-                </select>
+                    <select id="season" name="season">
+                        <option value="" disabled selected hidden>Please select season</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Summer">Summer</option>
+                    </select>
 
-                @error('season')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('season')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
@@ -104,13 +104,13 @@ image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
                 </div>
 
                 <div class="field">
-                <label for="question_number">Question number</label>
+                    <label for="question_number">Question number</label>
 
-                <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1"/>
-                @error('question_number')
+                    <input type="number" class="field--number" min='1' max='30' name="question_number" id="question_number" step="1"/>
+                    @error('question_number')
 
-                <p class="error">{{$message}}</p>
-                @enderror
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
@@ -140,9 +140,9 @@ image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
                 </div>
 
                 <div>
-                <button type="submit">
-                    Save
-                </button>
+                    <button type="submit">
+                        Save
+                    </button>
                 </div>
             </form>
 
