@@ -18,6 +18,14 @@ $isLoggedIn = Auth::check();
 {{-- display number of results  --}}
 <div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}{{ $filtered ? ' (filters applied)' : '' }}</div>
 
+{{--
+
+folder = public/images/resources/[date]-[jun/nov]
+subfolder = [date]-[jun/nov]-[1/2/3]-high-[qs/ms]
+image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
+
+--}}
+
 <div class="v2resources--container">
     <div class="v2resources__sidebar-wrapper">
         <aside class="v2resources__sidebar">
