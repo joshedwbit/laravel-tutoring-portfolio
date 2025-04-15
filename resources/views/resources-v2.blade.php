@@ -249,6 +249,8 @@ $isLoggedIn = Auth::check();
     <h4 class="v2resources__header"></h4>
     <h4 class="v2resources__header"></h4>
     @endif
+    <h4 class="v2resources__header">Question</h4>
+    <h4 class="v2resources__header">Mark scheme</h4>
 
     @foreach ($papers as $paper)
         <span>
@@ -294,6 +296,14 @@ $isLoggedIn = Auth::check();
           <button>Delete</button>
         </form>
         @endif
+
+        <span>
+            pull question
+        </span>
+
+        <span>
+            pull ms
+        </span>
     @endforeach
 
     </section>
