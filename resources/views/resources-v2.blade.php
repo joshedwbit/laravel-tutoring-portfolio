@@ -32,14 +32,6 @@ $isLoggedIn = Auth::check();
     @endif
 </div>
 
-{{--
-
-folder = public/images/resources/[date]-[jun/nov]
-subfolder = [date]-[jun/nov]-[1/2/3]-high-[qs/ms]
-image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
-
---}}
-
 <div class="v2resources--container">
     <div class="v2resources__sidebar-wrapper">
         <aside class="v2resources__sidebar">
@@ -267,6 +259,9 @@ image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
     <h4 class="v2resources__header">Mark scheme</h4>
 
     @foreach ($papers as $paper)
+        @php
+        $data = $paper->buildPaperData();
+        @endphp
         <span>
             {{ $paper['year'] }}
         </span>
@@ -312,11 +307,11 @@ image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
         @endif
 
         <span>
-            pull question
+            <img src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}" alt="Question image" style="max-height: 200px; max-width: 100%;" />
         </span>
 
         <span>
-            pull ms
+            <img src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}" alt="Question image" style="max-height: 200px; max-width: 100%;" />
         </span>
     @endforeach
 
