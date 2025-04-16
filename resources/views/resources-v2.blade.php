@@ -310,25 +310,33 @@ $isLoggedIn = Auth::check();
         </form>
         @endif
 
-        <span class="photoswipe-image">
-            <a
-                href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
-                data-pswp-width="1000"
-                data-pswp-height="560"
-            >
-            open image
-            </a>
-        </span>
+        @if ($paper->questionExists())
+            <span class="photoswipe-image">
+                <a
+                    href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
+                    data-pswp-width="1000"
+                    data-pswp-height="560"
+                >
+                open image
+                </a>
+            </span>
+        @else
+            <span></span>
+        @endif
 
-        <span class="photoswipe-image">
-            <a
-                href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
-                data-pswp-width="1000"
-                data-pswp-height="560"
-            >
-            open image
-            </a>
-        </span>
+        @if ($paper->questionExists())
+            <span class="photoswipe-image">
+                <a
+                    href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
+                    data-pswp-width="1000"
+                    data-pswp-height="560"
+                >
+                open image
+                </a>
+            </span>
+        @else
+            <span></span>
+        @endif
     @endforeach
 
     </section>

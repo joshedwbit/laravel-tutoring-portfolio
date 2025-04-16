@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,7 +21,7 @@ class Papers extends Model
         'notes',
     ];
 
-    function buildPaperData(): array
+    public function buildPaperData(): array
     {
         $season = $this->season === 'Summer' ? 'jun' : 'nov';
         $band = $this->higher ? 'high' : 'found';
@@ -34,5 +35,19 @@ class Papers extends Model
             'question' => "{$paperBase}-qs-{$this->question_number}.JPG",
             'markScheme' => "{$paperBase}-ms-{$this->question_number}.JPG",
         ];
+    }
+
+    public function questionExists(): bool
+    {
+        $data = $this->buildPaperData();
+        $imagePath = public_path('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']);
+        return File::exists($imagePath);
+    }
+
+    public function markSchemeExists(): bool
+    {
+        $data = $this->buildPaperData();
+        $imagePath = public_path('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']);
+        return File::exists($imagePath);
     }
 }
