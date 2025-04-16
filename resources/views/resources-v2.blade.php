@@ -264,7 +264,7 @@ $isLoggedIn = Auth::check();
 
     @foreach ($papers as $paper)
         @php
-        $data = $paper->buildPaperData();
+        $paperData = $paper->buildPaperData();
         @endphp
         <span>
             {{ $paper['year'] }}
@@ -310,10 +310,10 @@ $isLoggedIn = Auth::check();
         </form>
         @endif
 
-        @if ($data['questionExists'])
+        @if ($paperData['questionExists'])
             <span class="photoswipe-image">
                 <a
-                    href="{{ $data['questionPath'] }}"
+                    href="{{ $paperData['questionPath'] }}"
                     data-pswp-width="1000"
                     data-pswp-height="560"
                 >
@@ -324,10 +324,10 @@ $isLoggedIn = Auth::check();
             <span></span>
         @endif
 
-        @if ($data['markSchemeExists'])
+        @if ($paperData['markSchemeExists'])
             <span class="photoswipe-image">
                 <a
-                    href="{{ $data['markSchemePath'] }}"
+                    href="{{ $paperData['markSchemePath'] }}"
                     data-pswp-width="1000"
                     data-pswp-height="560"
                 >
