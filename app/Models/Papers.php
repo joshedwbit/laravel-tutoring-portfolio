@@ -29,23 +29,12 @@ class Papers extends Model
         $folder = "{$this->year}-{$season}";
         $paperBase = "{$folder}-{$this->paper_number}-{$band}";
 
-        $questionSubfolder = "{$paperBase}-qs";
-        $markSchemeSubfolder ="{$paperBase}-ms";
-        $question = "{$paperBase}-qs-{$this->question_number}.JPG";
-        $markScheme = "{$paperBase}-ms-{$this->question_number}.JPG";
-
-        $questionPath = 'images/resources/' . $folder . '/' . $questionSubfolder . '/' . $question;
-        $markSchemePath = 'images/resources/' . $folder . '/' . $markSchemeSubfolder . '/' . $markScheme;
-
-        $questionImagePath = public_path($questionPath);
-        $markSchemeImagePath = public_path($markSchemePath);
-
-        $questionExists = File::exists($questionImagePath);
-        $markSchemeExists = File::exists($markSchemeImagePath);
+        $questionPath = "images/resources/{$folder}/{$paperBase}-qs/{$paperBase}-qs-{$this->question_number}.JPG";
+        $markSchemePath = "images/resources/{$folder}/{$paperBase}-ms/{$paperBase}-ms-{$this->question_number}.JPG";
 
         return [
-            'questionExists' =>  $questionExists,
-            'markSchemeExists' => $markSchemeExists,
+            'questionExists' => File::exists(public_path($questionPath)),
+            'markSchemeExists' => File::exists(public_path($markSchemePath)),
             'questionPath' => $questionPath,
             'markSchemePath' => $markSchemePath,
         ];
