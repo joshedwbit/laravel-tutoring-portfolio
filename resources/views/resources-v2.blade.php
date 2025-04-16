@@ -310,22 +310,24 @@ $isLoggedIn = Auth::check();
         </form>
         @endif
 
-        <span>
-            <img
-                src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
-                alt="Question image"
-                style="max-height: 200px; max-width: 100%;"
-                loading="lazy"
-            />
+        <span id="gallery--profile-photo">
+            <a
+                href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
+                data-pswp-width="1000"
+                data-pswp-height="560"
+            >
+            open image
+            </a>
         </span>
 
-        <span>
-            <img
-                src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
-                alt="Question image"
-                style="max-height: 200px; max-width: 100%;"
-                loading="lazy"
-            />
+        <span id="gallery--profile-photo">
+            <a
+                href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
+                data-pswp-width="1000"
+                data-pswp-height="560"
+            >
+            open image
+            </a>
         </span>
     @endforeach
 
