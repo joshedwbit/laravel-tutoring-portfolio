@@ -310,10 +310,10 @@ $isLoggedIn = Auth::check();
         </form>
         @endif
 
-        @if ($paper->questionExists())
+        @if ($data['questionExists'])
             <span class="photoswipe-image">
                 <a
-                    href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
+                    href="{{ $data['questionPath'] }}"
                     data-pswp-width="1000"
                     data-pswp-height="560"
                 >
@@ -324,10 +324,10 @@ $isLoggedIn = Auth::check();
             <span></span>
         @endif
 
-        @if ($paper->questionExists())
+        @if ($data['markSchemeExists'])
             <span class="photoswipe-image">
                 <a
-                    href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
+                    href="{{ $data['markSchemePath'] }}"
                     data-pswp-width="1000"
                     data-pswp-height="560"
                 >

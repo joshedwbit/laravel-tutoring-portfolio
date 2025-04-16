@@ -25,29 +25,29 @@ class Papers extends Model
     {
         $season = $this->season === 'Summer' ? 'jun' : 'nov';
         $band = $this->higher ? 'high' : 'found';
-        $base = "{$this->year}-{$season}";
-        $paperBase = "{$base}-{$this->paper_number}-{$band}";
+
+        $folder = "{$this->year}-{$season}";
+        $paperBase = "{$folder}-{$this->paper_number}-{$band}";
+
+        $questionSubfolder = "{$paperBase}-qs";
+        $markSchemeSubfolder ="{$paperBase}-ms";
+        $question = "{$paperBase}-qs-{$this->question_number}.JPG";
+        $markScheme = "{$paperBase}-ms-{$this->question_number}.JPG";
+
+        $questionPath = 'images/resources/' . $folder . '/' . $questionSubfolder . '/' . $question;
+        $markSchemePath = 'images/resources/' . $folder . '/' . $markSchemeSubfolder . '/' . $markScheme;
+
+        $questionImagePath = public_path($questionPath);
+        $markSchemeImagePath = public_path($markSchemePath);
+
+        $questionExists = File::exists($questionImagePath);
+        $markSchemeExists = File::exists($markSchemeImagePath);
 
         return [
-            'folder' => $base,
-            'questionSubfolder' => "{$paperBase}-qs",
-            'markSchemeSubfolder' => "{$paperBase}-ms",
-            'question' => "{$paperBase}-qs-{$this->question_number}.JPG",
-            'markScheme' => "{$paperBase}-ms-{$this->question_number}.JPG",
+            'questionExists' =>  $questionExists,
+            'markSchemeExists' => $markSchemeExists,
+            'questionPath' => $questionPath,
+            'markSchemePath' => $markSchemePath,
         ];
-    }
-
-    public function questionExists(): bool
-    {
-        $data = $this->buildPaperData();
-        $imagePath = public_path('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']);
-        return File::exists($imagePath);
-    }
-
-    public function markSchemeExists(): bool
-    {
-        $data = $this->buildPaperData();
-        $imagePath = public_path('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']);
-        return File::exists($imagePath);
     }
 }
