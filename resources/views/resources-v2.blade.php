@@ -310,7 +310,7 @@ $isLoggedIn = Auth::check();
         </form>
         @endif
 
-        <span id="gallery--profile-photo">
+        <span class="photoswipe-image">
             <a
                 href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
                 data-pswp-width="1000"
@@ -320,7 +320,7 @@ $isLoggedIn = Auth::check();
             </a>
         </span>
 
-        <span id="gallery--profile-photo">
+        <span class="photoswipe-image">
             <a
                 href="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
                 data-pswp-width="1000"

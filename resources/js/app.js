@@ -30,7 +30,7 @@ AOS.init({
 });
 
 const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery--profile-photo',
+    gallery: '.photoswipe-image',
     children: 'a',
     pswpModule: () => import('photoswipe'),
     bgOpacity: 0.8,
