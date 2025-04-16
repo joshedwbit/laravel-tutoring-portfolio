@@ -1,0 +1,10 @@
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.pagination .page-link {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+}

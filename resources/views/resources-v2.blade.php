@@ -161,7 +161,7 @@ $isLoggedIn = Auth::check();
             @endif
 
             <section class="js-filter-container">
-            <form action="/resources-filtered" method="POST" class="v2resources__filters">
+            <form action="{{ route('resources.filtered') }}" method="GET" class="v2resources__filters">
                 @csrf
 
                 <div class="field">
@@ -339,6 +339,10 @@ $isLoggedIn = Auth::check();
             @endif
         </span>
     @endforeach
+
+    <div class="pagination">
+        {{ $papers->links() }}
+    </div>
 
     </section>
 
