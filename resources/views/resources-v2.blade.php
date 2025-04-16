@@ -10,13 +10,27 @@
 $isLoggedIn = Auth::check();
 @endphp
 
-<button id="sidebarToggle">Toggle filters</button>
-{{-- link to papers  --}}
-<p>
-<a href="https://www.mathsgenie.co.uk/papers.php" target="_blank">Resources external link</a> (mathsgenie.co.uk)
-</p>
+
+{{-- link to papers - no longer needed  --}}
+{{-- <p>
+    <a href="https://www.mathsgenie.co.uk/papers.php" target="_blank">Resources external link</a> (mathsgenie.co.uk)
+</p> --}}
+
 {{-- display number of results  --}}
 <div class="">{{$results_count}} {{ $results_count == 1  ? 'result' : 'results' }}{{ $filtered ? ' (filters applied)' : '' }}</div>
+
+<div class="v2resources__filters-container">
+    <button id="sidebarToggle">Add filters</button>
+    @if ($filtered)
+        <form action="/resources" method="GET">
+            <div>
+            <button type="submit">
+                Remove filters
+            </button>
+            </div>
+        </form>
+    @endif
+</div>
 
 {{--
 
@@ -231,14 +245,6 @@ image = [year]-[jun/nov]-[1/2/3]-high-[qs/ms]-[question number].JPG
                 </button>
                 </div>
 
-            </form>
-
-            <form action="/resources" method="GET">
-                <div>
-                <button type="submit">
-                    Remove filters
-                </button>
-                </div>
             </form>
             </section>
         </aside>
