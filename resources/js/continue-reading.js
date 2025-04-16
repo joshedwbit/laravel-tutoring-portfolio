@@ -1,4 +1,6 @@
-export function continueReading() {
+continueReading();
+
+function continueReading() {
     document.addEventListener("DOMContentLoaded", function() {
         const details = document.querySelector(".js-v2homepage-details");
         const summary = details.querySelector(".js-v2homepage-summary");

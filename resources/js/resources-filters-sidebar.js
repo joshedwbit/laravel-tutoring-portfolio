@@ -1,4 +1,6 @@
-export function resourcesFilters() {
+resourcesFilters();
+
+function resourcesFilters() {
     const toggleBtn = document.getElementById('sidebarToggle');
     const closeBtn = document.getElementById('sidebarClose');
     const sidebarWrapper = document.querySelector('.v2resources__sidebar-wrapper');

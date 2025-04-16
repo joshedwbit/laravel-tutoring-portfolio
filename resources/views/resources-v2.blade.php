@@ -3,6 +3,10 @@
 @section('title', 'Resources - Joshua Edwards Tutoring')
 @section('meta_description', 'Explore a collection of official past paper questions. Easily filter by year, season, topic and more to get exam ready.')
 
+@push('scripts')
+  @vite('resources/js/resources-filters-sidebar.js')
+@endpush
+
 @section('content')
 <h1 class="v2page-title">{{ $pageInfo['title'] }}</h1>
 
