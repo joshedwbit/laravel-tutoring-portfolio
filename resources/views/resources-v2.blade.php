@@ -307,11 +307,21 @@ $isLoggedIn = Auth::check();
         @endif
 
         <span>
-            <img src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}" alt="Question image" style="max-height: 200px; max-width: 100%;" />
+            <img
+                src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['questionSubfolder'] . '/' . $data['question']) }}"
+                alt="Question image"
+                style="max-height: 200px; max-width: 100%;"
+                loading="lazy"
+            />
         </span>
 
         <span>
-            <img src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}" alt="Question image" style="max-height: 200px; max-width: 100%;" />
+            <img
+                src="{{ asset('images/resources/' . $data['folder'] . '/' . $data['markSchemeSubfolder'] . '/' . $data['markScheme']) }}"
+                alt="Question image"
+                style="max-height: 200px; max-width: 100%;"
+                loading="lazy"
+            />
         </span>
     @endforeach
 
