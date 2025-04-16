@@ -1,8 +1,7 @@
 import AOS from "aos";
-import { navDropdown } from "./navbar";
+// import { navDropdown } from "./navbar";
 import $ from 'jquery';
-import { continueReading } from "./continue-reading";
-import { resourcesFilters } from "./resources-filters-sidebar";
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
 window.$ = window.jQuery = $;
 
 const documentHeader = document.querySelector('.js-header')
@@ -30,8 +29,19 @@ AOS.init({
     mirror: true, // whether elements should animate out while scrolling past them
 });
 
-navDropdown();
+const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery--profile-photo',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+    bgOpacity: 0.8,
+    zoom: true,
+    showHideAnimationType: 'fade',
+    wheelToZoom: true,
+    maxZoomLevel: 3,
+    zoomAnimationDuration: 300,
+    tapAction: 'close',
+    doubleTapAction: 'zoom',
+    escKey: true,
+});
+console.log(lightbox.init());
 
-continueReading();
-
-resourcesFilters();
