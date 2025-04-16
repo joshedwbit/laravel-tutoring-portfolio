@@ -265,6 +265,11 @@ $isLoggedIn = Auth::check();
     @foreach ($papers as $paper)
         @php
         $paperData = $paper->buildPaperData();
+        $questionExists = $paperData['questionExists'];
+        $questionPath = $paperData['questionPath'];
+
+        $markSchemeExists = $paperData['markSchemeExists'];
+        $markSchemePath = $paperData['markSchemePath'];
         @endphp
         <span>
             {{ $paper['year'] }}
@@ -310,33 +315,29 @@ $isLoggedIn = Auth::check();
         </form>
         @endif
 
-        @if ($paperData['questionExists'])
-            <span class="photoswipe-image">
+        <span class="photoswipe-image">
+            @if ($questionExists)
                 <a
-                    href="{{ $paperData['questionPath'] }}"
-                    data-pswp-width="1000"
-                    data-pswp-height="560"
+                    href="{{ $questionPath }}"
+                    data-pswp-width="{{ getImageDimensions($questionPath)['width'] }}"
+                    data-pswp-height="{{ getImageDimensions($questionPath)['height'] }}"
                 >
                 open image
                 </a>
-            </span>
-        @else
-            <span></span>
-        @endif
+            @endif
+        </span>
 
-        @if ($paperData['markSchemeExists'])
-            <span class="photoswipe-image">
+        <span class="photoswipe-image">
+            @if ($markSchemeExists)
                 <a
-                    href="{{ $paperData['markSchemePath'] }}"
-                    data-pswp-width="1000"
-                    data-pswp-height="560"
+                    href="{{ $markSchemePath }}"
+                    data-pswp-width="{{ getImageDimensions($markSchemePath)['width'] }}"
+                    data-pswp-height="{{ getImageDimensions($markSchemePath)['height'] }}"
                 >
                 open image
                 </a>
-            </span>
-        @else
-            <span></span>
-        @endif
+            @endif
+        </span>
     @endforeach
 
     </section>
