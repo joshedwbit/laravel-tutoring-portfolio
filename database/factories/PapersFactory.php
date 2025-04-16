@@ -20,7 +20,7 @@ class PapersFactory extends Factory
     public function definition(): array
     {
         return [
-            'year' => $this->faker->numberBetween($min = 2004, $max = date('Y')),
+            'year' => $this->faker->numberBetween($min = 2018, $max = date('Y')),
             'paper_number' => $this->faker->numberBetween($min = 1, $max = 3),
             'season' => $this->faker->randomElement(
                 [

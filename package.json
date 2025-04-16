@@ -15,6 +15,7 @@
     "dependencies": {
         "aos": "^2.3.4",
         "jquery": "^3.7.1",
+        "photoswipe": "^5.4.4",
         "swiper": "^11.1.14"
     }
 }

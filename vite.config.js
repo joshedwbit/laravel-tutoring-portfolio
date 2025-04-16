@@ -8,8 +8,9 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/sass/app.scss',
                 'resources/js/app.js',
-                'resources/js/toggle-filters.js',
                 'resources/js/twitter-dropdown.js',
+                'resources/js/resources-filters-sidebar.js',
+                'resources/js/continue-reading.js',
                 'resources/js/feedback-success-carousel.js',
                 'resources/js/feedback-success-carousel-v2.js',
                 'resources/js/homepage-reviews-carousel.js'

@@ -1,21 +1,26 @@
 @use "../tools/mixins/breakpoints";
+@use "../theme/variables";
+@use "../tools/mixins/font";
 
 .v2resources--container {
     display: flex;
 }
 
 .v2resources-table--container {
-    div {
+    span {
         text-align: center;
     }
+    @include font.font(variables.$font--standard, 20px, 0, 300, variables.$c-black-fade);
+    font-family: variables.$futura-cyrillic-medium;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
     align-items: start;
-    margin: 0 80px;
+    margin: 40px 0 60px;
     user-select: text;
+    row-gap: 15px;
 
     @include breakpoints.breakpoint(nav) {
         margin: 0 30px;
@@ -29,13 +34,63 @@
 }
 
 .resources--logged-in {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
 }
 
-.resources__header {
+.v2resources__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.v2resources__header {
     padding: 0 30px;
 }
 
-.resources__filters--hidden {
-    display: none;
+.v2resources__sidebar-wrapper {
+    position: fixed;
+    // top: 0;
+    left: 0;
+    // height: 100vh;
+    width: 400px; // or any width
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    background: variables.$bg-white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .v2resources__sidebar {
+      padding: 40px 20px 20px;
+      position: relative;
+
+      .field label {
+        margin-right: 30px;
+      }
+
+      .sidebar__close {
+        background: none;
+        border: none;
+        font-size: 1rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #555;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+}
+
+.v2resources__filters-container {
+    display: flex;
+    gap: 5px;
+    padding: 10px 0;
 }

@@ -39,6 +39,7 @@ class ResourcesController extends Controller
             'papers' => Papers::orderBy('year', 'desc')->get(),
             'results_count' => count(Papers::all()),
             'topics' => Topics::all(),
+            'filtered' => false,
         ]);
     }
 
@@ -158,6 +159,7 @@ class ResourcesController extends Controller
             'papers' => $filteredResources,
             'results_count' => count($filteredResources),
             'topics' => Topics::all(),
+            'filtered' => true,
         ]);
     }
 
