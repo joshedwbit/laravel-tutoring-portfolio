@@ -14,7 +14,7 @@
     font-family: variables.$futura-cyrillic-medium;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
     align-items: start;
@@ -34,7 +34,7 @@
 }
 
 .resources--logged-in {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
 }
 
 .v2resources__filters {
