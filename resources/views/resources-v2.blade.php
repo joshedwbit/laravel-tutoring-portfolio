@@ -7,6 +7,10 @@
   @vite('resources/js/resources-filters-sidebar.js')
 @endpush
 
+@section('header')
+    @include('partials._navbar-v2', ['hideLinks' => true])
+@endsection
+
 @section('content')
 <h1 class="v2page-title">{{ $pageInfo['title'] }}</h1>
 
@@ -161,7 +165,7 @@ $isLoggedIn = Auth::check();
             @endif
 
             <section class="js-filter-container">
-            <form action="/resources-filtered" method="POST" class="v2resources__filters">
+            <form action="{{ route('resources.filtered') }}" method="GET" class="v2resources__filters">
                 @csrf
 
                 <div class="field">
