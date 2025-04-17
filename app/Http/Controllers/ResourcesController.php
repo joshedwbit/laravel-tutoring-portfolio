@@ -36,8 +36,8 @@ class ResourcesController extends Controller
     {
         return view('resources-v2', [
             'pageInfo' => Resources::first(),
-            'papers' => Papers::orderBy('year', 'desc')->get(),
-            'results_count' => count(Papers::all()),
+            'papers' => Papers::orderBy('year', 'desc')->simplePaginate(20),
+            'results_count' => Papers::count(),
             'topics' => Topics::all(),
             'filtered' => false,
         ]);
@@ -126,7 +126,7 @@ class ResourcesController extends Controller
         $query = Papers::query();
 
         if ($request['filter_year']) {
-            $query = Papers::where('year', $request['filter_year']);
+            $query->where('year', $request['filter_year']);
         }
 
         if ($request['filter_paper_number']) {
@@ -152,12 +152,14 @@ class ResourcesController extends Controller
         $query->orderBy('year', 'desc');
 
         // dd($query->toSql(), $query->getBindings());
-        $filteredResources = $query->get();
+        // total must be calculated before filtering so the order below is important
+        $filteredResourcesTotal = count($query->get());
+        $filteredResources = $query->simplePaginate(20)->withQueryString();
 
         return view('resources-v2', [
             'pageInfo' => Resources::first(),
             'papers' => $filteredResources,
-            'results_count' => count($filteredResources),
+            'results_count' => $filteredResourcesTotal,
             'topics' => Topics::all(),
             'filtered' => true,
         ]);

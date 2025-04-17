@@ -16,7 +16,7 @@
 </head>
 <body class="body-v2">
     <header class="header-v2">
-        @include('partials._navbar-v2')
+        @yield('header')
     </header>
 
     <main class="main-v2">
