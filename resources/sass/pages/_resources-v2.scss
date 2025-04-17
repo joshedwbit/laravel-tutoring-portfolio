@@ -6,7 +6,10 @@
     display: flex;
     flex-direction: column;
 }
-
+.resources-table-desktop,
+.resources-table-tablet {
+    width: 100%;
+}
 .v2resources-table--container {
     span {
         text-align: center;
@@ -15,7 +18,7 @@
     font-family: variables.$futura-cyrillic-medium;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
     align-items: start;
@@ -25,17 +28,28 @@
 
     @include breakpoints.breakpoint(nav) {
         margin: 0 30px;
-        overflow: scroll;
-        overflow-y: hidden;
+        // overflow: scroll;
+        // overflow-y: hidden;
+    }
+
+    @include breakpoints.breakpoint(tablet) {
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+        align-items: center;
+        column-gap: 12px;
     }
 
     @include breakpoints.breakpoint(mobile) {
         margin: 0px;
+        @include font.font(variables.$font--tiny, 20px, 0, 300, variables.$c-black-fade);
     }
 }
 
 .resources--logged-in {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+
+    @include breakpoints.breakpoint(tablet) {
+        grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+    }
 }
 
 .v2resources__filters {
@@ -47,6 +61,10 @@
 .v2resources__header {
     padding: 0 30px;
     margin: 10px 0;
+
+    @include breakpoints.breakpoint(tablet) {
+        padding: 0;
+    }
 }
 
 .v2resources__sidebar-wrapper {
@@ -64,6 +82,10 @@
 
     &.open {
       transform: translateX(0);
+    }
+
+    @include breakpoints.breakpoint(tablet) {
+        width: 300px;
     }
 
     .v2resources__sidebar {

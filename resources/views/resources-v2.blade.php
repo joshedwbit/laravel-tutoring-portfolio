@@ -43,7 +43,7 @@ $isLoggedIn = Auth::check();
 <div class="v2resources--container">
     <div class="v2resources__sidebar-wrapper">
         <aside class="v2resources__sidebar">
-            <button class="sidebar__close" id="sidebarClose">× Close</button>
+            <button class="sidebar__close" id="sidebarClose">×</button>
 
 
             {{-- add a new resource  --}}
@@ -169,39 +169,39 @@ $isLoggedIn = Auth::check();
                 @csrf
 
                 <div class="field">
-                <label for="filter_year">Filter Year</label>
+                    <label for="filter_year">Year</label>
 
-                <input type="text" name="filter_year" id="filter_year"/>
+                    <input type="text" name="filter_year" id="filter_year"/>
 
 
-                @error('filter_year')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('filter_year')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
-                <label for="filter_paper_number">Filter Paper</label>
+                    <label for="filter_paper_number">Paper</label>
 
                     <input type="checkbox" name="filter_paper_number[]" value="1">1
                     <input type="checkbox" name="filter_paper_number[]" value="2">2
                     <input type="checkbox" name="filter_paper_number[]" value="3">3
 
-                @error('paper_number')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('paper_number')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
-                <label for="filter_season">Filter Season</label>
-                <input type="checkbox" name="filter_season[]" value="Winter">Winter
-                <input type="checkbox" name="filter_season[]" value="Summer">Summer
+                    <label for="filter_season">Season</label>
+                    <input type="checkbox" name="filter_season[]" value="Winter">Winter
+                    <input type="checkbox" name="filter_season[]" value="Summer">Summer
 
-                @error('filter_season')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('filter_season')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
-                <div class="field">
+                {{-- <div class="field">
                     <label for="filter_type">Filter Type</label>
 
                 <input type="checkbox" name="filter_type[]" value="1">Calculator
@@ -210,9 +210,9 @@ $isLoggedIn = Auth::check();
                     @error('filter_type')
                     <p class="error">{{$message}}</p>
                     @enderror
-                </div>
+                </div> --}}
 
-                <div class="field">
+                {{-- <div class="field">
                     <label for="filter_level">Level</label>
                 <input type="checkbox" name="filter_level[]" value="0">Foundation
                 <input type="checkbox" name="filter_level[]" value="1">Higher
@@ -220,7 +220,7 @@ $isLoggedIn = Auth::check();
                     @error('filter_level')
                     <p class="error">{{$message}}</p>
                     @enderror
-                </div>
+                </div> --}}
 
                 <div class="field">
                     <label for="filter_topic">Topic</label>
@@ -250,104 +250,177 @@ $isLoggedIn = Auth::check();
         </aside>
     </div>
 
-    <section class="v2resources-table--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
-    <h4 class="v2resources__header">Year</h4>
-    <h4 class="v2resources__header">Paper</h4>
-    <h4 class="v2resources__header">Season</h4>
-    <h4 class="v2resources__header">Type</h4>
-    <h4 class="v2resources__header">Level</h4>
-    <h4 class="v2resources__header">Question</h4>
-    <h4 class="v2resources__header">Topic(s)</h4>
-    <h4 class="v2resources__header">Notes</h4>
-    @if ($isLoggedIn)
-    <h4 class="v2resources__header"></h4>
-    <h4 class="v2resources__header"></h4>
-    @endif
-    <h4 class="v2resources__header">Question</h4>
-    <h4 class="v2resources__header">Mark scheme</h4>
-
-    @foreach ($papers as $paper)
-        @php
-        $paperData = $paper->buildPaperData();
-        $questionExists = $paperData['questionExists'];
-        $questionPath = $paperData['questionPath'];
-
-        $markSchemeExists = $paperData['markSchemeExists'];
-        $markSchemePath = $paperData['markSchemePath'];
-        @endphp
-        <span>
-            {{ $paper['year'] }}
-        </span>
-
-        <span>
-            {{ $paper['paper_number'] }}
-        </span>
-
-        <span>
-            {{ $paper['season'] }}
-        </span>
-
-        <span>
-            {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
-        </span>
-
-        <span>
-            {{ $paper['higher'] ? 'higher' : 'foundation' }}
-        </span>
-
-        <span>
-            {{ $paper['question_number'] }}
-        </span>
-
-        <span>
-            {{ $paper['topic'] }}
-        </span>
-
-        <span>
-            {{ $paper['notes'] }}
-        </span>
-
-        @if ($isLoggedIn)
-        <span>
-          <a href="/edit-resource/{{ $paper->id }}">Edit</a>
-        </span>
-
-        <form action="/delete-resource/{{ $paper->id }}" method="POST">
-          @csrf
-          @method('DELETE')
-          <button>Delete</button>
-        </form>
-        @endif
-
-        <span class="photoswipe-image">
-            @if ($questionExists)
-                <a
-                    href="{{ $questionPath }}"
-                    data-pswp-width="{{ getImageDimensions($questionPath)['width'] }}"
-                    data-pswp-height="{{ getImageDimensions($questionPath)['height'] }}"
-                >
-                Show
-                </a>
+    <div class="tablet-hide resources-table-desktop">
+        <section class="v2resources-table--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
+            <h4 class="v2resources__header">Date</h4>
+            <h4 class="v2resources__header">Paper</h4>
+            {{-- <h4 class="v2resources__header">Season</h4> --}}
+            {{-- <h4 class="v2resources__header">Type</h4> --}}
+            {{-- <h4 class="v2resources__header">Level</h4> --}}
+            {{-- <h4 class="v2resources__header">Question</h4> --}}
+            <h4 class="v2resources__header">Topic(s)</h4>
+            <h4 class="v2resources__header">Notes</h4>
+            @if ($isLoggedIn)
+            <h4 class="v2resources__header"></h4>
+            <h4 class="v2resources__header"></h4>
             @endif
-        </span>
+            <h4 class="v2resources__header">Question</h4>
+            <h4 class="v2resources__header">Mark scheme</h4>
 
-        <span class="photoswipe-image">
-            @if ($markSchemeExists)
-                <a
-                    href="{{ $markSchemePath }}"
-                    data-pswp-width="{{ getImageDimensions($markSchemePath)['width'] }}"
-                    data-pswp-height="{{ getImageDimensions($markSchemePath)['height'] }}"
-                >
-                Show
-                </a>
+            @foreach ($papers as $paper)
+                @php
+                $paperData = $paper->buildPaperData();
+                $questionExists = $paperData['questionExists'];
+                $questionPath = $paperData['questionPath'];
+
+                $markSchemeExists = $paperData['markSchemeExists'];
+                $markSchemePath = $paperData['markSchemePath'];
+                @endphp
+                <span>
+                    {{ $paper['season'] . ' ' . $paper['year'] }}
+                </span>
+
+                <span>
+                    {{ $paper['paper_number'] }}
+                </span>
+
+                {{-- <span>
+                    {{ $paper['season'] }}
+                </span> --}}
+
+                {{-- <span>
+                    {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
+                </span> --}}
+                {{--
+                <span>
+                    {{ $paper['higher'] ? 'higher' : 'foundation' }}
+                </span> --}}
+
+                {{-- <span>
+                    {{ $paper['question_number'] }}
+                </span> --}}
+
+                <span>
+                    {{ $paper['topic'] }}
+                </span>
+
+                <span>
+                    {{ $paper['notes'] }}
+                </span>
+
+                @if ($isLoggedIn)
+                <span>
+                <a href="/edit-resource/{{ $paper->id }}">Edit</a>
+                </span>
+
+                <form action="/delete-resource/{{ $paper->id }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>Delete</button>
+                </form>
+                @endif
+
+                <span class="photoswipe-image">
+                    @if ($questionExists)
+                        <a
+                            href="{{ $questionPath }}"
+                            data-pswp-width="{{ getImageDimensions($questionPath)['width'] }}"
+                            data-pswp-height="{{ getImageDimensions($questionPath)['height'] }}"
+                        >
+                        {{ $paper['question_number'] }}
+                        </a>
+                    @endif
+                </span>
+
+                <span class="photoswipe-image">
+                    @if ($markSchemeExists)
+                        <a
+                            href="{{ $markSchemePath }}"
+                            data-pswp-width="{{ getImageDimensions($markSchemePath)['width'] }}"
+                            data-pswp-height="{{ getImageDimensions($markSchemePath)['height'] }}"
+                        >
+                        show
+                        </a>
+                    @endif
+                </span>
+            @endforeach
+        </section>
+    </div>
+
+    <div class="tablet-show resources-table-tablet">
+        <section class="v2resources-table--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
+            <h4 class="v2resources__header">Question</h4>
+            <h4 class="v2resources__header">Topic(s)</h4>
+            <h4 class="v2resources__header">Notes</h4>
+            <h4 class="v2resources__header">MS</h4>
+            @if ($isLoggedIn)
+            <h4 class="v2resources__header"></h4>
+            <h4 class="v2resources__header"></h4>
             @endif
-        </span>
-    @endforeach
-</section>
 
-<div class="pagination">
-    {{ $papers->links(null, ['results_count' => $results_count]) }}
-</div>
+            @foreach ($papers as $paper)
+                @php
+                $paperData = $paper->buildPaperData();
+                $questionExists = $paperData['questionExists'];
+                $questionPath = $paperData['questionPath'];
 
+                $markSchemeExists = $paperData['markSchemeExists'];
+                $markSchemePath = $paperData['markSchemePath'];
+                @endphp
+                <span class="photoswipe-image">
+                    @if ($questionExists)
+                        <a
+                            href="{{ $questionPath }}"
+                            data-pswp-width="{{ getImageDimensions($questionPath)['width'] }}"
+                            data-pswp-height="{{ getImageDimensions($questionPath)['height'] }}"
+                        >
+                        {{ $paper['season'] . ' ' . $paper['year'] }}<br>
+                        {{ 'Paper ' . $paper['paper_number']  }}<br>
+                        {{ 'Question ' . $paper['question_number'] }}
+                        </a>
+                    @else
+                    {{ $paper['season'] . ' ' . $paper['year'] }}<br>
+                    {{ 'Paper ' . $paper['paper_number']  }}<br>
+                    {{ 'Question ' . $paper['question_number'] }}
+                    @endif
+                </span>
+
+                <span>
+                    {{ $paper['topic'] }}
+                </span>
+
+                <span>
+                    {{ $paper['notes'] }}
+                </span>
+
+                <span class="photoswipe-image">
+                    @if ($markSchemeExists)
+                        <a
+                            href="{{ $markSchemePath }}"
+                            data-pswp-width="{{ getImageDimensions($markSchemePath)['width'] }}"
+                            data-pswp-height="{{ getImageDimensions($markSchemePath)['height'] }}"
+                        >
+                        show
+                        </a>
+                    @endif
+                </span>
+
+                @if ($isLoggedIn)
+                <span>
+                <a href="/edit-resource/{{ $paper->id }}">Edit</a>
+                </span>
+
+                <form action="/delete-resource/{{ $paper->id }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>Delete</button>
+                </form>
+                @endif
+            @endforeach
+        </section>
+    </div>
+    <div class="pagination">
+        {{ $papers->links(null, ['results_count' => $results_count]) }}
+    </div>
 </div>
 @endsection
