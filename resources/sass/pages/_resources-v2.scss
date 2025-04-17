@@ -5,7 +5,10 @@
 .v2resources--container {
     display: flex;
 }
-
+.resources-table-desktop,
+resources-table-tablet {
+    width: 100%;
+}
 .v2resources-table--container {
     span {
         text-align: center;
@@ -14,7 +17,6 @@
     font-family: variables.$futura-cyrillic-medium;
 
     display: grid;
-    width: 100%;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
