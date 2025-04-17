@@ -19,7 +19,7 @@
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
     align-items: start;
-    margin: 10px 0 30px;
+    margin: 20px 0 30px;
     user-select: text;
     row-gap: 15px;
 
@@ -46,6 +46,7 @@
 
 .v2resources__header {
     padding: 0 30px;
+    margin: 10px 0;
 }
 
 .v2resources__sidebar-wrapper {
