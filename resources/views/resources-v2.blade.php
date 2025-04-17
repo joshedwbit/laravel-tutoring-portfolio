@@ -169,39 +169,39 @@ $isLoggedIn = Auth::check();
                 @csrf
 
                 <div class="field">
-                <label for="filter_year">Filter Year</label>
+                    <label for="filter_year">Filter Year</label>
 
-                <input type="text" name="filter_year" id="filter_year"/>
+                    <input type="text" name="filter_year" id="filter_year"/>
 
 
-                @error('filter_year')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('filter_year')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
-                <label for="filter_paper_number">Filter Paper</label>
+                    <label for="filter_paper_number">Filter Paper</label>
 
                     <input type="checkbox" name="filter_paper_number[]" value="1">1
                     <input type="checkbox" name="filter_paper_number[]" value="2">2
                     <input type="checkbox" name="filter_paper_number[]" value="3">3
 
-                @error('paper_number')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('paper_number')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="field">
-                <label for="filter_season">Filter Season</label>
-                <input type="checkbox" name="filter_season[]" value="Winter">Winter
-                <input type="checkbox" name="filter_season[]" value="Summer">Summer
+                    <label for="filter_season">Filter Season</label>
+                    <input type="checkbox" name="filter_season[]" value="Winter">Winter
+                    <input type="checkbox" name="filter_season[]" value="Summer">Summer
 
-                @error('filter_season')
-                <p class="error">{{$message}}</p>
-                @enderror
+                    @error('filter_season')
+                    <p class="error">{{$message}}</p>
+                    @enderror
                 </div>
 
-                <div class="field">
+                {{-- <div class="field">
                     <label for="filter_type">Filter Type</label>
 
                 <input type="checkbox" name="filter_type[]" value="1">Calculator
@@ -210,9 +210,9 @@ $isLoggedIn = Auth::check();
                     @error('filter_type')
                     <p class="error">{{$message}}</p>
                     @enderror
-                </div>
+                </div> --}}
 
-                <div class="field">
+                {{-- <div class="field">
                     <label for="filter_level">Level</label>
                 <input type="checkbox" name="filter_level[]" value="0">Foundation
                 <input type="checkbox" name="filter_level[]" value="1">Higher
@@ -220,7 +220,7 @@ $isLoggedIn = Auth::check();
                     @error('filter_level')
                     <p class="error">{{$message}}</p>
                     @enderror
-                </div>
+                </div> --}}
 
                 <div class="field">
                     <label for="filter_topic">Topic</label>
@@ -251,12 +251,12 @@ $isLoggedIn = Auth::check();
     </div>
 
     <section class="v2resources-table--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
-    <h4 class="v2resources__header">Year</h4>
+    <h4 class="v2resources__header">Date</h4>
     <h4 class="v2resources__header">Paper</h4>
-    <h4 class="v2resources__header">Season</h4>
-    <h4 class="v2resources__header">Type</h4>
-    <h4 class="v2resources__header">Level</h4>
-    <h4 class="v2resources__header">Question</h4>
+    {{-- <h4 class="v2resources__header">Season</h4> --}}
+    {{-- <h4 class="v2resources__header">Type</h4> --}}
+    {{-- <h4 class="v2resources__header">Level</h4> --}}
+    {{-- <h4 class="v2resources__header">Question</h4> --}}
     <h4 class="v2resources__header">Topic(s)</h4>
     <h4 class="v2resources__header">Notes</h4>
     @if ($isLoggedIn)
@@ -276,28 +276,28 @@ $isLoggedIn = Auth::check();
         $markSchemePath = $paperData['markSchemePath'];
         @endphp
         <span>
-            {{ $paper['year'] }}
+            {{ $paper['season'] . ' ' . $paper['year'] }}
         </span>
 
         <span>
             {{ $paper['paper_number'] }}
         </span>
 
-        <span>
+        {{-- <span>
             {{ $paper['season'] }}
-        </span>
+        </span> --}}
 
-        <span>
+        {{-- <span>
             {{ $paper['calculator'] ? 'calculator' : 'non-calc' }}
-        </span>
-
+        </span> --}}
+{{--
         <span>
             {{ $paper['higher'] ? 'higher' : 'foundation' }}
-        </span>
+        </span> --}}
 
-        <span>
+        {{-- <span>
             {{ $paper['question_number'] }}
-        </span>
+        </span> --}}
 
         <span>
             {{ $paper['topic'] }}
@@ -326,7 +326,7 @@ $isLoggedIn = Auth::check();
                     data-pswp-width="{{ getImageDimensions($questionPath)['width'] }}"
                     data-pswp-height="{{ getImageDimensions($questionPath)['height'] }}"
                 >
-                Show
+                {{ $paper['question_number'] }}
                 </a>
             @endif
         </span>
