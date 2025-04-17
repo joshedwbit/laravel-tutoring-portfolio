@@ -29,13 +29,24 @@
         overflow-y: hidden;
     }
 
+    @include breakpoints.breakpoint(tablet) {
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+        align-items: center;
+        column-gap: 5px;
+    }
+
     @include breakpoints.breakpoint(mobile) {
         margin: 0px;
+        @include font.font(variables.$font--tiny, 20px, 0, 300, variables.$c-black-fade);
     }
 }
 
 .resources--logged-in {
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+
+    @include breakpoints.breakpoint(tablet) {
+        grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+    }
 }
 
 .v2resources__filters {

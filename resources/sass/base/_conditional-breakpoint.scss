@@ -1,0 +1,15 @@
+@use "../theme/variables";
+@use "../tools/mixins/breakpoints";
+
+.tablet-hide {
+    @include breakpoints.breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.tablet-show {
+    display: none;
+    @include breakpoints.breakpoint(tablet) {
+        display: block;
+    }
+}
