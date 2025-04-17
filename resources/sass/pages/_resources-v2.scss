@@ -32,7 +32,7 @@
     @include breakpoints.breakpoint(tablet) {
         grid-template-columns: 2fr 2fr 2fr 1fr;
         align-items: center;
-        column-gap: 5px;
+        column-gap: 12px;
     }
 
     @include breakpoints.breakpoint(mobile) {
@@ -57,6 +57,10 @@
 
 .v2resources__header {
     padding: 0 30px;
+
+    @include breakpoints.breakpoint(tablet) {
+        padding: 0;
+    }
 }
 
 .v2resources__sidebar-wrapper {

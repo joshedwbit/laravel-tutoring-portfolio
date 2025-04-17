@@ -345,10 +345,10 @@ $isLoggedIn = Auth::check();
 
     <div class="tablet-show resources-table-tablet">
         <section class="v2resources-table--container {{ $isLoggedIn ? 'resources--logged-in' : '' }}">
-            <h4 class="v2resources__header">Info</h4>
+            <h4 class="v2resources__header">Question</h4>
             <h4 class="v2resources__header">Topic(s)</h4>
             <h4 class="v2resources__header">Notes</h4>
-            <h4 class="v2resources__header">Mark scheme</h4>
+            <h4 class="v2resources__header">MS</h4>
             @if ($isLoggedIn)
             <h4 class="v2resources__header"></h4>
             <h4 class="v2resources__header"></h4>
