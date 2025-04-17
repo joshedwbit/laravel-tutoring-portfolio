@@ -16,7 +16,7 @@
     font-family: variables.$coolvetica;
     // width: 100%;
     // animation: slide-up 1s ease;
-    @include font.font(variables.$font--title--large, 36px, 2px, 700);
+    @include font.font(variables.$font--title--x-large, 36px, 2px, 700);
     // text-align: center;
 }
 
