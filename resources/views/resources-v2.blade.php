@@ -334,7 +334,7 @@ $isLoggedIn = Auth::check();
                     data-pswp-width="{{ getImageDimensions($markSchemePath)['width'] }}"
                     data-pswp-height="{{ getImageDimensions($markSchemePath)['height'] }}"
                 >
-                open image
+                show
                 </a>
             @endif
         </span>

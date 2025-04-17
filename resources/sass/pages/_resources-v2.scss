@@ -14,6 +14,7 @@
     font-family: variables.$futura-cyrillic-medium;
 
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: repeat(1, min-content);
     justify-items: center;
