@@ -80,6 +80,10 @@
       transform: translateX(0);
     }
 
+    @include breakpoints.breakpoint(tablet) {
+        width: 300px;
+    }
+
     .v2resources__sidebar {
       padding: 40px 20px 20px;
       position: relative;

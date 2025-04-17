@@ -39,7 +39,7 @@ $isLoggedIn = Auth::check();
 <div class="v2resources--container">
     <div class="v2resources__sidebar-wrapper">
         <aside class="v2resources__sidebar">
-            <button class="sidebar__close" id="sidebarClose">× Close</button>
+            <button class="sidebar__close" id="sidebarClose">×</button>
 
 
             {{-- add a new resource  --}}
@@ -165,7 +165,7 @@ $isLoggedIn = Auth::check();
                 @csrf
 
                 <div class="field">
-                    <label for="filter_year">Filter Year</label>
+                    <label for="filter_year">Year</label>
 
                     <input type="text" name="filter_year" id="filter_year"/>
 
@@ -176,7 +176,7 @@ $isLoggedIn = Auth::check();
                 </div>
 
                 <div class="field">
-                    <label for="filter_paper_number">Filter Paper</label>
+                    <label for="filter_paper_number">Paper</label>
 
                     <input type="checkbox" name="filter_paper_number[]" value="1">1
                     <input type="checkbox" name="filter_paper_number[]" value="2">2
@@ -188,7 +188,7 @@ $isLoggedIn = Auth::check();
                 </div>
 
                 <div class="field">
-                    <label for="filter_season">Filter Season</label>
+                    <label for="filter_season">Season</label>
                     <input type="checkbox" name="filter_season[]" value="Winter">Winter
                     <input type="checkbox" name="filter_season[]" value="Summer">Summer
 
