@@ -345,10 +345,6 @@ $isLoggedIn = Auth::check();
                 </span>
             @endforeach
         </section>
-
-        <div class="pagination">
-            {{ $papers->links(null, ['results_count' => $results_count]) }}
-        </div>
     </div>
 
     <div class="tablet-show resources-table-tablet">
@@ -422,10 +418,9 @@ $isLoggedIn = Auth::check();
                 @endif
             @endforeach
         </section>
-
-        <div class="pagination">
-            {{ $papers->links(null, ['results_count' => $results_count]) }}
-        </div>
+    </div>
+    <div class="pagination">
+        {{ $papers->links(null, ['results_count' => $results_count]) }}
     </div>
 </div>
 @endsection
