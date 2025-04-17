@@ -28,8 +28,8 @@
 
     @include breakpoints.breakpoint(nav) {
         margin: 0 30px;
-        overflow: scroll;
-        overflow-y: hidden;
+        // overflow: scroll;
+        // overflow-y: hidden;
     }
 
     @include breakpoints.breakpoint(tablet) {

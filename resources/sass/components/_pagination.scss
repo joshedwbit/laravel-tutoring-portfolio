@@ -1,8 +1,21 @@
+@use "../tools/mixins/breakpoints";
+@use "../theme/variables";
+@use "../tools/mixins/font";
+
 .pagination {
     display: flex;
     justify-content: end;
     margin-right: 20px;
     margin-bottom: 30px;
+    margin-top: 15px;
+
+    @include breakpoints.breakpoint(tablet) {
+        margin-top: 20px;
+    }
+
+    @include breakpoints.breakpoint(mobile) {
+        @include font.font(variables.$font--tiny, 20px, 0, 300, variables.$c-black-fade);
+    }
 }
 
 .pagination__navigation {
