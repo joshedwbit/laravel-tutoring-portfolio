@@ -154,7 +154,7 @@ class ResourcesController extends Controller
         // dd($query->toSql(), $query->getBindings());
         // total must be calculated before filtering so the order below is important
         $filteredResourcesTotal = count($query->get());
-        $filteredResources = $query->simplePaginate(4)->withQueryString();
+        $filteredResources = $query->simplePaginate(10)->withQueryString();
 
         return view('resources-v2', [
             'pageInfo' => Resources::first(),

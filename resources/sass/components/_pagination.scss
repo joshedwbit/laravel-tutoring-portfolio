@@ -1,10 +1,11 @@
 .pagination {
-    margin-top: 2rem;
     display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+    justify-content: end;
+    margin-right: 20px;
+    margin-bottom: 30px;
 }
-.pagination .page-link {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
+
+.pagination__navigation {
+    display: flex;
+    gap: 10px;
 }
