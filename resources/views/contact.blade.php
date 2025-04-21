@@ -2,6 +2,7 @@
 
 @section('title', 'Contact - Joshua Edwards Tutoring')
 @section('meta_description', 'Have questions or want to get started? Contact me directly to discuss the next steps.')
+@section('robots_meta', 'noindex')
 
 @section('content')
 <h1 class="page-title">{{ $pageInfo['title'] }}</h1>

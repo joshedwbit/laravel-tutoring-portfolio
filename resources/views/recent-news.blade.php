@@ -2,6 +2,7 @@
 
 @section('title', 'Recent News - Joshua Edwards Tutoring')
 @section('meta_description', 'Stay updated with the latest news and announcements from key examination bodies. Discover recent developments in syllabus changes, exam updates and more.')
+@section('robots_meta', 'noindex')
 
 @push('scripts')
   @vite('resources/js/twitter-dropdown.js')
