@@ -29,7 +29,7 @@ class Papers extends Model
         $folder = "{$this->year}-{$season}";
         $paperBase = "{$folder}-{$this->paper_number}-{$band}";
 
-        $questionPath = "images/resources/{$folder}/{$paperBase}-qs/{$paperBase}-qs-{$this->question_number}.png";
+        $questionPath = "images/resources/{$folder}/{$paperBase}-qs/{$paperBase}-qs-{$this->question_number}.JPG";
         $markSchemePath = "images/resources/{$folder}/{$paperBase}-ms/{$paperBase}-ms-{$this->question_number}.JPG";
 
         return [
